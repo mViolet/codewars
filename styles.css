@@ -1,0 +1,42 @@
+body {
+	transition: background .5s ease, color .5s ease;
+	font-family: monospace;
+	color: green;
+	background: black;
+}
+
+.switch {
+	display: flex;
+	width: 50px;
+	height: 20px;
+	background: green;
+	border-radius: 80px;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 5px;
+}
+
+.btn {
+	width: 20px;
+	height: 20px;
+	background: black;
+	border-radius: 100%;
+}
+
+.start {
+	justify-content: flex-start;
+}
+
+.day {
+	background: ghostwhite;
+	color: black;
+}
+
+.btnday {
+	background: ghostwhite;
+}
+
+.switchday {
+	background: black;
+}
+
