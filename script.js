@@ -1,6 +1,16 @@
 // 2021.02.16
 
+function spoonerize(words) {
+    let arr = words.split(" ").map(e => e.split(""))
 
+    const temp = arr[0][0]
+    arr[0][0] = arr[1][0]
+    arr[1][0] = temp
+
+    return arr.map(e => e.join("")).join(" ")
+}
+
+// this one is interesting. doesn't work unless chars are separated.
 
 // function switcheroo(str){
 //   return str.replace(/[ab]/gi, e => (e == 'a') ? 'b' : 'a')
@@ -171,9 +181,7 @@
 // }
 
 // Simple enough this one - you will be given an array. The values in the array will either be numbers or strings, or a mix of both. You will not get an empty array, nor a sparse one.
-
 // Your job is to return a single array that has first the numbers sorted in ascending order, followed by the strings sorted in alphabetic order. The values must maintain their original type.
-
 // Note that numbers written as strings are strings and must be sorted with the other strings.
 
 // function moveTen(s){
@@ -221,9 +229,7 @@
 // Your task is to find the first element of an array that is not consecutive.
 // By not consecutive we mean not exactly 1 larger than the previous element of the array.
 // E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
-
-// If the whole array is consecutive then return null2.
-
+// If the whole array is consecutive then return null
 // The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
 
 /////************** codewars problem
