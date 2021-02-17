@@ -7,10 +7,11 @@ function spoonerize(words) {
     arr[0][0] = arr[1][0]
     arr[1][0] = temp
 
-    return arr.map(e => e.join("")).join(" ")
+    // return arr.map(e => e.join("")).join(" ")
+    return words
 }
 
-// this one is interesting. doesn't work unless chars are separated.
+// this one is interesting. doesn't work unless chars are separated. return words works for me, but does not work on codewars!
 
 // function switcheroo(str){
 //   return str.replace(/[ab]/gi, e => (e == 'a') ? 'b' : 'a')
