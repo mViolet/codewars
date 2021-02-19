@@ -1,15 +1,50 @@
+// 2021.02.18
+
+function vowel2index(str) {
+   return str.replace(/[aeiou]/gi, (c,i) => /[aeiou]/gi.test(c) ? i+1 : c)
+}
+
+console.log(vowel2index('hello'))
+
+// usage:
+// vowel2index('this is my string') == 'th3s 6s my str15ng'
+
+//penguins problem - still working this out
+
+const snapshot = `|----p---~---------|
+    |----p---~~--------|
+    |----p---~~~-------|`;
+
+const snaps = snapshot.split(/\n/).map(e => e.trim()).map(e => e.toLowerCase()) //isolates the snaps
+
+console.log(snaps)
+
+let miniSnap = snaps[0].split('') //creates a shortened version of it to neglect chars in front of 'p's
+
+let removeFront = miniSnap.slice(miniSnap.indexOf('p'), -1)
+
+console.log(miniSnap)
+console.log(removeFront)
+
+//count dashes and squiggles
+// Penguins:
+// ["Joline", "Abigail", "Jane", "Gerry"]
+
+// Expected Output:
+// "GOLD: Joline, SILVER: Jane, BRONZE: Gerry"
+
 // 2021.02.16
 
-function spoonerize(words) {
-    let arr = words.split(" ").map(e => e.split(""))
+// function spoonerize(words) {
+//     let arr = words.split(" ").map(e => e.split(""))
 
-    const temp = arr[0][0]
-    arr[0][0] = arr[1][0]
-    arr[1][0] = temp
+//     const temp = arr[0][0]
+//     arr[0][0] = arr[1][0]
+//     arr[1][0] = temp
 
-    // return arr.map(e => e.join("")).join(" ")
-    return words
-}
+//     // return arr.map(e => e.join("")).join(" ")
+//     return words
+// }
 
 // this one is interesting. doesn't work unless chars are separated. return words works for me, but does not work on codewars!
 
