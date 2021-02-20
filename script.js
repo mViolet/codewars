@@ -1,37 +1,54 @@
+// 2021.02.19
+// is it a perfect square?
+
+// const isSquare = (n) => Math.pow(Math.sqrt(n).toFixed(2), 2) == n ? true : false
+
+// //better solution:
+// function isSquare(n) {
+//   return Math.sqrt(n) % 1 === 0;
+// }
+
+
+// penguins problem!
+
+// const snapshot = `|-~~------------~--p-------|
+//     |~~--~p------------~-------|
+//     |--------~-p---------------|
+//     |--------~-p----~~~--------|`;
+
+// const penguins = ["Joline", "Abigail", "Jane", "Gerry"];
+
+
+// function calculateWinners(snapshot, penguins){
+// 	let snaps = snapshot.split(/\n/).map(e => e.trim()).map(e => e.toLowerCase())  //isolates the snapshot to individual strings
+// 	let results ={}  // empty obj to track the scores and names
+
+// 	for (i = 0; i < snaps.length; i++){  //iterate through snaps to tally scores based on reduceRight()
+// 		results[`${penguins[i]}`] = reduceRight(snaps[i])
+// 	}
+
+// 	results = Object.entries(results).sort((a,b) => a[1] - b[1])  //convert to array & sort names by tallied scores
+// 	return `GOLD: ${results[0][0]}, SILVER: ${results[1][0]}, BRONZE: ${results[2][0]}`
+
+// 	function reduceRight(arr){
+// 	return arr.split('').slice(arr.indexOf('p') + 1, -1).map(c => c == '~' ? 2 : 1).reduce((a,b) => a+b)
+// 	}
+// }
+
+
+
 // 2021.02.18
 
-function vowel2index(str) {
-   return str.replace(/[aeiou]/gi, (c,i) => /[aeiou]/gi.test(c) ? i+1 : c)
-}
+// function vowel2index(str) {
+//    return str.replace(/[aeiou]/gi, (c,i) => /[aeiou]/gi.test(c) ? i+1 : c)
+// }
 
-console.log(vowel2index('hello'))
+// console.log(vowel2index('hello'))
 
 // usage:
 // vowel2index('this is my string') == 'th3s 6s my str15ng'
 
-//penguins problem - still working this out
 
-const snapshot = `|----p---~---------|
-    |----p---~~--------|
-    |----p---~~~-------|`;
-
-const snaps = snapshot.split(/\n/).map(e => e.trim()).map(e => e.toLowerCase()) //isolates the snaps
-
-console.log(snaps)
-
-let miniSnap = snaps[0].split('') //creates a shortened version of it to neglect chars in front of 'p's
-
-let removeFront = miniSnap.slice(miniSnap.indexOf('p'), -1)
-
-console.log(miniSnap)
-console.log(removeFront)
-
-//count dashes and squiggles
-// Penguins:
-// ["Joline", "Abigail", "Jane", "Gerry"]
-
-// Expected Output:
-// "GOLD: Joline, SILVER: Jane, BRONZE: Gerry"
 
 // 2021.02.16
 
