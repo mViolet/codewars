@@ -1,3 +1,42 @@
+// 2021.02.20
+
+// function divCon(x){
+//  let strings = x.filter(e => typeof e === 'string').map(Number)
+//  let nums = x.filter(e => typeof e === 'number')
+
+//  if (strings.length > 0) { strings = strings.reduce((a,b) => a+b) } else {strings = 0}
+//  if (nums.length > 0) { nums = nums.reduce((a,b) => a+b) } else {nums = 0}
+ 
+//  return nums - strings
+// }
+
+//double trouble
+// const x = [1, 3, 5, 6, 7, 4, 3]
+// const t = 7
+
+// function trouble(x, t){
+// 	for (let i = 0; i < x.length - 1; i++){
+// 		if ((x[i] + x[i + 1]) === t) {
+//     	  x.splice(i+1, 1)
+//     	  i--
+//     	}
+// 	}
+// 	return x
+// }
+
+// Expected: '[1, 3, 5, 6, 7, 4]'
+
+// function arrayMadness(a, b) {
+//   return (
+//     a.reduce((a,b) => {return a + b ** 2}, 0) > b.reduce((a,b) => {return a + b ** 3}, 0))
+// }
+
+// function arrayMadness(a, b) {
+//   return (
+//     a.map(n => n ** 2).reduce((a,b) => a+b) >
+//     b.map(n => n ** 3).reduce((a,b) => a+b)) ? true : false
+// }
+
 // 2021.02.19
 // is it a perfect square?
 
