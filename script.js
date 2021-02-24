@@ -1,3 +1,73 @@
+// 2021.02.23
+
+// function DNAStrand(dna){
+//   return dna.replace(/[ATGC]/gi, function(e){
+//   	if (e === 'A') return 'T'
+//   	else if (e === 'T') return 'A'
+//   	else if (e === 'G') return 'C'
+//   	else if (e === 'C') return 'G'
+//   })
+// }
+
+//top solution for that one was this: (uses pairs object)
+// function DNAStrand(dna) {
+//   return dna.replace(/./g, function(c) {
+//     return DNAStrand.pairs[c]
+//   })
+// }
+
+// DNAStrand.pairs = {
+//   A: 'T',
+//   T: 'A',
+//   C: 'G',
+//   G: 'C',
+// }
+
+//this one passes tests but times out: revisit later (Sums of Parts)
+// function partsSums(ls) {
+// 	let len = ls.length
+// 	let arr = ls
+// 	let sums = []
+
+//     for (let i = 0; i <= len; i++){
+//     	sums.push(arr.reduce((a,b) => a + b, 0))
+//     	arr.shift()
+//     }
+
+//     return sums
+// }
+
+// function getGrade (s1, s2, s3) {
+//   let score = (s1 + s2 + s3) / 3
+  
+//   if (score >= 90) return 'A'
+//   else if (score >= 80) return 'B'
+//   else if (score >= 70) return 'C'
+//   else if (score >= 60) return 'D'
+//   else if (score >= 0) return 'F'
+//   else return 'Please provide three grade scores'
+// }
+
+// this one is named after Chuck Norris in the kata, but I think Saitama is a much better name
+// function onePunch(items){ return (typeof items === 'string' && items) ? items.split(' ').sort().join(' ').replace(/[ae]/gi, '') : 'Broken!' } //Don't leave this line!!
+
+// const moveZeros = (arr) => {
+//   let nums = arr.filter(e => e !== 0)
+//   let zeros = arr.filter(e => e === 0)
+//   zeros.forEach(e => nums.push(e))
+
+//   return nums
+// }
+
+// the top solution for the one above was really good (this one's not mine):
+// const moveZeros = function (arr) {
+//   return arr.filter(function(x) {return x !== 0}).concat(arr.filter(function(x) {return x === 0;}));
+// }
+
+// function oddOrEven(array) {
+//    return array.reduce((a,b) => a + b, 0) % 2 === 0 ? "even" : "odd"
+// }
+
 // 2021.02.20
 
 // function divCon(x){
