@@ -1,3 +1,19 @@
+// 2021.03.01
+
+// please forgive me 
+// function XO(s) {
+//     return (/[x]/gi.test(s) && /[o]/gi.test(s)) ? (s.split("").filter(l => l.toLowerCase() == 'x').length == s.split("").filter(l => l.toLowerCase() == 'o').length ? true : false) : (s == '' ? true : false)
+// }
+
+// function isTriangle(a, b, c) {
+//     let p = (a + b + c) / 2 //perimeter of a triangle. surface area is sqrt(p(p-a)(p-b)(p-c))
+//     return (Math.sqrt(p * (p-a) * (p-b) * (p-c)) && ((a+b > c) || (a+c > b) || (b+c > a))) ? true : false
+// }
+
+// top solution avoided having to calc area by using &&:
+    // return a + b > c && a + c > b && c + b > a
+
+
 // 2021.02.23
 
 // function DNAStrand(dna){
