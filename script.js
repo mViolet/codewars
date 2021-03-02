@@ -1,3 +1,16 @@
+// 2021.03.02
+
+// function validatePIN(pin) {
+//     return /(^\d{4}$)|(^\d{6}$)/.test(pin)
+// }
+
+// refactored: /^(\d{4}|\d{6})$/.test(pin)
+
+// function padIt(str, n) {
+//     //   while :)
+//     return str.padStart(str.length + Math.ceil(n / 2), "*").concat('*'.repeat(Math.floor(n / 2)))
+// }
+
 // 2021.03.01
 
 // please forgive me 
