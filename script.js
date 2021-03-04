@@ -1,5 +1,45 @@
 // 2021.03.04
-// grinding  out more 8kyus today
+
+// pretty happy with this one:
+
+// moves = ["up", "left", "down", "down", "right", "up", "left", "down", "right"]
+// fighters = [
+//     ["Ryu", "E.Honda", "Blanka", "Guile", "Balrog", "Vega"],
+//     ["Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"],
+//     ['Gandalf', 'Gollum', 'Pip', 'Frodo', 'Sauron', 'Galadriel'] //added a row to see if I can get it to work with any # of rows of fighters
+// ]
+
+// // expected:
+// // Ryu, Vega, M.Bison, Galadriel, Gandalf, Ken, M.Bison, Galadriel, Gandalf
+
+// function streetFighterSelection(fighters, position, moves) {
+//     let x = position[0]
+//     let y = position[1]
+//     let selections = []
+
+//     moves.forEach(move => {
+//         if (move == 'up' && x != 0) x--
+//         if (move == 'down' && x != fighters.length - 1) x++
+//         else if (move == 'left') y == 0 ? y = fighters[x].length - 1 : y--
+//         else if (move == 'right') y == fighters[x].length - 1 ? y = 0 : y++
+
+//         selections.push(fighters[x][y])
+//     })
+
+//     return selections
+// }
+
+
+// function fizzbuzz(n) {
+//     const arr = []
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 == 0 && i % 5 == 0) arr.push('FizzBuzz')
+//         else if (i % 3 == 0) arr.push('Fizz')
+//         else if (i % 5 == 0) arr.push('Buzz')
+//         else arr.push(i)
+//     }
+//     return arr
+// }
 
 // function sumOfDifferences(arr) {
 //     let a = arr.sort((a, b) => b - a)
