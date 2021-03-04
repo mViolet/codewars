@@ -1,3 +1,45 @@
+// 2021.03.03
+// 8kyus today
+
+// function amIWilson(p) {
+//     function factorial(n) {
+//         return (n != 1) ? n * factorial(n - 1) : 1; //recursion!
+//     }
+//     return Number.isInteger(((factorial(p - 1) + 1) / (p * p)))
+// }
+
+// const findDifference = (a, b) => Math.abs(a.reduce((a, b) => a * b) - b.reduce((a, b) => a * b))
+
+// const makeUpperCase = (str) => str.toUpperCase()
+
+// function uefaEuro2016(team, s) {
+//     return `At match ${team[0]} - ${team[1]}, ${s[0] == s[1] ? 'teams played draw.' : `${s[0] > s[1] ? team[0] : team[1]} won!`}`
+// }
+
+// refactored. ^^
+
+// function uefaEuro2016(teams, s) {
+//     return (s[0] > s[1] || s[0] != s[1]) ? `At match ${teams[0]} - ${teams[1]}, ${s[0] > s[1] ? teams[0] : teams[1]} won!` : `At match ${teams[0]} - ${teams[1]}, teams played draw.`
+// }
+
+// uefaEuro2016(['Germany', 'Ukraine'], [2, 0]) // "At match Germany - Ukraine, Germany won!"
+// uefaEuro2016(['Belgium', 'Italy'], [0, 2]) // "At match Belgium - Italy, Italy won!"
+// uefaEuro2016(['Portugal', 'Iceland'], [1, 1]) // "At match Portugal - Iceland, teams played draw.
+
+// const solution = (mm1, mm2, gm1, gm2, vol, tmp) => ((gm1 / mm1 + gm2 / mm2) * 0.082 * (tmp + 273.15)) / vol
+
+// function move(position, roll) {
+//     return position + roll * 2
+// }
+
+// function reverseWords(str) {
+//     return str.split(" ").reverse().join(" ")
+// }
+
+// function paperwork(n, m) {
+//     return (n < 0 || m < 0) ? 0 : n * m
+// }
+
 // 2021.03.02
 
 // function validatePIN(pin) {
