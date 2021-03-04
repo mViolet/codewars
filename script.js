@@ -1,3 +1,127 @@
+// 2021.03.04
+// grinding  out more 8kyus today
+
+// function sumOfDifferences(arr) {
+//     let a = arr.sort((a, b) => b - a)
+//     let n = 0
+//     for (let i = 0; i < a.length - 1; i++) {
+//         n += a[i] - a[i + 1]
+//     }
+//     return n
+// }
+
+// function index(array, n) {
+//     return array.length > n ? array[n] ** n : -1
+// }
+
+// const quarterOf = month => Math.ceil(month / 3)
+
+// function toCsvText(array) {
+//     return array.map(e => e.join(",")).join('\n')
+// }
+
+// const odds = values => values.filter(e => e % 2 !== 0)
+
+// const problem = x => (typeof x != 'number') ? 'Error' : x * 50 + 6
+
+// function bmi(weight, height) {
+//     let bmi = weight / height ** 2
+
+//     switch (true) {
+//         case (bmi <= 18.5):
+//             return "Underweight"
+
+//         case (bmi <= 25.0):
+//             return "Normal"
+
+//         case (bmi <= 30.0):
+//             return "Overweight"
+
+//         case (bmi > 30):
+//             return "Obese"
+//     }
+// }
+
+// const flip = (d, a) => (d == 'R') ? a.sort((a, b) => a - b) : a.sort((a, b) => b - a)
+
+// function firstNonConsecutive(arr) {
+//     const num = arr.find((el, i) => el != (i + arr[0]))  //rule of sequential numbers - any # must equal its position - 1 plus the 1st #
+//     return (typeof num != 'number') ? null : num
+// }
+
+// function firstNonConsecutive(arr) {
+//     const min = Math.min(...arr)
+//     const num = arr.find((el, i) => el != (arr[i - 1] + 1) && el != min)
+//     return (typeof num != 'number') ? null : num
+// }
+
+// const fixTheMeerkat = arr => arr.reverse()
+
+// const a = 'dev'
+// const b = 'Lab'
+// const c = 'd'
+// const d = 'e'
+// const e = 'v'
+// const f = 'L'
+// const g = 'a'
+// const h = 'b'
+// const name = 'devLab' || c + d + e + f + g + h
+
+// function pipeFix(numbers) {
+//     const arr = []
+//     const min = Math.min(...numbers)
+//     const max = Math.max(...numbers)
+//     for (let i = min; i <= max; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+
+// function stringy(size) {
+//     let s = ""
+//     for (let i = 1; i <= size; i++) {
+//         s += i % 2
+//     }
+//     return s
+// }
+
+// function stringy(size) {
+//     let s = ""
+//     for (let i = 0; i < size; i++) {
+//         (i % 2 === 0) ? s += '1' : s += '0'
+//     }
+//     return s
+// }
+
+// const gooseFilter = (birds) => {
+//     const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//     return birds.filter(e => geese.indexOf(e) == -1)
+// }
+
+// const multiply = (a, b) => a * b
+
+// const greet = (name, owner) => `Hello ${name === owner ? 'boss' : 'guest'}`
+
+// function preFizz(n) {
+//     let arr = []
+//     for (let i = 1; i <= n; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+
+// function rentalCarCost(d) {
+//     const cost = 40
+//     let num = 0
+
+//     if (d >= 3 && d < 7) num = 20
+//     else if (d >= 7) num = 50
+
+//     return (cost * d) - num
+// }
+
+// const grow = x => x.reduce((a, b) => a * b)
+
 // 2021.03.03
 // 8kyus today
 
