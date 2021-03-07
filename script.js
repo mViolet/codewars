@@ -1,5 +1,12 @@
 // 2021.03.06
 
+// const min = (list) => Math.min(...list)
+// const max = (list) => Math.max(...list)
+
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.reduce((a, b) => a + b, 0) + arr2.reduce((a, b) => a + b, 0)
+// }
+
 // function howMuchWater(water, load, clothes){
 //   if (clothes > load * 2) return 'Too much clothes'
 //   else if (clothes < load) return 'Not enough clothes'
