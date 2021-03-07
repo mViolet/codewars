@@ -1,3 +1,56 @@
+// 2021.03.06
+
+// function howMuchWater(water, load, clothes){
+//   if (clothes > load * 2) return 'Too much clothes'
+//   else if (clothes < load) return 'Not enough clothes'
+//   else return Number((water * 1.1 ** (clothes - load)).toFixed(2))
+// }
+
+// function sumStr(a,b) {
+//   return String(Number(a) + Number(b))
+// }
+
+// console.log(sumStr('2','3'))
+
+// let i = 0
+
+// function notepad(){
+//   // return (i++ + i--)
+//   return i++
+// }
+
+// console.log(notepad())
+// console.log(i)
+
+// function position(letter){
+//   return `Position of alphabet: ${letter.toLowerCase().charCodeAt(0) - 96}`
+// }
+
+// console.log(position('a'))
+
+// function getAge(inputString){
+//   return parseInt(inputString[0])
+// }
+
+// function arr(n) {
+//   let array = []
+//   for (let i = 0; i < n; i++){
+//     array.push(i)
+//   }
+//   return array
+// }
+
+// function lovefunc(a, b){
+//   return a % 2 !== b % 2
+// }
+
+// function lovefunc(a, b){
+//   if (a % 2 == 0) return b % 2 != 0 ? true : false
+//   if (a % 2 != 0) return b % 2 == 0 ? true : false
+// }
+
+// const cockroachSpeed = (s) => Math.floor((((s * 1000) * 100) / 60) / 60)
+
 // 2021.03.04
 
 // pretty happy with this one:
