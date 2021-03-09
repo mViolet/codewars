@@ -1,3 +1,26 @@
+// 2021.03.09
+
+//practice:  lookup 'Set' object
+
+function longest(s1, s2) {
+    let res = []
+    let arr = s1.concat(s2).split("").sort()
+
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] !== arr[i + 1]) res.push(arr[i])
+    }
+    return res.join("")
+}
+
+// function points(games) {
+//     let results = games.map(e => e.split(":"))
+//     return results.reduce((a,b) => {
+//         if (b[0] > b[1]) return a + 3
+//         else if (b[0] === b[1]) return a + 1
+//         else return a + 0
+//     },0)
+// }
+
 // 2021.03.06
 
 // const min = (list) => Math.min(...list)
