@@ -1,16 +1,51 @@
+// 2021.03.14
+// happy pi day!
+
+
+
+// function detect(comment) {
+//     return comment.startsWith("Can someone explain")
+// }
+
+// function findLongest(str) {
+//     const spl = str.split(" ")
+//     let longest = 0
+
+//     for (let i = 0; i < spl.length; i++) {
+//         if (spl[i].length > longest) {
+//             longest = spl[i].length
+//         }
+//     }
+//     return longest
+// }
+
+// function sumMix(x) {
+//     return x.map(a => +a).reduce((a, b) => a + b);
+// }
+
+// function sumMix(x) {
+//     return x.reduce((a,b) => a + Number(b), 0)
+// }
+
+// class Ball {
+//     constructor(ballType = 'regular'){
+//         this.ballType = ballType
+//     }
+// }
+
 // 2021.03.09
 
 //practice:  lookup 'Set' object
 
-function longest(s1, s2) {
-    let res = []
-    let arr = s1.concat(s2).split("").sort()
+// function longest(s1, s2) {
+//     let res = []
+//     let arr = s1.concat(s2).split("").sort()
 
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] !== arr[i + 1]) res.push(arr[i])
-    }
-    return res.join("")
-}
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] !== arr[i + 1]) res.push(arr[i])
+//     }
+//     return res.join("")
+// }
 
 // function points(games) {
 //     let results = games.map(e => e.split(":"))
