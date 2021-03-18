@@ -1,7 +1,20 @@
+// 2021.03.17
+
+// function makeAWindow(n) {
+//     let window = ""
+
+//     window = window
+//         .concat(`${'-'.repeat(n * 2 + 3)}\n`)
+//         .concat(`|${'.'.repeat(n)}|${'.'.repeat(n)}|\n`.repeat(n))
+//         .concat(`|${'-'.repeat(n)}+${'-'.repeat(n)}|\n`)
+//         .concat(`|${'.'.repeat(n)}|${'.'.repeat(n)}|\n`.repeat(n))
+//         .concat(`${'-'.repeat(n * 2 + 3)}`)
+
+//     return window
+// }
+
 // 2021.03.14
 // happy pi day!
-
-
 
 // function detect(comment) {
 //     return comment.startsWith("Can someone explain")
