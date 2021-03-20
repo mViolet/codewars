@@ -1,21 +1,78 @@
 // 2021.03.18
 
-var list1 = [
-    { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
-    { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
-    { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
-    { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
-]
+// function likes(names) {
+//     return names.length == 0 ? 'no one likes this' : (names.slice(0, names.length - 2) || "").concat(names.slice(-2).join(" and ")).join(", ") + ` like${names.length == 1 ? 's' : ""} this`
+// } //this one isn't the right format!
 
-function countLanguages(list) {
-    let result = {}
-
-    for (person in list){
-        !result[list[person].language] ? result[list[person].language] = 1 : result[list[person].language]++
-    }
-
-    return result
+// solution. works but maybe write as switch statement...
+function likes(names) {
+    if (names.length === 0) return 'no one likes this'
+    return (names.length >= 1 && names.length <= 3) ? (names.slice(0, names.length - 2) || "").concat(names.slice(-2).join(" and ")).join(", ") + ` like${names.length == 1 ? 's' : ""} this` :  `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
 }
+
+// reduce fractions 
+// function reduce(fr){
+//     let list = []
+//     let divisor
+
+//     fr.forEach((e, ind) => {
+//         list[ind] = []
+//         for (let i = 1; i <= e; i++) {
+//             if (e % i === 0) list[ind].push(i)
+//         }
+//     })
+
+//     list.sort().forEach(e => e.reverse()) //to make sure shortest list is first & reversed
+    
+//     for (let i = 0; i < list[0].length; i++){
+//         if (list[1].includes(list[0][i])){
+//             divisor = list[0][i]
+//             break
+//         }
+//     }
+
+//     return [fr[0]/divisor, fr[1]/divisor]
+// }
+
+// clever solution using bitwise operator, leaving the odd int out:
+// const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+
+// my solution:
+// function findOdd(arr) {
+//     let nums = {}
+//     arr.forEach(e => nums[e] = (nums[e] || 0) + 1)
+//     console.log(nums)
+//     for (el in nums){
+//         if (nums[el] % 2 !== 0) return Number(el)
+//     }
+// }
+
+// 2021.03.18
+
+// var list1 = [
+//     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
+//     { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
+//     { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
+//     { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
+// ]
+
+// top solution:
+// function countLanguages(list) {
+//     var count = {};
+//     list.forEach(x => count[x.language] = (count[x.language] || 0) + 1);
+//     return count;
+// }
+
+// my solution:
+// function countLanguages(list) {
+//     let result = {}
+
+//     for (person in list){
+//         !result[list[person].language] ? result[list[person].language] = 1 : result[list[person].language]++
+//     }
+
+//     return result
+// }
 
 // 2021.03.17
 
