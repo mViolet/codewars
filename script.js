@@ -1,10 +1,15 @@
 // 2021.03.19
 
-// solution. works but maybe write as switch statement...
-function likes(names) {
-    if (names.length === 0) return 'no one likes this'
-    return (names.length >= 1 && names.length <= 3) ? (names.slice(0, names.length - 2) || "").concat(names.slice(-2).join(" and ")).join(", ") + ` like${names.length == 1 ? 's' : ""} this` : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+function rgb(r, g, b) {
+    let arr = [r,g,b].map(e => (e < 0) ? e = 0 : ((e > 255) ? e = 255 : e))
+    return arr.map(e => e.toString(16)).map(e => (e.length < 2) ? '0' + e : e).join("").toUpperCase()
 }
+
+// solution. works but maybe write as switch statement...
+// function likes(names) {
+//     if (names.length === 0) return 'no one likes this'
+//     return (names.length >= 1 && names.length <= 3) ? (names.slice(0, names.length - 2) || "").concat(names.slice(-2).join(" and ")).join(", ") + ` like${names.length == 1 ? 's' : ""} this` : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+// }
 
 // 2021.03.18
 
