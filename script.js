@@ -1,9 +1,43 @@
+// 2021.03.21
+
+// function enough(cap, on, wait) {
+//     return (on + wait > cap) ? (on + wait) - cap : 0
+// }
+
+// function check(a, x) {
+//     return a.includes(x)
+// }
+
+// function DNAtoRNA(dna) {
+//     // create a function which returns an RNA sequence from the given DNA sequence
+//     // "GCAT"  => "GCAU"
+//     return dna.replace(/t/gi, "U")
+// }
+
+// function DNAtoRNA(dna) {
+//     // create a function which returns an RNA sequence from the given DNA sequence
+//     // "GCAT"  => "GCAU"
+//     return dna.split("").map(e => (e == "T" || e == "U") ? ((e == "T") ? "U" : "E") : e).join("")
+// }
+
+// function countPositivesSumNegatives(arr) {
+
+//     if (arr && arr.length >= 1) {
+//         let positiveCount = arr.filter(e => e > 0).length || 0
+//         let sumNegatives = arr.filter(e => e < 0).reduce((a, b) => a + b) || 0
+
+//         return [positiveCount, sumNegatives]
+//     }
+
+//     else return []
+// }
+
 // 2021.03.19
 
-function rgb(r, g, b) {
-    let arr = [r,g,b].map(e => (e < 0) ? e = 0 : ((e > 255) ? e = 255 : e))
-    return arr.map(e => e.toString(16)).map(e => (e.length < 2) ? '0' + e : e).join("").toUpperCase()
-}
+// function rgb(r, g, b) {
+//     let arr = [r,g,b].map(e => (e < 0) ? e = 0 : ((e > 255) ? e = 255 : e)) //clip numbers at 0 or 255
+//     return arr.map(e => e.toString(16)).map(e => (e.length < 2) ? '0' + e : e).join("").toUpperCase()
+// }
 
 // solution. works but maybe write as switch statement...
 // function likes(names) {
