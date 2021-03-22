@@ -1,3 +1,85 @@
+// 2021 03.22
+// 7 kyus today
+
+function printerError(s) {
+    return `${s.match(/[n-z]/gi).length || 0}/${s.length || 0}`
+}
+
+// function addBinary(a, b) {
+//     return (a + b).toString(2)
+// }
+
+// so it turns out that Math.pow(n, 3) works for this one!
+
+// function rowSumOddNumbers(n) {
+//     // the row (n) is also equal to the length of row
+//     //number at end of row = (n * n) + (n - 1)
+
+//     if (!n) return 0
+//     else {
+//         let sum = 0
+//         let endNum = (n * n) + (n - 1)
+//         for (let i = 0; i < n; i++){
+//             sum += endNum
+//             endNum -= 2 // decrease to next odd int
+//         }
+//         return sum
+//     }
+// }
+
+// BUT the square root of a perfect square + 1, and then squared will find the next perfect square!!
+
+// function findNextSquare(sq) {
+//     let sqrt = Math.sqrt(sq)
+//     return (Number.isInteger(sqrt)) ? (Math.sqrt(sqrt) + 1) ** 2 : -1
+// }
+
+// function findNextSquare(sq) {
+//     // Return the next square if sq is a perfect square, -1 otherwise
+//     if (Number.isInteger(Math.sqrt(sq))) {
+//         while (!(Number.isInteger(Math.sqrt(sq + 1)))){
+//             sq++
+//         }
+//         return sq + 1
+//     }
+//     else return -1
+// }
+
+//perfect square has a sqrt that is a whole int
+
+// function findNextSquare(sq) {
+//     // Return the next square if sq is a perfect square, -1 otherwise
+//     if (Number.isInteger(Math.sqrt(sq))) {
+//         while (!(Number.isInteger(Math.sqrt(sq + 1)))){
+//             sq++
+//         }
+//         return sq + 1
+//     }
+//     else return -1
+// }
+
+
+// function nbYear(p0, percent, aug, p) {
+//     let years = 0
+//     while (p0 < p) {
+//         p0 = p0 + p0 * (percent / 100) + aug
+//         years++
+//     }
+//     return years
+// }
+
+// function getSum(a, b) {
+//     let min = Math.min(a,b)
+//     let max = Math.max(a,b)
+
+//     if (min == max) return max
+//     else return max + getSum(min, max - 1)
+// }
+
+// String.prototype.toJadenCase = function () {
+//   return this.split(" ").map(e => e[0].toUpperCase() + e.slice(1)).join(" ")
+// }
+
 // 2021.03.21
 
 // function enough(cap, on, wait) {
