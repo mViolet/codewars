@@ -2,7 +2,8 @@
 // 7 kyus today
 
 function printerError(s) {
-    return `${s.match(/[n-z]/gi).length || 0}/${s.length || 0}`
+    let errs = s.match(/[n-z]/gi)
+    return `${errs ? errs.length : 0}/${s.length}`
 }
 
 // function addBinary(a, b) {
