@@ -1,10 +1,16 @@
+// 2021 03.23
+
+// function betterThanAverage(classPoints, yourPoints) {
+//     return (yourPoints > (classPoints.reduce((a,b) => a+b) / classPoints.length)) ? true : false
+// }
+
 // 2021 03.22
 // 7 kyus today
 
-function printerError(s) {
-    let errs = s.match(/[n-z]/gi)
-    return `${errs ? errs.length : 0}/${s.length}`
-}
+// function printerError(s) {
+//     let errs = s.match(/[n-z]/gi)
+//     return `${errs ? errs.length : 0}/${s.length}`
+// }
 
 // function addBinary(a, b) {
 //     return (a + b).toString(2)
