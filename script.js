@@ -1,3 +1,14 @@
+// 2021 03.24
+
+// function countBy(x, n) {
+//     let arr = []
+
+//     for (i = 1; i <= n; i++) {
+//         arr.push(x * i)
+//     }
+//     return arr
+// }
+
 // 2021 03.23
 
 // function betterThanAverage(classPoints, yourPoints) {
