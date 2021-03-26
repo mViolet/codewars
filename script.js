@@ -1,6 +1,8 @@
 // 2021 03.25
 
-const smash = words => words.join(" ")
+const twoSort = s => s.sort().shift().split("").join("***")
+
+// const smash = words => words.join(" ")
 
 // 2021 03.24
 
