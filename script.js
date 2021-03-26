@@ -1,3 +1,7 @@
+// 2021 03.25
+
+const smash = words => words.join(" ")
+
 // 2021 03.24
 
 // function countBy(x, n) {
