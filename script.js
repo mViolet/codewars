@@ -1,27 +1,37 @@
+// 2021 03.28
+
+function getDivisorsCnt(n) {
+    let nums = []
+    for (let i = 1; i <= n; i++){
+        if (n % i === 0) nums.push(i)
+    }
+    return nums.length
+}
+
 // 2021 03.27
 
-function tapCodeTranslation(text) {
-    const square = [
-        ["a", "b", "c", "d", "e"],
-        ["f", "g", "h", "i", "j"],
-        ["l", "m", "n", "o", "p"],
-        ["q", "r", "s", "t", "u"],
-        ["v", "w", "x", "y", "z"]
-    ]
-    let arr = []
+// function tapCodeTranslation(text) {
+//     const square = [
+//         ["a", "b", "c", "d", "e"],
+//         ["f", "g", "h", "i", "j"],
+//         ["l", "m", "n", "o", "p"],
+//         ["q", "r", "s", "t", "u"],
+//         ["v", "w", "x", "y", "z"]
+//     ]
+//     let arr = []
 
-    // replace all ks with cs in whole string
-    let string = text.replace(/k/gi, 'c')
-    string.split("").map((e, i) => {
-        const row = square.findIndex(el => el.includes(e)) //find the row in square
-        const col = square[row].findIndex(el => el.includes(e)) //find col
-        console.log(row + 1)
+//     // replace all ks with cs in whole string
+//     let string = text.replace(/k/gi, 'c')
+//     string.split("").map((e, i) => {
+//         const row = square.findIndex(el => el.includes(e)) //find the row in square
+//         const col = square[row].findIndex(el => el.includes(e)) //find col
+//         console.log(row + 1)
 
-        arr.push(`${'.'.repeat(row + 1)} ${'.'.repeat(col + 1)}`)
-    })
+//         arr.push(`${'.'.repeat(row + 1)} ${'.'.repeat(col + 1)}`)
+//     })
 
-    return arr.join(" ")
-}
+//     return arr.join(" ")
+// }
 
 // 2021 03.25
 
