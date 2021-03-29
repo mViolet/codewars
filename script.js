@@ -1,12 +1,16 @@
+// 2021 03.29
+
+const removeExclamationMarks = s => s.replace(/!/g, "")
+
 // 2021 03.28
 
-function getDivisorsCnt(n) {
-    let nums = []
-    for (let i = 1; i <= n; i++){
-        if (n % i === 0) nums.push(i)
-    }
-    return nums.length
-}
+// function getDivisorsCnt(n) {
+//     let nums = []
+//     for (let i = 1; i <= n; i++){
+//         if (n % i === 0) nums.push(i)
+//     }
+//     return nums.length
+// }
 
 // 2021 03.27
 
