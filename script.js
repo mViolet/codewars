@@ -1,8 +1,10 @@
 // 2021 03.29
 
-const removeExclamationMarks = s => s.replace(/!/g, "")
+const splitSentence = s => s.split(" ")
 
 // 2021 03.28
+
+// const removeExclamationMarks = s => s.replace(/!/g, "")
 
 // function getDivisorsCnt(n) {
 //     let nums = []
