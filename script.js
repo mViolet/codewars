@@ -1,6 +1,47 @@
+// 2021 03.30 
+
+function toLeetSpeak(str){
+    let leet = {
+        A : '@',
+        B : '8',
+        C : '(',
+        D : 'D',
+        E : '3',
+        F : 'F',
+        G : '6',
+        H : '#',
+        I : '!',
+        J : 'J',
+        K : 'K',
+        L : '1',
+        M : 'M',
+        N : 'N',
+        O : '0',
+        P : 'P',
+        Q : 'Q',
+        R : 'R',
+        S : '$',
+        T : '7',
+        U : 'U',
+        V : 'V',
+        W : 'W',
+        X : 'X',
+        Y : 'Y',
+        Z : '2'
+    }
+
+    const words = str.split(" ").map(el => el.split(""))
+    for (let i = 0; i < words.length; i++){
+        for (let j = 0; j < words[i].length; j++) {
+            words[i][j] = leet[words[i][j]]
+        }
+    }
+    return words.map(arr => arr.join("")).join(" ")
+}
+
 // 2021 03.29
 
-const splitSentence = s => s.split(" ")
+// const splitSentence = s => s.split(" ")
 
 // 2021 03.28
 
