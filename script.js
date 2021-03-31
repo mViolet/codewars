@@ -1,43 +1,53 @@
+// 2021 03.31
+
+const binaryArrayToNumber = arr => parseInt(arr.join(""), 2)
+
+// function openOrSenior(data) {
+//     return data.map(el => {
+//         return (el[0] >= 55 && el[1] > 7) ? 'Senior' : 'Open'
+//     })
+// }
+
 // 2021 03.30 
 
-function toLeetSpeak(str){
-    let leet = {
-        A : '@',
-        B : '8',
-        C : '(',
-        D : 'D',
-        E : '3',
-        F : 'F',
-        G : '6',
-        H : '#',
-        I : '!',
-        J : 'J',
-        K : 'K',
-        L : '1',
-        M : 'M',
-        N : 'N',
-        O : '0',
-        P : 'P',
-        Q : 'Q',
-        R : 'R',
-        S : '$',
-        T : '7',
-        U : 'U',
-        V : 'V',
-        W : 'W',
-        X : 'X',
-        Y : 'Y',
-        Z : '2'
-    }
+// function toLeetSpeak(str){
+//     let leet = {
+//         A : '@',
+//         B : '8',
+//         C : '(',
+//         D : 'D',
+//         E : '3',
+//         F : 'F',
+//         G : '6',
+//         H : '#',
+//         I : '!',
+//         J : 'J',
+//         K : 'K',
+//         L : '1',
+//         M : 'M',
+//         N : 'N',
+//         O : '0',
+//         P : 'P',
+//         Q : 'Q',
+//         R : 'R',
+//         S : '$',
+//         T : '7',
+//         U : 'U',
+//         V : 'V',
+//         W : 'W',
+//         X : 'X',
+//         Y : 'Y',
+//         Z : '2'
+//     }
 
-    const words = str.split(" ").map(el => el.split(""))
-    for (let i = 0; i < words.length; i++){
-        for (let j = 0; j < words[i].length; j++) {
-            words[i][j] = leet[words[i][j]]
-        }
-    }
-    return words.map(arr => arr.join("")).join(" ")
-}
+//     const words = str.split(" ").map(el => el.split(""))
+//     for (let i = 0; i < words.length; i++){
+//         for (let j = 0; j < words[i].length; j++) {
+//             words[i][j] = leet[words[i][j]]
+//         }
+//     }
+//     return words.map(arr => arr.join("")).join(" ")
+// }
 
 // 2021 03.29
 
