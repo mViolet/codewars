@@ -1,5 +1,31 @@
 // 2021 03.31
 
+var countSheep = function (num) {
+    let str = ""
+    for (let i = 1; i <= num; i++) {
+        str = str.concat(`${i} sheep...`)
+    }
+    return str
+}
+
+// const rps = (p1, p2) => {
+//     const wins = {
+//         scissors: 'paper',
+//         paper: 'rock',
+//         rock: 'scissors'
+//     }
+
+//     if (p1 && p2) {
+//         return (wins[p1] == p2) ? 'Player 1 wins' : ((p1 !== p2) ? 'Player 2 wins' : 'draw')
+//     } else {
+//         return 'Please try again'
+//     }
+// }
+
+// function sumArray(array) {
+//     return (!array || array.length < 3) ? 0 : array.sort((a, b) => a - b).slice(1, array.length - 1).reduce((a, b) => a + b)
+// }
+
 // gonna take a break and then do some 8's
 
 // function splitAndMerge(string, separator) {
