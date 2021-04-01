@@ -1,6 +1,50 @@
 // 2021 03.31
 
-const binaryArrayToNumber = arr => parseInt(arr.join(""), 2)
+// gonna take a break and then do some 8's
+
+// function splitAndMerge(string, separator) {
+//     return string.split(" ").map(word => word.split("").join(separator)).join(" ")
+// }
+
+// function bonusTime(salary, bonus) {
+//     return bonus ? `\u00A3${salary * 10}` : `\u00A3${salary}`
+// }
+
+// function calc(str) {
+//     let total1 = str.replace(/[A-Z]/gi, letter => letter.codePointAt())
+//     let total2 = total1.replace(/7/g, '1')
+
+//     // console.log(total1 + " : " + total2)
+//     return total1.split("").reduce((a, b) => +a + +b) - total2.split("").reduce((a, b) => +a + +b)
+// }
+
+// const repeater = (string, n) => string.repeat(n)
+
+// const mouthSize = animal => (animal.toLowerCase() == 'alligator') ? 'small' : 'wide'
+
+// function removeSmallest(numbers) {
+//     let minIndex = numbers.indexOf(Math.min(...numbers))
+//     return numbers.filter((n, i) => i !== minIndex)
+//     // console.log(minIndex)
+//     // numbers.forEach((n, i) => console.log(i + ":" + minIndex))
+// }
+    // return numbers.filter(n => n !== min)
+
+// function reverseWords(str) {
+//     return str.replace(/\S+/g, word => word.split("").reverse().join("") )
+// }
+
+// function divisors(integer) {
+//     //return divisors excl 1 and that int
+//     //if arr is empty, return "int is prime"
+//     let result = []
+//     for (let i = 2; i < integer; i++) {
+//         if (integer % i === 0) result.push(i)
+//     }
+//     return result.length < 1 ? `${integer} is prime` : result
+// }
+
+// const binaryArrayToNumber = arr => parseInt(arr.join(""), 2)
 
 // function openOrSenior(data) {
 //     return data.map(el => {
