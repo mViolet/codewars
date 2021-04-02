@@ -1,12 +1,18 @@
+// 2021 04.01
+
+function breakChocolate(n, m) {
+    // return 0;
+}
+
 // 2021 03.31
 
-var countSheep = function (num) {
-    let str = ""
-    for (let i = 1; i <= num; i++) {
-        str = str.concat(`${i} sheep...`)
-    }
-    return str
-}
+// var countSheep = function (num) {
+//     let str = ""
+//     for (let i = 1; i <= num; i++) {
+//         str = str.concat(`${i} sheep...`)
+//     }
+//     return str
+// }
 
 // const rps = (p1, p2) => {
 //     const wins = {
