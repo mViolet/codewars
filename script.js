@@ -1,7 +1,22 @@
 // 2021 04.01
 
 function breakChocolate(n, m) {
-    // return 0;
+    //the logic is find the count from n to 1, and then find the count from m to 1 n times, and add together
+    if (n > 0 && m > 0){ //because one dimension of 0 is impossible!
+        let n1 = 0
+        let n2 = 0
+        for (let i = n; i > 1; i--){
+            n1++
+        }
+        for (let i = 0; i < n; i++){
+            for (let j = m; j > 1; j--){
+                n2++
+            }
+        }
+        return n1 + n2
+    } else {
+        return 0
+    }
 }
 
 // 2021 03.31
