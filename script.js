@@ -1,23 +1,41 @@
-// 2021 04.01
+// 2021 04.02
 
-function breakChocolate(n, m) {
-    //the logic is find the count from n to 1, and then find the count from m to 1 n times, and add together
-    if (n > 0 && m > 0){ //because one dimension of 0 is impossible!
-        let n1 = 0
-        let n2 = 0
-        for (let i = n; i > 1; i--){
-            n1++
+function stray(numbers) {
+    if (numbers[0] !== numbers[1] && numbers[1] == numbers[2]) return numbers[0]
+    else if (numbers[1] != numbers[2] && numbers[2] == numbers[0]) return numbers[1]
+    else if (numbers[2] != numbers[0] && numbers[0] == numbers[1]) return numbers[2]
+    else {
+        for (i = 3; i < numbers.length; i++) {
+            if (numbers[i] != numbers[0]) return numbers[i]
         }
-        for (let i = 0; i < n; i++){
-            for (let j = m; j > 1; j--){
-                n2++
-            }
-        }
-        return n1 + n2
-    } else {
-        return 0
     }
 }
+
+// 2021 04.01
+
+//much more simple:
+// function breakChocolate(n, m){
+//     return (n > 0 && m > 0) ? n * m - 1 : 0
+// }
+
+// function breakChocolate(n, m) {
+//     //the logic here is find the count from n to 1, and then find the count from m to 1 n times, and add together
+//     if (n > 0 && m > 0){ //because one dimension of 0 is impossible!
+//         let n1 = 0
+//         let n2 = 0
+//         for (let i = n; i > 1; i--){
+//             n1++
+//         }
+//         for (let i = 0; i < n; i++){
+//             for (let j = m; j > 1; j--){
+//                 n2++
+//             }
+//         }
+//         return n1 + n2
+//     } else {
+//         return 0
+//     }
+// }
 
 // 2021 03.31
 
