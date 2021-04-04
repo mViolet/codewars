@@ -1,15 +1,19 @@
+// 2021 04.03
+
+
+
 // 2021 04.02
 
-function stray(numbers) {
-    if (numbers[0] !== numbers[1] && numbers[1] == numbers[2]) return numbers[0]
-    else if (numbers[1] != numbers[2] && numbers[2] == numbers[0]) return numbers[1]
-    else if (numbers[2] != numbers[0] && numbers[0] == numbers[1]) return numbers[2]
-    else {
-        for (i = 3; i < numbers.length; i++) {
-            if (numbers[i] != numbers[0]) return numbers[i]
-        }
-    }
-}
+// function stray(numbers) {
+//     if (numbers[0] !== numbers[1] && numbers[1] == numbers[2]) return numbers[0]
+//     else if (numbers[1] != numbers[2] && numbers[2] == numbers[0]) return numbers[1]
+//     else if (numbers[2] != numbers[0] && numbers[0] == numbers[1]) return numbers[2]
+//     else {
+//         for (i = 3; i < numbers.length; i++) {
+//             if (numbers[i] != numbers[0]) return numbers[i]
+//         }
+//     }
+// }
 
 // 2021 04.01
 
