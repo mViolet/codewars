@@ -1,6 +1,16 @@
+// 2021 04.04
+
+function swapValues(args) {
+    let temp = args[0]
+    args[0] = args[1]
+    args[1] = temp
+}
+
 // 2021 04.03
 
-
+// function mango(quantity, price) {
+//     return (quantity - Math.floor(quantity / 3)) * price
+// }
 
 // 2021 04.02
 
