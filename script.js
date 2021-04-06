@@ -1,6 +1,13 @@
 // 2021 04.05
 
+function multiplyAll(arr) {
+    return n => arr.map(num => num * n)
+}
 
+// function multiplyAll(arr) {
+//     const multiplier = n => arr.map(num => num * n)
+//     return multiplier
+// }
 
 // 2021 04.04
 
