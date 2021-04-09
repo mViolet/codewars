@@ -1,6 +1,17 @@
+// 2021 04.09
+
+function updateLight(current) {
+ let lights = {green: 'yellow', yellow: 'red', red: 'green'}
+ return lights[current]
+}
+
 // 2021 04.06
 
+//bunch of 8s
 
+// var TempleStrings = function (obj, feature) {
+//     return `${obj} are ${feature}`
+// }
 
 //number validation
 // function isDigit(s) {
