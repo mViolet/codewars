@@ -1,9 +1,13 @@
+// 2021 04.10
+
+const apple = x => +x ** 2 > 1000 ? 'It\'s hotter than the sun!' : 'Help yourself to a honeycomb Yorkie for the glovebox.'
+
 // 2021 04.09
 
-function updateLight(current) {
- let lights = {green: 'yellow', yellow: 'red', red: 'green'}
- return lights[current]
-}
+// function updateLight(current) {
+//  let lights = {green: 'yellow', yellow: 'red', red: 'green'}
+//  return lights[current]
+// }
 
 // 2021 04.06
 
