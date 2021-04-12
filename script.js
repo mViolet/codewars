@@ -1,9 +1,16 @@
 // 2021 04.11
 
+function part(x) {
+    let alanTerms = ["Partridge", "PearTree", "Chat", "Dan", "Toblerone", "Lynn", "AlphaPapa", "Nomad"]
+    let count = 0
+    x.forEach(x => count += Number( alanTerms.includes(x)) )
+    return count > 0 ? `Mines a pint${'!'.repeat(count)}` : 'Lynn, I\'ve pierced my foot on a spike!!'
+}
+
 //there is a Math.hypot function!! but we aren't using that here
 
-const hypotenuse = (a, b) => Math.sqrt(a ** 2 + b ** 2)
-const leg = (c, a) => Math.sqrt(c ** 2 - a ** 2)
+// const hypotenuse = (a, b) => Math.sqrt(a ** 2 + b ** 2)
+// const leg = (c, a) => Math.sqrt(c ** 2 - a ** 2)
 
 // // or we could do
 // let hours = Math.floor(seconds / 3600)
