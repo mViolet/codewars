@@ -1,6 +1,19 @@
 // 2021 04.11
 
+//there is a Math.hypot function!! but we aren't using that here
 
+const hypotenuse = (a, b) => Math.sqrt(a ** 2 + b ** 2)
+const leg = (c, a) => Math.sqrt(c ** 2 - a ** 2)
+
+// // or we could do
+// let hours = Math.floor(seconds / 3600)
+// let minutes = Math.floor(seconds % 3600 / 60)
+
+// function toTime(seconds) {
+//     let hours = Math.trunc(seconds / 3600)
+//     let minutes = Math.trunc(seconds / 60 - hours * 60)
+//     return (`${hours} hour(s) and ${minutes} minute(s)`)
+// }
 
 // 2021 04.10
 
