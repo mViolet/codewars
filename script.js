@@ -1,6 +1,10 @@
+// 2021 04.11
+
+
+
 // 2021 04.10
 
-const apple = x => +x ** 2 > 1000 ? 'It\'s hotter than the sun!' : 'Help yourself to a honeycomb Yorkie for the glovebox.'
+// const apple = x => x ** 2 > 1000 ? 'It\'s hotter than the sun!' : 'Help yourself to a honeycomb Yorkie for the glovebox.'
 
 // 2021 04.09
 
