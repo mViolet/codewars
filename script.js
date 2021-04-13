@@ -1,6 +1,25 @@
 // 2021 04.13
 
-const hoopCount = n => n > 9 ? 'Great, now move on to tricks' : 'Keep at it until you get it'
+let friends = [{ id: 92837, name: 'bob', extra: 'yee' }, { id: 92823, name: 'lisa' }, { id: 9287, name: 'nun'}]
+
+function combineFriends(arr){
+    let newFriends = {}
+    arr.forEach((friend, i) => {
+        if (!newFriends[friend.id]) { newFriends[friend.id] = arr[i]}
+        delete newFriends[friend.id].id
+    })
+    return newFriends
+}
+
+// function powersOfTwo(n) {
+//     const powers = []
+//     for (let i = 0; i <= n; i++){
+//         powers.push(2 ** i)
+//     }
+//     return powers
+// }
+
+// const hoopCount = n => n > 9 ? 'Great, now move on to tricks' : 'Keep at it until you get it'
 
 // const howManySmaller = (arr, n) => arr.filter(num => num.toFixed(2) < n).length
 
