@@ -1,15 +1,48 @@
 // 2021 04.13
 
-let friends = [{ id: 92837, name: 'bob', extra: 'yee' }, { id: 92823, name: 'lisa' }, { id: 9287, name: 'nun'}]
+// knock out some 8's / 7's
 
-function combineFriends(arr){
-    let newFriends = {}
-    arr.forEach((friend, i) => {
-        if (!newFriends[friend.id]) { newFriends[friend.id] = arr[i]}
-        delete newFriends[friend.id].id
-    })
-    return newFriends
+function yourFutureCareer() {
+    const career = Math.random()
+    if (career <= 0.32) return 'FrontEnd Developer'
+    else if (career <= 0.65) return 'BackEnd Developer'
+    else return 'Full-Stack Developer'
 }
+
+// function gps(s, x) {             // come back to this
+//     let ranges = []
+//     if (x.length <= 1) 0
+//     else  {
+//         for (let i = 0; i < s.length - 2; i++){
+//             ranges.push(s[i+1] - s[i])
+//         }
+//     }
+//     return Math.floor(Math.max(...ranges.map(n => (n * 3600) / x)))
+// }
+
+// function addArrays(array1, array2) {  // ( ◉◞౪◟◉)
+//     return (array1.length != array2.length) ? hello : array1.map((n, i) => n + array2[i])
+// }
+
+// function filterLongWords(sentence, n) {
+//     return sentence.split(" ").filter(word => word.length > n)
+// }
+
+// function converter(mpg) {
+//     // 1 Imperial Gallon = 4.54609188 litres 1 Mile = 1.609344 kilometres
+//     return +(mpg * 1.609344 / 4.54609188).toFixed(2)
+// }
+
+// let friends = [{ id: 92837, name: 'bob', extra: 'yee' }, { id: 92823, name: 'lisa' }, { id: 9287, name: 'nun'}]
+
+// function combineFriends(arr){
+//     let newFriends = {}
+//     arr.forEach((friend, i) => {
+//         if (!newFriends[friend.id]) { newFriends[friend.id] = arr[i]}
+//         delete newFriends[friend.id].id
+//     })
+//     return newFriends
+// }
 
 // function powersOfTwo(n) {
 //     const powers = []
