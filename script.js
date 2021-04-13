@@ -1,11 +1,23 @@
-// 2021 04.11
+// 2021 04.13
 
-function part(x) {
-    let alanTerms = ["Partridge", "PearTree", "Chat", "Dan", "Toblerone", "Lynn", "AlphaPapa", "Nomad"]
-    let count = 0
-    x.forEach(x => count += Number( alanTerms.includes(x)) )
-    return count > 0 ? `Mines a pint${'!'.repeat(count)}` : 'Lynn, I\'ve pierced my foot on a spike!!'
+function howManySmaller(arr, n) {
+    return arr.filter(num => num.toFixed(2) < n).length
 }
+
+// function howManySmaller(arr, n) {
+//     return arr.map(num => num.toFixed(2)).filter(num => num < n).length
+// }
+
+// 2021 04.12
+
+// function part(x) {
+//     let alanTerms = ["Partridge", "PearTree", "Chat", "Dan", "Toblerone", "Lynn", "AlphaPapa", "Nomad"]
+//     let count = 0
+//     x.forEach(x => count += Number( alanTerms.includes(x)) )
+//     return count > 0 ? `Mines a pint${'!'.repeat(count)}` : 'Lynn, I\'ve pierced my foot on a spike!!'
+// }
+
+// 2021 04.11
 
 //there is a Math.hypot function!! but we aren't using that here
 
