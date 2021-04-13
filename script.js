@@ -1,8 +1,12 @@
 // 2021 04.13
 
-function howManySmaller(arr, n) {
-    return arr.filter(num => num.toFixed(2) < n).length
-}
+const hoopCount = n => n > 9 ? 'Great, now move on to tricks' : 'Keep at it until you get it'
+
+// const howManySmaller = (arr, n) => arr.filter(num => num.toFixed(2) < n).length
+
+// function howManySmaller(arr, n) {
+//     return arr.filter(num => num.toFixed(2) < n).length
+// }
 
 // function howManySmaller(arr, n) {
 //     return arr.map(num => num.toFixed(2)).filter(num => num < n).length
