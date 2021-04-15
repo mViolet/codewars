@@ -2,6 +2,12 @@
 
 
 
+// function periodIsLate(last, today, cycleLength) {
+//     msPassed = today.getTime() - last.getTime()
+//     msInDay = 8.64e+7
+//     return (msPassed / msInDay > cycleLength) ? true : false
+// }
+
 // const remove = s => s.replace(/!$/, '')
 
 // const include = (arr, item) => arr.includes(item)
