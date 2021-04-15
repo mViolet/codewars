@@ -1,13 +1,34 @@
+// 2021 04.14
+
+
+
+const include = (arr, item) => arr.includes(item)
+
+function correctTail(body, tail) {
+    const sub = body.substr(body.length - tail.length)
+    return (sub == tail) ? true : false
+}
+
+const nameShuffler = str => str.split(" ").reverse().join(" ")
+
+const shortcut = string => string.replace(/[aeiou]/gi, "")
+
+const solution = (a, b) => (a.length < b.length) ? a+b+a : b+a+b
+
+function greaterThanLessThan(a, b, c) {
+    return a < b < c
+}
+
 // 2021 04.13
 
 // knock out some 8's / 7's
 
-function yourFutureCareer() {
-    const career = Math.random()
-    if (career <= 0.32) return 'FrontEnd Developer'
-    else if (career <= 0.65) return 'BackEnd Developer'
-    else return 'Full-Stack Developer'
-}
+// function yourFutureCareer() {
+//     const career = Math.random()
+//     if (career <= 0.32) return 'FrontEnd Developer'
+//     else if (career <= 0.65) return 'BackEnd Developer'
+//     else return 'Full-Stack Developer'
+// }
 
 // function gps(s, x) {             // come back to this
 //     let ranges = []
