@@ -2,6 +2,8 @@
 
 
 
+// const remove = s => s.replace(/!$/, '')
+
 // const include = (arr, item) => arr.includes(item)
 
 // function correctTail(body, tail) {
