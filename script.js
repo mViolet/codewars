@@ -2,22 +2,22 @@
 
 
 
-const include = (arr, item) => arr.includes(item)
+// const include = (arr, item) => arr.includes(item)
 
-function correctTail(body, tail) {
-    const sub = body.substr(body.length - tail.length)
-    return (sub == tail) ? true : false
-}
+// function correctTail(body, tail) {
+//     const sub = body.substr(body.length - tail.length)
+//     return (sub == tail) ? true : false
+// }
 
-const nameShuffler = str => str.split(" ").reverse().join(" ")
+// const nameShuffler = str => str.split(" ").reverse().join(" ")
 
-const shortcut = string => string.replace(/[aeiou]/gi, "")
+// const shortcut = string => string.replace(/[aeiou]/gi, "")
 
-const solution = (a, b) => (a.length < b.length) ? a+b+a : b+a+b
+// const solution = (a, b) => (a.length < b.length) ? a+b+a : b+a+b
 
-function greaterThanLessThan(a, b, c) {
-    return a < b < c
-}
+// function greaterThanLessThan(a, b, c) {
+//     return a < b < c
+// }
 
 // 2021 04.13
 
