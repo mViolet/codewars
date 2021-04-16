@@ -1,12 +1,67 @@
 // 2021 04.16
 
-function nbDig(n, d) {
-    let arr = []
-    for (let i = 0; i <= n; i++) {
-        arr.push(i ** 2)
+// #6
+// Using an object:
+function howManydays(month) {
+    const daysInMonths = {
+        31: [1, 3, 5, 7, 8, 10, 12],
+        30: [4, 6, 9, 11],
+        28: [2]
     }
-    return arr.join("").split("").filter(num => num == d).length
+
+    for (m in daysInMonths) {
+        if (daysInMonths[m].includes(month)) return Number(m)
+    }
 }
+
+// using a switch statement:
+function howManydays(month) {
+    var days;
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            days = 31
+            break
+        case 4: case 6: case 9: case 11:
+            days = 30
+            break
+        case 2:
+            days = 28
+            break
+        default:
+            return 'That is not a valid month!'
+    }
+    return days;
+}
+
+
+// #7
+// function saleHotdogs(n) {
+//     if (n < 5) return n * 100
+//     else if (n >= 10) return n * 90
+//     else return n * 95
+// }
+
+// #6
+// const trueOrFalse = val => val ? "true" : "false" //test requires return type string
+
+// #1
+// function helloWorld() {
+//     var str = 'Hello World!'  // test requires var!
+//     console.log(str)
+// }
+
+// Finally deciding to complete this series of 8s. All the ones I haven't finished yet will be above. I won't post the fill-in-the-blank style ones
+// TRAINING JS SERIES by myjinxin2015
+
+// for this one, someone used string.split('d').length-1 to count the length! very cool
+
+// function nbDig(n, d) {
+//     let arr = []
+//     for (let i = 0; i <= n; i++) {
+//         arr.push(i ** 2)
+//     }
+//     return arr.join("").split("").filter(num => num == d).length
+// }
 
 // 2021 04.15
 
