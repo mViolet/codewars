@@ -1,8 +1,22 @@
+// 2021 04.16
+
+function nbDig(n, d) {
+    let arr = []
+    for (let i = 0; i <= n; i++) {
+        arr.push(i ** 2)
+    }
+    return arr.join("").split("").filter(num => num == d).length
+}
+
 // 2021 04.15
 
-function twiceAsOld(dadAge, sonAge) {
-    return Math.abs(dadAge - sonAge * 2)
-}
+// function solution(value) {
+//     return "Value is " + `${value}`.padStart(5, '0')
+// }
+
+// function twiceAsOld(dadAge, sonAge) {
+//     return Math.abs(dadAge - sonAge * 2)
+// }
 
 // 2021 04.14
 
