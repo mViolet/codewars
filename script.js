@@ -1,6 +1,6 @@
 // 2021 04.16
 
-// #6
+// #8
 // Using an object:
 function howManydays(month) {
     const daysInMonths = {
@@ -34,17 +34,17 @@ function howManydays(month) {
 }
 
 
-// #7
+// // #7
 // function saleHotdogs(n) {
 //     if (n < 5) return n * 100
 //     else if (n >= 10) return n * 90
 //     else return n * 95
 // }
 
-// #6
+// // #6
 // const trueOrFalse = val => val ? "true" : "false" //test requires return type string
 
-// #1
+// // #1
 // function helloWorld() {
 //     var str = 'Hello World!'  // test requires var!
 //     console.log(str)
