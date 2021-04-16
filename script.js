@@ -1,6 +1,21 @@
+// 2021 04.15
+
+function twiceAsOld(dadAge, sonAge) {
+    return Math.abs(dadAge - sonAge * 2)
+}
+
 // 2021 04.14
 
+// function squareArea(a) {
+//     const r = (a * 4 / Math.PI) / 2
+//     const area = r ** 2
+//     return +area.toFixed(2)
+// }
 
+// a*4 = circumference
+// 2pi * r = circumf
+// (circumf/pi)/2 = radius
+// radius^2 = area
 
 // function periodIsLate(last, today, cycleLength) {
 //     msPassed = today.getTime() - last.getTime()
