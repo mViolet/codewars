@@ -1,37 +1,89 @@
-// 2021 04.16
+// 2021 04.17
 
-// #8
-// Using an object:
-function howManydays(month) {
-    const daysInMonths = {
-        31: [1, 3, 5, 7, 8, 10, 12],
-        30: [4, 6, 9, 11],
-        28: [2]
-    }
 
-    for (m in daysInMonths) {
-        if (daysInMonths[m].includes(month)) return Number(m)
-    }
-}
 
-// using a switch statement:
-function howManydays(month) {
-    var days;
-    switch (month) {
-        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-            days = 31
-            break
-        case 4: case 6: case 9: case 11:
-            days = 30
-            break
-        case 2:
-            days = 28
-            break
-        default:
-            return 'That is not a valid month!'
-    }
-    return days;
-}
+// // #27 - filter
+
+// function countGrade(scores) {
+//     const finalScores = {
+//         S: scores.filter(el => el == 100).length,
+//         A: scores.filter(el => el < 100 && el >= 90).length,
+//         B: scores.filter(el => el < 90 && el >= 80).length,
+//         C: scores.filter(el => el < 80 && el >= 60).length,
+//         D: scores.filter(el => el < 60 && el >= 0).length,
+//         X: scores.filter(el => el < 0).length
+//     }
+//     return finalScores
+// }
+
+// function countGrade(scores) {
+//     const finalScores = { S: 0, A: 0, B: 0, C: 0, D: 0, X: 0 }
+
+//     for (let i in scores) {
+//         if (scores[i] == 100) finalScores.S++
+//         else if (scores[i] < 100 && scores[i] >= 90) finalScores.A++
+//         else if (scores[i] < 90 && scores[i] >= 80) finalScores.B++
+//         else if (scores[i] < 80 && scores[i] >= 60) finalScores.C++
+//         else if (scores[i] < 60 && scores[i] >= 0) finalScores.D++
+//         else finalScores.X++
+//     }
+//     return finalScores
+// }
+// crap. Didn't use filter..
+
+// // #26
+// function isolateIt(arr) {
+//     // add | in the middle of each array
+//     let thing = arr.map(el => {
+//         let l = el.length
+//         let start = el.slice(0, Math.floor(l/2))
+//         let end = el.slice(Math.ceil(l/2), el.length)
+//         return start + "|" + end
+//     })
+//     return thing
+// }
+
+// // #10
+// function pickIt(arr) {
+//     const odd = [], even = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         (arr[i] % 2 === 0) ? even.push(arr[i]) : odd.push(arr[i])
+//     }
+//     return [odd, even];
+// }
+
+// // #8
+// // Using an object:
+// function howManydays(month) {
+//     const daysInMonths = {
+//         31: [1, 3, 5, 7, 8, 10, 12],
+//         30: [4, 6, 9, 11],
+//         28: [2]
+//     }
+
+//     for (m in daysInMonths) {
+//         if (daysInMonths[m].includes(month)) return Number(m)
+//     }
+// }
+
+// // using a switch statement:
+// function howManydays(month) {
+//     var days;
+//     switch (month) {
+//         case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+//             days = 31
+//             break
+//         case 4: case 6: case 9: case 11:
+//             days = 30
+//             break
+//         case 2:
+//             days = 28
+//             break
+//         default:
+//             return 'That is not a valid month!'
+//     }
+//     return days;
+// }
 
 
 // // #7
