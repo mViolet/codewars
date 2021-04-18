@@ -1,6 +1,21 @@
+// 2021 04.18
+
+// #31 isArray, indexOf, toString
+
+
+
+// // # 29 concat(), join()
+
+// function bigToSmall(arr) {
+//     let newArr = [].concat(...arr)  //chef's kiss
+//     // for (let i = 0; i < arr.length; i++){
+//     //     newArr = newArr.concat(arr[i])
+//     // }
+
+//     return newArr.sort((a,b) => b-a).join(">")
+// }
+
 // 2021 04.17
-
-
 
 // // #27 - filter
 
@@ -102,10 +117,10 @@
 //     console.log(str)
 // }
 
-// Finally deciding to complete this series of 8s. All the ones I haven't finished yet will be above. I won't post the fill-in-the-blank style ones
-// TRAINING JS SERIES by myjinxin2015
+// // Finally deciding to complete this series of 8s. All the ones I haven't finished yet will be above. I won't post the fill-in-the-blank style ones
+// // TRAINING JS SERIES by myjinxin2015
 
-// for this one, someone used string.split('d').length-1 to count the length! very cool
+// // for this one, someone used string.split('d').length-1 to count the length! very cool
 
 // function nbDig(n, d) {
 //     let arr = []
