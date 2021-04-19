@@ -1,8 +1,11 @@
+// 2021 04.19
+
+function blackAndWhite(arr) {
+    let a = Array.isArray(arr)
+    return `It's a ${a ? arr.indexOf(5) >= 0 && arr.indexOf(13) >= 0 ? 'black' : 'white' : 'fake'} array`
+}
+
 // 2021 04.18
-
-// #31 isArray, indexOf, toString
-
-
 
 // // # 29 concat(), join()
 
