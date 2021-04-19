@@ -1,9 +1,26 @@
 // 2021 04.19
+// #33 - max, min, abs
 
-function blackAndWhite(arr) {
-    let a = Array.isArray(arr)
-    return `It's a ${a ? arr.indexOf(5) >= 0 && arr.indexOf(13) >= 0 ? 'black' : 'white' : 'fake'} array`
+function maxMin(arr1, arr2) {
+    let diffs = []
+    arr1.forEach((el, i) => diffs.push(Math.abs(el - arr2[i])))
+    return [Math.max(...diffs), Math.min(...diffs)]
 }
+
+// // # 32 - round, ceil, floor
+// function roundIt(n) {
+//     let leftHalf = n.toString().split('.')[0].length
+//     let rightHalf = n.toString().split('.')[1].length
+
+//     if (leftHalf != rightHalf) return (leftHalf < rightHalf) ? Math.ceil(n) : Math.floor(n)
+//     else return Math.round(n)
+// }
+
+// // # 31
+// function blackAndWhite(arr) {
+//     let a = Array.isArray(arr)
+//     return `It's a ${a ? arr.indexOf(5) >= 0 && arr.indexOf(13) >= 0 ? 'black' : 'white' : 'fake'} array`
+// }
 
 // 2021 04.18
 
