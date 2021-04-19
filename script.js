@@ -1,15 +1,17 @@
 // 2021 04.19
-// #37 - RegExp Object!
-// var reg1 = /abc/
-// var reg2 = new RegExp("abc")  //two ways to creat a Reg Exp
-
-function countAnimals(animals, count) {
-    let arr = []
-    count.forEach(el => console.log(
-        arr.push((animals.match(new RegExp(el, "g")) || []).length)
-    ))
-    return arr
+//  #38: Reg Exp - ^ $ . and test()
+function findSimilarity(str, word) {
+    let regxStr = "^" + word[0] + word.replace(/./g, ".").slice(1,-1) + word[word.length - 1] + "$"
+    return str.split(" ").filter(el => new RegExp(regxStr).test(el)).join(" ")
 }
+
+// // #37 - RegExp Object!
+
+// function countAnimals(animals, count) {
+//     let arr = []  //or could use map
+//     count.forEach(el => arr.push((animals.match(new RegExp(el, "g")) || []).length))
+//     return arr
+// }
 
 // example:
 // countAnimals("dog,cat", ["dog", "cat", "pig"]); //=> [1,1,0]
