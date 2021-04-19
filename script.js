@@ -1,19 +1,33 @@
 // 2021 04.19
-// #36 - Math.random()
+// #37 - RegExp Object!
+// var reg1 = /abc/
+// var reg2 = new RegExp("abc")  //two ways to creat a Reg Exp
 
-function rndCode() {
-    //coding here...
-    let punct = ['~','!','@','#','$','%','^','&','*']
-    let pass = String.fromCharCode(rand(65,78), rand(65,78))
-    for (let i = 0; i < 4; i++) pass = pass.concat(rand(0,10))
-    for (let i = 0; i < 2; i++) pass = pass.concat(punct[rand(0, punct.length)])
-
-    return pass
-
-    function rand(min, max){ //excludes max
-        return Math.floor(Math.random() * (max - min) + min)
-    }
+function countAnimals(animals, count) {
+    let arr = []
+    count.forEach(el => console.log(
+        arr.push((animals.match(new RegExp(el, "g")) || []).length)
+    ))
+    return arr
 }
+
+// example:
+// countAnimals("dog,cat", ["dog", "cat", "pig"]); //=> [1,1,0]
+
+// // #36 - Math.random()
+// function rndCode() {
+//     let punct = ['~','!','@','#','$','%','^','&','*']
+//     let pass = String.fromCharCode(rand(65,78), rand(65,78))
+//     for (let i = 0; i < 4; i++) pass = pass.concat(rand(0,10))
+//     for (let i = 0; i < 2; i++) pass = pass.concat(punct[rand(0, punct.length)])
+
+//     return pass
+
+//     function rand(min, max){ //excludes max
+//         return Math.floor(Math.random() * (max - min) + min)
+// //              or use ~~ instead of Math.floor
+//     }
+// }
 
 // Coding in function rndCode.Your task is to generate a random verification code.In accordance with the following rules:
 
