@@ -1,11 +1,42 @@
 // 2021 04.19
-// #33 - max, min, abs
+// #36 - Math.random()
 
-function maxMin(arr1, arr2) {
-    let diffs = []
-    arr1.forEach((el, i) => diffs.push(Math.abs(el - arr2[i])))
-    return [Math.max(...diffs), Math.min(...diffs)]
+function rndCode() {
+    //coding here...
+    let punct = ['~','!','@','#','$','%','^','&','*']
+    let pass = String.fromCharCode(rand(65,78), rand(65,78))
+    for (let i = 0; i < 4; i++) pass = pass.concat(rand(0,10))
+    for (let i = 0; i < 2; i++) pass = pass.concat(punct[rand(0, punct.length)])
+
+    return pass
+
+    function rand(min, max){ //excludes max
+        return Math.floor(Math.random() * (max - min) + min)
+    }
 }
+
+// Coding in function rndCode.Your task is to generate a random verification code.In accordance with the following rules:
+
+// the code length should be 8;
+
+// The 1st and 2nd characters should be two uppercase letters.The range is "ABCDEFGHIJKLM".
+
+//     The 3rd - 6th characters should be four numbers.
+
+//         the 7th and 8th characters should be two symbols.The range is "~!@#$%^&*".
+
+// If Your code runs 100 times, It should generate 100 non duplicate verification codes.
+
+// Some valid verification code examples:
+
+// AB1234#$ MG6145$@ KJ2249@&
+
+// // #33 - max, min, abs
+// function maxMin(arr1, arr2) {
+//     let diffs = []
+//     arr1.forEach((el, i) => diffs.push(Math.abs(el - arr2[i])))
+//     return [Math.max(...diffs), Math.min(...diffs)]
+// }
 
 // // # 32 - round, ceil, floor
 // function roundIt(n) {
