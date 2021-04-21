@@ -1,13 +1,17 @@
 // 2021 04.20
 // String-related problems!
 
-function findOddNames(list) {
-    let oddNames = []
-    list.forEach(el => {
-        if (el.firstName.split("").map(l => l.codePointAt(0)).reduce((a,b) => a+b) % 2 !== 0) oddNames.push(el)
-    })
-    return oddNames
+function broken(x) {
+    return x.split("").map(el => (el == '0') ? '1' : '0').join("")
 }
+
+// function findOddNames(list) {
+//     let oddNames = []
+//     list.forEach(el => {
+//         if (el.firstName.split("").map(l => l.codePointAt(0)).reduce((a,b) => a+b) % 2 !== 0) oddNames.push(el)
+//     })
+//     return oddNames
+// }
 
 // function inArray(array1, array2) {
 //     let r = []
