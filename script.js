@@ -1,9 +1,29 @@
-// 2021 04.19
-//  #38: Reg Exp - ^ $ . and test()
-function findSimilarity(str, word) {
-    let regxStr = "^" + word[0] + word.replace(/./g, ".").slice(1,-1) + word[word.length - 1] + "$"
-    return str.split(" ").filter(el => new RegExp(regxStr).test(el)).join(" ")
+// 2021 04.20
+// String-related problems!
+
+function inArray(array1, array2) {
+    let r = []
+    array1.forEach(word => {
+        array2.forEach(el => {
+            if (new RegExp(word).test(el) && !r.includes(word)) r.push(word)
+        })
+    })
+    return r.sort()
 }
+
+function spinWords(string) {
+    return string.split(" ").map(word => {
+        return (word.length > 4) ? word.split("").reverse().join("") : word
+    }).join(" ")
+}
+
+// 2021 04.19
+
+// //  #38: Reg Exp - ^ $ . and test()
+// function findSimilarity(str, word) {
+//     let regxStr = "^" + word[0] + word.replace(/./g, ".").slice(1,-1) + word[word.length - 1] + "$"
+//     return str.split(" ").filter(el => new RegExp(regxStr).test(el)).join(" ")
+// }
 
 // // #37 - RegExp Object!
 
