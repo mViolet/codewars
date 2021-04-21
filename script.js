@@ -1,10 +1,49 @@
-// 2021 04.20
-// String-related problems!
+// 2021 04.21
+// more "Training JS" series Kata from myjinxin2015
 
-const isAnagram = (test, original) => {
-    const string = s => s.toLowerCase().split('').sort().join('')
-    return string(test) == string(original)
+// #13 Number object
+function whatNumberIsIt(n) {
+    let word = ''
+    switch (n) {
+        case (isNaN(n)):
+            word = 'Number.NaN'
+            break
+        case (n === Number.NEGATIVE_INFINITY):
+            word = 'Number.NEGATIVE_Infinity'
+            break
+        case (n === Number.POSITIVE_INFINITY):
+            word = 'Number.POSITIVE.INFINITY'
+            break
+        case (n === Number.MAX_VALUE):
+            word = 'Number.MAX_VALUE'
+            break
+        case (n === Number.MIN_VALUE):
+            word = 'Number.MIN_VALUE'
+            break
+        default:
+            word += n
+    }
+    return `Input number is ${word}`
 }
+
+// // #12
+// function giveMeFive(obj) {
+//     const fiveKeys = []
+//     for (const key in obj) {
+//         if (key.length == 5) fiveKeys.push(key)
+//         if (obj[key].length == 5) fiveKeys.push(obj[key])
+//     }
+//     return fiveKeys
+// }
+
+
+// 2021 04.20
+// // String-related problems!
+
+// const isAnagram = (test, original) => {
+//     const string = s => s.toLowerCase().split('').sort().join('')
+//     return string(test) == string(original)
+// }
 
 // const isAnagram = (test, original) => {
 //     if (test.length == original.length) {
