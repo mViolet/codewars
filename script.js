@@ -1,21 +1,29 @@
 // 2021 04.20
 // String-related problems!
 
-function inArray(array1, array2) {
-    let r = []
-    array1.forEach(word => {
-        array2.forEach(el => {
-            if (new RegExp(word).test(el) && !r.includes(word)) r.push(word)
-        })
+function findOddNames(list) {
+    let oddNames = []
+    list.forEach(el => {
+        if (el.firstName.split("").map(l => l.codePointAt(0)).reduce((a,b) => a+b) % 2 !== 0) oddNames.push(el)
     })
-    return r.sort()
+    return oddNames
 }
 
-function spinWords(string) {
-    return string.split(" ").map(word => {
-        return (word.length > 4) ? word.split("").reverse().join("") : word
-    }).join(" ")
-}
+// function inArray(array1, array2) {
+//     let r = []
+//     array1.forEach(word => {
+//         array2.forEach(el => {
+//             if (new RegExp(word).test(el) && !r.includes(word)) r.push(word)
+//         })
+//     })
+//     return r.sort()
+// }
+
+// function spinWords(string) {
+//     return string.split(" ").map(word => {
+//         return (word.length > 4) ? word.split("").reverse().join("") : word
+//     }).join(" ")
+// }
 
 // 2021 04.19
 
