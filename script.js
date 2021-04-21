@@ -1,9 +1,19 @@
 // 2021 04.20
 // String-related problems!
 
-function broken(x) {
-    return x.split("").map(el => (el == '0') ? '1' : '0').join("")
+// write the function isAnagram
+const isAnagram = (test, original) => {
+    if (test.length == original.length) {
+        let str1 = test.split('').sort().join('')
+        let str2 = original.split('').sort().join('')
+        return str1 == str2
+    } else return false
 }
+
+
+// function broken(x) {
+//     return x.split("").map(el => (el == '0') ? '1' : '0').join("")
+// }
 
 // function findOddNames(list) {
 //     let oddNames = []
