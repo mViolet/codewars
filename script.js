@@ -1,30 +1,42 @@
+// 2021 04.22
+// @blawblawLaw's favorite 8kyu string-related Kata!
+
+
+// 'Fake Binary'
+const fakeBin = x => x.split("").map(x => (Number(x) < 5) ? '0' : '1').join("")
+
+// 'The Feast of Many Beasts'
+function feast(beast, dish) {
+    return ([beast[0], beast.slice(-1)].join("") == [dish[0], dish.slice(-1)].join("")) ? true : false
+}
+
 // 2021 04.21
 // more "Training JS" series Kata from myjinxin2015
 
-// #13 Number object
-function whatNumberIsIt(n) {
-    let word = ''
-    switch (n) {
-        case (isNaN(n)):
-            word = 'Number.NaN'
-            break
-        case (n === Number.NEGATIVE_INFINITY):
-            word = 'Number.NEGATIVE_Infinity'
-            break
-        case (n === Number.POSITIVE_INFINITY):
-            word = 'Number.POSITIVE.INFINITY'
-            break
-        case (n === Number.MAX_VALUE):
-            word = 'Number.MAX_VALUE'
-            break
-        case (n === Number.MIN_VALUE):
-            word = 'Number.MIN_VALUE'
-            break
-        default:
-            word += n
-    }
-    return `Input number is ${word}`
-}
+// // #13 Number object
+// function whatNumberIsIt(n) {
+//     let word = ''
+//     switch (isNaN(n) || Number(n)) {
+//         case (true):
+//             word = 'Number.NaN'
+//             break
+//         case (Number.NEGATIVE_INFINITY):
+//             word = 'Number.NEGATIVE_INFINITY'
+//             break
+//         case (Number.POSITIVE_INFINITY):
+//             word = 'Number.POSITIVE_INFINITY'
+//             break
+//         case (Number.MAX_VALUE):
+//             word = 'Number.MAX_VALUE'
+//             break
+//         case (Number.MIN_VALUE):
+//             word = 'Number.MIN_VALUE'
+//             break
+//         default:
+//             word += n
+//     }
+//     return `Input number is ${word}`
+// }
 
 // // #12
 // function giveMeFive(obj) {
