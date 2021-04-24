@@ -1,15 +1,26 @@
+//2021 04.23
+// more of @blawblawLaw's favorite 8kyu string-related Kata!
+// 'Reversed Words'
+const reverseWords = str => str.split(' ').reverse().join(' ')
+
+// 'Name Shuffler'
+const nameShuffler = str => str.split(" ").reverse().join(" ")
+
+// 'Sort and Star'
+const twoSort = s => s.sort()[0].split("").join('***')
+
 // 2021 04.22
 // @blawblawLaw's favorite 8kyu string-related Kata!
 
-// 'A Strange Trip to the Market'
-function isLockNessMonster(s) {
-    let str = s.toLowerCase()
-    if (str.includes('3.50') || str.includes('tree fiddy') || str.includes('three fifty')) return true
-    else return false
-}
+// // 'A Strange Trip to the Market'
+// function isLockNessMonster(s) {
+//     let str = s.toLowerCase()
+//     if (str.includes('3.50') || str.includes('tree fiddy') || str.includes('three fifty')) return true
+//     else return false
+// }
 
-// top solution was a nice RegExp
-const isLockNessMonster = s => /tree fiddy|three fifty|3.50/.test(s)
+// // top solution was a nice RegExp
+// const isLockNessMonster = s => /tree fiddy|three fifty|3.50/.test(s)
 
 // // 'You Only Need One - Beginner'
 // const check = (a, x) => a.includes(x)
