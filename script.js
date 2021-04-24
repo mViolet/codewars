@@ -1,13 +1,32 @@
 //2021 04.23
 // more of @blawblawLaw's favorite 8kyu string-related Kata!
-// 'Reversed Words'
-const reverseWords = str => str.split(' ').reverse().join(' ')
+// 'Reversing Words in a String'
+function reverse(string) {
+    return string.split(' ').map(w => w.trim()).reverse().join(' ')
+}
 
-// 'Name Shuffler'
-const nameShuffler = str => str.split(" ").reverse().join(" ")
+// 'No Loops 2 - You only need one'
+function check(a, x) {
+    return a.includes(x)
+}
 
-// 'Sort and Star'
-const twoSort = s => s.sort()[0].split("").join('***')
+// 'Returning Strings'
+function greet(name) {
+    return `Hello, ${name} how are you doing today?`
+}
+
+// 'noobCode 01: SUPERSIZE ME.... or rather, this integer!'
+const superSize = num => Number(String(num).split('').map(Number).sort((a,b)=>b-a).join(''))
+//duh could've used reverse!
+
+// // 'Reversed Words'
+// const reverseWords = str => str.split(' ').reverse().join(' ')
+
+// // 'Name Shuffler'
+// const nameShuffler = str => str.split(" ").reverse().join(" ")
+
+// // 'Sort and Star'
+// const twoSort = s => s.sort()[0].split("").join('***')
 
 // 2021 04.22
 // @blawblawLaw's favorite 8kyu string-related Kata!
