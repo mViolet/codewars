@@ -1,14 +1,26 @@
 // 2021 04.22
 // @blawblawLaw's favorite 8kyu string-related Kata!
 
-
-// 'Fake Binary'
-const fakeBin = x => x.split("").map(x => (Number(x) < 5) ? '0' : '1').join("")
-
-// 'The Feast of Many Beasts'
-function feast(beast, dish) {
-    return ([beast[0], beast.slice(-1)].join("") == [dish[0], dish.slice(-1)].join("")) ? true : false
+// 'A Strange Trip to the Market'
+function isLockNessMonster(s) {
+    let str = s.toLowerCase()
+    if (str.includes('3.50') || str.includes('tree fiddy') || str.includes('three fifty')) return true
+    else return false
 }
+
+// top solution was a nice RegExp
+const isLockNessMonster = s => /tree fiddy|three fifty|3.50/.test(s)
+
+// // 'You Only Need One - Beginner'
+// const check = (a, x) => a.includes(x)
+
+// // 'Fake Binary'
+// const fakeBin = x => x.split("").map(x => (Number(x) < 5) ? '0' : '1').join("")
+
+// // 'The Feast of Many Beasts'
+// function feast(beast, dish) {
+//     return ([beast[0], beast.slice(-1)].join("") == [dish[0], dish.slice(-1)].join("")) ? true : false
+// }
 
 // 2021 04.21
 // more "Training JS" series Kata from myjinxin2015
