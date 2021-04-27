@@ -1,14 +1,24 @@
-//2021 04.24
+// 2021 04.26
 
-function vertMirror(str) {
-    return str.split('\n').map(el => el.split('').reverse().join(''))
+function vowelIndices(word) {
+    let indices = []
+    word.split("").forEach((el, i) => {
+        if (/[aeiouy]/gi.test(el)) indices.push(i + 1) //eyyy sometimes y!
+    })
+    return indices
 }
-function horMirror(str) {
-    return str.split('\n').reverse()
-}
-function oper(func, s) {
-    return func(s).join('\n')
-}
+
+// //2021 04.24
+
+// function vertMirror(str) {
+//     return str.split('\n').map(el => el.split('').reverse().join(''))
+// }
+// function horMirror(str) {
+//     return str.split('\n').reverse()
+// }
+// function oper(func, s) {
+//     return func(s).join('\n')
+// }
 
 //2021 04.23
 // more of @blawblawLaw's favorite 8kyu string-related Kata!
