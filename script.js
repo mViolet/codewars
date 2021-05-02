@@ -1,7 +1,9 @@
 // 2021 05.01
 // blaw's recommended arrays codewars 8kyus
 
-const getAverage = marks => Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length)
+function getAverage(marks) {
+    return Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length)
+}
 
 // function countSheeps(arrayOfSheep) {
 //     let n = 0
