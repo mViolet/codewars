@@ -1,12 +1,23 @@
-// 2021 04.26
+// 2021 05.01
+// blaw's recommended arrays codewars 8kyus
 
-function vowelIndices(word) {
-    let indices = []
-    word.split("").forEach((el, i) => {
-        if (/[aeiouy]/gi.test(el)) indices.push(i + 1) //eyyy sometimes y!
-    })
-    return indices
+function countSheeps(arrayOfSheep) {
+    let n = 0
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i]) n++
+    }
+    return n
 }
+
+// // 2021 04.26
+
+// function vowelIndices(word) {
+//     let indices = []
+//     word.split("").forEach((el, i) => {
+//         if (/[aeiouy]/gi.test(el)) indices.push(i + 1) //eyyy sometimes y!
+//     })
+//     return indices
+// }
 
 // //2021 04.24
 
