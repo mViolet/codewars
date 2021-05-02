@@ -1,9 +1,25 @@
 // 2021 05.01
 // blaw's recommended arrays codewars 8kyus
 
-function multipleOfIndex(array) {
-    return array.filter((el, i) => el % i === 0)
+function addLength(str) {
+    return str.split(' ').map(el => `${el} ${el.length}`)
 }
+
+// function array(arr) {
+//     let realArr = arr.split(',') || []
+//     if (realArr.length < 3) {
+//         return null
+//     } else {
+//         realArr.pop()
+//         realArr.shift()
+//         return realArr.join(' ')
+//     }
+// }
+// // meh.
+
+// function multipleOfIndex(array) {
+//     return array.filter((el, i) => el % i === 0)
+// }
 
 // function grow(x) {
 //     return x.sort().reduce((a, b) => a * b, 1)
