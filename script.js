@@ -1,13 +1,15 @@
 // 2021 05.01
 // blaw's recommended arrays codewars 8kyus
 
-function countSheeps(arrayOfSheep) {
-    let n = 0
-    for (let i = 0; i < arrayOfSheep.length; i++) {
-        if (arrayOfSheep[i]) n++
-    }
-    return n
-}
+const getAverage = marks => Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length)
+
+// function countSheeps(arrayOfSheep) {
+//     let n = 0
+//     for (let i = 0; i < arrayOfSheep.length; i++) {
+//         if (arrayOfSheep[i]) n++
+//     }
+//     return n
+// }
 
 // // 2021 04.26
 
