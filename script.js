@@ -1,9 +1,13 @@
 // 2021 05.01
 // blaw's recommended arrays codewars 8kyus
 
-function grow(x) {
-    return x.sort().reduce((a, b) => a * b, 1)
+function multipleOfIndex(array) {
+    return array.filter((el, i) => el % i === 0)
 }
+
+// function grow(x) {
+//     return x.sort().reduce((a, b) => a * b, 1)
+// }
 
 // function getAverage(marks) {
 //     return Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length)
