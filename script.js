@@ -1,9 +1,18 @@
-// 2021 05.01
-// blaw's recommended arrays codewars 8kyus
+// 2021 05.04
+// more kata tagged 'arrays'
 
-function addLength(str) {
-    return str.split(' ').map(el => `${el} ${el.length}`)
+
+
+sortme = function (names) {
+    return names.sort()
 }
+
+// 2021 05.01
+// // blaw's recommended arrays codewars 8kyus
+
+// function addLength(str) {
+//     return str.split(' ').map(el => `${el} ${el.length}`)
+// }
 
 // function array(arr) {
 //     let realArr = arr.split(',') || []
