@@ -1,11 +1,39 @@
+// Ctrl+f for unsolved
+
 // 2021 05.04
 // more kata tagged 'arrays'
+function evenLast(numbers) {
+    const arr = numbers.slice(0, -1)
+    let n = numbers[numbers.length - 1] || 0
+    let sum = 0
+    console.log([numbers, arr, n])
 
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            sum += arr[i]
+            for (let j = 0; j < arr[i].length; j++) {
+                if (j % 2 === 0) {
+                    sum += arr[i][j]
+                }
+            }
+        }
+    }
 
-
-sortme = function (names) {
-    return names.sort()
+    return sum * n
 }
+
+console.log(evenLast([1, 3, 3, 1, 10], [1, 3, 3, 1], 10 ))
+
+// learned something new - Rest parameter - unsolved
+// function nthSmallest(...args) {    
+//     // let arr = [].concat(...args.slice(0, -1)).sort()
+//     // let n = args[args.length - 1]
+//     // return arr[n - 1]
+// }
+
+// sortme = function (names) {
+//     return names.sort()
+// }
 
 // 2021 05.01
 // // blaw's recommended arrays codewars 8kyus
