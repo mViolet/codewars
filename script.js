@@ -1,6 +1,10 @@
 //2021 05.06.2020
 
-
+function isVow(a) {
+    return a.map(el => {
+        return /97|101|105|111|117/g.test(el) ? String.fromCharCode(el) : el
+    })
+}
 
 // function first(arr, n = 1) {
 //     return (n) ? arr.slice(0, n) : []  //turns out I don't need the ternary!
