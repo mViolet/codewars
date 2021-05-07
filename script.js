@@ -1,8 +1,10 @@
 //2021 05.06.2020
 
-function first(arr, n = 1) {
-    return (n) ? arr.slice(0, n) : []  //turns out I don't need the ternary!
-}
+
+
+// function first(arr, n = 1) {
+//     return (n) ? arr.slice(0, n) : []  //turns out I don't need the ternary!
+// }
 
 // function smallEnough(a, limit) {
 //     return a.some(el => el > limit) ? false : true
