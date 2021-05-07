@@ -3,7 +3,7 @@
 function constructSubmatrix(matrix, delRows, delCols) {
     let arr = []
     matrix.forEach((row, i) => {
-        
+
     })
     return arr
 }
@@ -16,6 +16,10 @@ function constructSubmatrix(matrix, delRows, delCols) {
 // function shorter_reverse_longer(a, b) {
 //     return (a.length >= b.length) ? b + reverse(a) + b : a + reverse(b) + a
 // }
+
+//2021 05.07.2020
+
+
 
 //2021 05.06.2020
 
