@@ -1,28 +1,32 @@
-// Ctrl+f for unsolved
+//2021 05.06.2020
+
+function smallEnough(a, limit) {
+    return a.some(el => el > limit) ? false : true
+}
 
 // 2021 05.04
 // more kata tagged 'arrays'
-function evenLast(numbers) {
-    const arr = numbers.slice(0, -1)
-    let n = numbers[numbers.length - 1] || 0
-    let sum = 0
-    console.log([numbers, arr, n])
+// function evenLast(numbers) {          //unsolved
+//     const arr = numbers.slice(0, -1)
+//     let n = numbers[numbers.length - 1] || 0
+//     let sum = 0
+//     console.log([numbers, arr, n])
 
-    for (let i = 0; i < arr.length; i++) {
-        if (i % 2 === 0) {
-            sum += arr[i]
-            for (let j = 0; j < arr[i].length; j++) {
-                if (j % 2 === 0) {
-                    sum += arr[i][j]
-                }
-            }
-        }
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i % 2 === 0) {
+//             sum += arr[i]
+//             for (let j = 0; j < arr[i].length; j++) {
+//                 if (j % 2 === 0) {
+//                     sum += arr[i][j]
+//                 }
+//             }
+//         }
+//     }
 
-    return sum * n
-}
+//     return sum * n
+// }
 
-console.log(evenLast([1, 3, 3, 1, 10], [1, 3, 3, 1], 10 ))
+// console.log(evenLast([1, 3, 3, 1, 10], [1, 3, 3, 1], 10 ))
 
 // learned something new - Rest parameter - unsolved
 // function nthSmallest(...args) {    
@@ -1824,3 +1828,6 @@ console.log(evenLast([1, 3, 3, 1, 10], [1, 3, 3, 1], 10 ))
 // let array = [1,2,3,4,5,6,9,10,11]
 // console.log(firstNonConsecutive(array))
 //////*****************************
+
+
+// Ctrl+f for unsolved
