@@ -19,7 +19,12 @@ function constructSubmatrix(matrix, delRows, delCols) {
 
 //2021 05.07.2020
 
-
+// function getRealFloor(n) {
+//     console.log(n)
+//     if (n <= 0) return n
+//     else if (n > 0 && n < 13) return n - 1
+//     else return n - 2
+// }
 
 //2021 05.06.2020
 
