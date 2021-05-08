@@ -17,6 +17,12 @@ function constructSubmatrix(matrix, delRows, delCols) {
 //     return (a.length >= b.length) ? b + reverse(a) + b : a + reverse(b) + a
 // }
 
+//2021 05.08.2020
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//     return (distanceToPump/mpg <= fuelLeft) ? true : false
+// }
+
 //2021 05.07.2020
 
 // function getRealFloor(n) {
