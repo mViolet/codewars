@@ -1,11 +1,12 @@
 //2021 05.09.2020
 
 function constructSubmatrix(matrix, delRows, delCols) {
-    let arr = []
-    matrix.forEach((row, i) => {
-
+    let arr = matrix.filter((row, i) => {
+        return delRows.includes(i) === false
     })
-    return arr
+    return arr.map(row => row.filter((el, i) => {
+        return delCols.includes(i) === false
+    }))
 }
 
 //// 
