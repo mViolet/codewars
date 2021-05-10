@@ -1,13 +1,15 @@
-//2021 05.09.2020
+//2021 05.10
 
-function constructSubmatrix(matrix, delRows, delCols) {
-    let arr = matrix.filter((row, i) => {
-        return delRows.includes(i) === false
-    })
-    return arr.map(row => row.filter((el, i) => {
-        return delCols.includes(i) === false
-    }))
-}
+//2021 05.09
+
+// function constructSubmatrix(matrix, delRows, delCols) {
+//     let arr = matrix.filter((row, i) => {
+//         return delRows.includes(i) === false
+//     })
+//     return arr.map(row => row.filter((el, i) => {
+//         return delCols.includes(i) === false
+//     }))
+// }
 
 //// 
 // function reverse(str) {
@@ -18,13 +20,13 @@ function constructSubmatrix(matrix, delRows, delCols) {
 //     return (a.length >= b.length) ? b + reverse(a) + b : a + reverse(b) + a
 // }
 
-//2021 05.08.2020
+//2021 05.08
 
 // const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 //     return (distanceToPump/mpg <= fuelLeft) ? true : false
 // }
 
-//2021 05.07.2020
+//2021 05.07
 
 // function getRealFloor(n) {
 //     console.log(n)
@@ -33,7 +35,7 @@ function constructSubmatrix(matrix, delRows, delCols) {
 //     else return n - 2
 // }
 
-//2021 05.06.2020
+//2021 05.06
 
 // function isVow(a) {
 //     return a.map(el => {
