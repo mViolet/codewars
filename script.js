@@ -1,12 +1,21 @@
 //2021 05.09.2020
 
-function reverse(str) {
-    return str.split("").reverse().join("") || ""
+function constructSubmatrix(matrix, delRows, delCols) {
+    let arr = []
+    matrix.forEach((row, i) => {
+        
+    })
+    return arr
 }
 
-function shorter_reverse_longer(a, b) {
-    return (a.length >= b.length) ? b + reverse(a) + b : a + reverse(b) + a
-}
+//// 
+// function reverse(str) {
+//     return str.split("").reverse().join("") || ""
+// }
+
+// function shorter_reverse_longer(a, b) {
+//     return (a.length >= b.length) ? b + reverse(a) + b : a + reverse(b) + a
+// }
 
 //2021 05.06.2020
 
