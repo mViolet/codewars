@@ -1,4 +1,19 @@
-//2021 05.10
+//2021 05.21
+
+//Alphabet Symmetry
+function solve(arr) {
+    const howMany = []
+    arr.forEach(str => {
+        let count = 0
+        str.split('').forEach((l,i) => {
+            if (l.toLowerCase().codePointAt() - 97 == i) count++
+        })
+        howMany.push(count)
+    })
+    return howMany
+}
+
+console.log(solve(['abc', 'abedg', 'jslmndguis'])) // [3, 3, 2]
 
 //2021 05.09
 
