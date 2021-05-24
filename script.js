@@ -1,18 +1,32 @@
-//2021 05.23
+// 2021 05.24
+// ROT 13
 
-// Count characters in your string
-function count(string) {
-    let chars = {}
-
-    string.split('').forEach(c => {
-        if (!chars[c]) {
-            chars[c] = 1
+function rot13(str) {
+    return str.replace(/[A-Z]/gi, letter => {
+        let charCode = letter.charCodeAt()
+        if (charCode > 64 && charCode < 90) { 
+            return String.fromCodePoint(((charCode - 65 + 13) % 26) + 65)
         } else {
-            chars[c]++
+            return String.fromCodePoint(((charCode - 97 + 13) % 26) + 97)
         }
     })
-    return chars
 }
+
+// //2021 05.23
+
+// // Count characters in your string
+// function count(string) {
+//     let chars = {}
+
+//     string.split('').forEach(c => {
+//         if (!chars[c]) {
+//             chars[c] = 1
+//         } else {
+//             chars[c]++
+//         }
+//     })
+//     return chars
+// }
 
 // //Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
 // var list1 = [
