@@ -1,16 +1,29 @@
-// 2021 05.24
-// ROT 13
+// 2021 05.25
+// Turn String Input into Hash
 
-function rot13(str) {
-    return str.replace(/[A-Z]/gi, letter => {
-        let charCode = letter.charCodeAt()
-        if (charCode > 64 && charCode < 90) { 
-            return String.fromCodePoint(((charCode - 65 + 13) % 26) + 65)
-        } else {
-            return String.fromCodePoint(((charCode - 97 + 13) % 26) + 97)
-        }
+function strToHash(str) {
+    let hash = {a: 1}
+    str.split(', ').forEach(arr => {
+        let splitArr = arr.split('')
+        if (!hash[splitArr[0]]) return hash[splitArr[0]] = +splitArr[2]
+        // !hash['hi'] ? hash['hi'] = 1 : hash['hi']++
     })
+    return hash
 }
+
+// // 2021 05.24
+// // ROT 13
+
+// function rot13(str) {
+//     return str.replace(/[A-Z]/gi, letter => {
+//         let charCode = letter.charCodeAt()
+//         if (charCode > 64 && charCode < 90) { 
+//             return String.fromCodePoint(((charCode - 65 + 13) % 26) + 65)
+//         } else {
+//             return String.fromCodePoint(((charCode - 97 + 13) % 26) + 97)
+//         }
+//     })
+// }
 
 // //2021 05.23
 
