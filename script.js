@@ -1,6 +1,10 @@
 //2021 05.27
 //random 8kyu
 
+function take(arr, n) {
+    return arr.slice(0, n)
+}
+
 // function spEng(sentence) {
 //     return Boolean(sentence.match(/English/gi))
 // }
