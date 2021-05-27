@@ -1,15 +1,28 @@
-// 2021 05.25
-// Turn String Input into Hash
+//2021 05.26
+//8kyu strings kata
 
-function strToHash(str) {
-    let hash = {a: 1}
-    str.split(', ').forEach(arr => {
-        let splitArr = arr.split('')
-        if (!hash[splitArr[0]]) return hash[splitArr[0]] = +splitArr[2]
-        // !hash['hi'] ? hash['hi'] = 1 : hash['hi']++
-    })
-    return hash
+
+
+function lowercaseCount(str) {
+    return (str.match(/[a-z]/g) || []).length
 }
+
+const ArrowFunc = function (arr) {
+    return arr.map(num => String.fromCharCode(num)).join(''); //Complete this function
+}
+
+// // 2021 05.25
+// // Turn String Input into Hash
+
+// function strToHash(str) {
+//     let hash = {}
+//     str.split(', ').forEach(arr => {
+//         let splitArr = arr.split('=')
+//         if (!hash[splitArr[0]] && splitArr[0] !== '') return hash[splitArr[0]] = +splitArr[1]
+//         // !hash['hi'] ? hash['hi'] = 1 : hash['hi']++
+//     })
+//     return hash
+// }
 
 // // 2021 05.24
 // // ROT 13
