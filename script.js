@@ -1,9 +1,13 @@
 //2021 05.27
 //random 8kyu
 
-function howManyLightsabersDoYouOwn(name) {
-    return name !== 'Zach' ? 0 : 18
+function spEng(sentence) {
+    return Boolean(sentence.match(/English/gi))
 }
+
+// function howManyLightsabersDoYouOwn(name) {
+//     return name !== 'Zach' ? 0 : 18
+// }
 
 //2021 05.26
 //8kyu strings kata
