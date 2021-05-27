@@ -1,15 +1,15 @@
 //2021 05.26
 //8kyu strings kata
 
-//My hacker name is "Malware Bomb"... bahaha!
-function aliasGen(first, last) {
-    console.log(first, last)
-    if (/[a-z]/gi.test(first[0]) && /[a-z]/gi.test(last[0])) {
-        return `${firstName[first[0].toUpperCase()]} ${surname[last[0].toUpperCase()]}`
-    } else {
-        return 'Your name must start with a letter from A - Z.'
-    }
-}
+// //My hacker name is "Malware Bomb"... bahaha!
+// function aliasGen(first, last) {
+//     console.log(first, last)
+//     if (/[a-z]/gi.test(first[0]) && /[a-z]/gi.test(last[0])) {
+//         return `${firstName[first[0].toUpperCase()]} ${surname[last[0].toUpperCase()]}`
+//     } else {
+//         return 'Your name must start with a letter from A - Z.'
+//     }
+// }
 
 // function sayHello(name, city, state) {
 //     console.log(name, city, state)
