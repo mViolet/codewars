@@ -3,13 +3,18 @@
 
 
 
-function lowercaseCount(str) {
-    return (str.match(/[a-z]/g) || []).length
-}
+// function sayHello(name, city, state) {
+//     console.log(name, city, state)
+//     return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+// }
 
-const ArrowFunc = function (arr) {
-    return arr.map(num => String.fromCharCode(num)).join(''); //Complete this function
-}
+// function lowercaseCount(str) {
+//     return (str.match(/[a-z]/g) || []).length
+// }
+
+// const ArrowFunc = function (arr) {
+//     return arr.map(num => String.fromCharCode(num)).join(''); //Complete this function
+// }
 
 // // 2021 05.25
 // // Turn String Input into Hash
