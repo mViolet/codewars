@@ -1,8 +1,16 @@
+//2021 05.28
+
+function evenLast(numbers) {
+    const sum = numbers.filter((n, i) => i % 2 === 0).reduce((a, b) => a + b, 0)
+    const last = numbers.pop()
+    return (sum * last) || 0
+}
+
 //2021 05.27
 
-function spam(number) {
-    return "hue".repeat(number)
-}
+// function spam(number) {
+//     return "hue".repeat(number)
+// }
 
 // //random 8kyu
 
