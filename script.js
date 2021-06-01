@@ -1,12 +1,20 @@
 //2021 06.01
 //random 8kyus
 
-function logicalCalc(array, op) {
-    console.log(array, op)
-    if (op === "OR") return array.reduce((a, b) => a || b)
-    else if (op === "AND") return array.reduce((a, b) => a && b)
-    else if (op === "XOR") return Boolean(array.reduce((a, b) => a ^ b))
+function multiTable(num) {
+    let table = []
+    for (let i = 1; i <= 10; i++) {
+        table.push(`${i} * ${num} = ${i*num}`)
+    }
+    return table.join('\n')
 }
+
+// function logicalCalc(array, op) {
+//     console.log(array, op)
+//     if (op === "OR") return array.reduce((a, b) => a || b)
+//     else if (op === "AND") return array.reduce((a, b) => a && b)
+//     else if (op === "XOR") return Boolean(array.reduce((a, b) => a ^ b))
+// }
 
 // const humanYearsCatYearsDogYears = humanYears => {
 //     // human, cat, dog
