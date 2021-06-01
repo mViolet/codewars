@@ -1,26 +1,33 @@
 //2021 06.01
 //random 8kyus
 
-const humanYearsCatYearsDogYears = humanYears => {
-    // human, cat, dog
-    const years = [humanYears, 0, 0]
-    for (let i = 1; i <= humanYears; i++){
-        if (i === 1) {
-            years[1] += 15
-            years[2] += 15
-        }
-        else if (i === 2) {
-            years[1] += 9
-            years[2] += 9
-        }
-        else if (i > 2) {
-            years[1] += 4
-            years[2] += 5
-        }
-    }
-
-    return years
+function logicalCalc(array, op) {
+    console.log(array, op)
+    if (op === "OR") return array.reduce((a, b) => a || b)
+    else if (op === "AND") return array.reduce((a, b) => a && b)
+    else if (op === "XOR") return Boolean(array.reduce((a, b) => a ^ b))
 }
+
+// const humanYearsCatYearsDogYears = humanYears => {
+//     // human, cat, dog
+//     const years = [humanYears, 0, 0]
+//     for (let i = 1; i <= humanYears; i++){
+//         if (i === 1) {
+//             years[1] += 15
+//             years[2] += 15
+//         }
+//         else if (i === 2) {
+//             years[1] += 9
+//             years[2] += 9
+//         }
+//         else if (i > 2) {
+//             years[1] += 4
+//             years[2] += 5
+//         }
+//     }
+
+//     return years
+// }
 
 
 //2021 05.28
