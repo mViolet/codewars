@@ -1,10 +1,35 @@
+//2021 06.01
+//random 8kyus
+
+const humanYearsCatYearsDogYears = humanYears => {
+    // human, cat, dog
+    const years = [humanYears, 0, 0]
+    for (let i = 1; i <= humanYears; i++){
+        if (i === 1) {
+            years[1] += 15
+            years[2] += 15
+        }
+        else if (i === 2) {
+            years[1] += 9
+            years[2] += 9
+        }
+        else if (i > 2) {
+            years[1] += 4
+            years[2] += 5
+        }
+    }
+
+    return years
+}
+
+
 //2021 05.28
 
-function evenLast(numbers) {
-    const sum = numbers.filter((n, i) => i % 2 === 0).reduce((a, b) => a + b, 0)
-    const last = numbers.pop()
-    return (sum * last) || 0
-}
+// function evenLast(numbers) {
+//     const sum = numbers.filter((n, i) => i % 2 === 0).reduce((a, b) => a + b, 0)
+//     const last = numbers.pop()
+//     return (sum * last) || 0
+// }
 
 //2021 05.27
 
