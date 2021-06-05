@@ -1,9 +1,15 @@
 //2021 06.05
 //random 8s
 
-const areaOrPerimeter = function (l, w) {
-    return (l === w) ? l * w : (l + w) * 2
+function distanceBetweenPoints(a, b) {
+    //points are x and y props of Point.
+    //suqare root of ( (x1-x2) ^ 2 + (y1-y2) ^ 2 )
+    return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2)
 }
+
+// const areaOrPerimeter = function (l, w) {
+//     return (l === w) ? l * w : (l + w) * 2
+// }
 
 // //2021 06.04
 
