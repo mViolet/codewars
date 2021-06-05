@@ -1,13 +1,37 @@
+//2021 06.04
+
+//lengthy
+function breakEven(arr, l, last=""){
+    const array = []
+    for (i = 0; i < l; i += 2) {
+        array.push(arr[i].concat(arr[i + 1]))
+    }
+    if (arr.length % 2 !== 0) { array.push(last + '_') }
+
+    return array
+}
+
+function solution(str) {
+    const newStr = str.split("")
+    if (!newStr.length) return []
+    else if (newStr.length % 2 === 0) {
+        return breakEven(newStr, newStr.length-1)
+    }
+    else { 
+        return breakEven(newStr, newStr.length - 2, newStr[newStr.length-1])
+    }
+}
+
 //2021 06.01
 //random 8kyus
 
-function multiTable(num) {
-    let table = []
-    for (let i = 1; i <= 10; i++) {
-        table.push(`${i} * ${num} = ${i*num}`)
-    }
-    return table.join('\n')
-}
+// function multiTable(num) {
+//     let table = []
+//     for (let i = 1; i <= 10; i++) {
+//         table.push(`${i} * ${num} = ${i*num}`)
+//     }
+//     return table.join('\n')
+// }
 
 // function logicalCalc(array, op) {
 //     console.log(array, op)
