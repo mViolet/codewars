@@ -1,11 +1,17 @@
-//2021 06.05
-//random 8s
+//2021 06.06
 
-function distanceBetweenPoints(a, b) {
-    //points are x and y props of Point.
-    //suqare root of ( (x1-x2) ^ 2 + (y1-y2) ^ 2 )
-    return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2)
+function nthEven(n) {
+    return (n !== 1) ? 2 * (n - 1) : 0
 }
+
+// //2021 06.05
+// //random 8s
+
+// function distanceBetweenPoints(a, b) {
+//     //points are x and y props of Point.
+//     //suqare root of ( (x1-x2) ^ 2 + (y1-y2) ^ 2 )
+//     return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2)
+// }
 
 // const areaOrPerimeter = function (l, w) {
 //     return (l === w) ? l * w : (l + w) * 2
