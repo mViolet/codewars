@@ -1,9 +1,17 @@
 //2021 06.07
 //random 8kyus
 
-String.prototype.isUpperCase = function () {
-    return this == this.toUpperCase()
+function between(a, b) {
+    const integers = []
+    for (let i = a; i <= b; i++) {
+        integers.push(i)
+    }
+    return integers
 }
+
+// String.prototype.isUpperCase = function () {
+//     return this == this.toUpperCase()
+// }
 
 //2021 06.06
 
