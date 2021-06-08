@@ -1,8 +1,15 @@
+//2021 06.07
+//random 8kyus
+
+String.prototype.isUpperCase = function () {
+    return this == this.toUpperCase()
+}
+
 //2021 06.06
 
-function nthEven(n) {
-    return (n !== 1) ? 2 * (n - 1) : 0
-}
+// function nthEven(n) {
+//     return (n !== 1) ? 2 * (n - 1) : 0
+// }
 
 // //2021 06.05
 // //random 8s
