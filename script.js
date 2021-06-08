@@ -1,13 +1,18 @@
 //2021 06.07
 //random 8kyus
 
-function between(a, b) {
-    const integers = []
-    for (let i = a; i <= b; i++) {
-        integers.push(i)
-    }
-    return integers
+function sortVowels(s) {
+    if (typeof s !== 'string') return ''
+    return s.split("").map(c => /[aeiou]/gi.test(c) ? '|' + c : c + '|').join('\n')
 }
+
+// function between(a, b) {
+//     const integers = []
+//     for (let i = a; i <= b; i++) {
+//         integers.push(i)
+//     }
+//     return integers
+// }
 
 // String.prototype.isUpperCase = function () {
 //     return this == this.toUpperCase()
