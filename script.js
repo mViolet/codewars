@@ -1,10 +1,14 @@
 //2021 06.11
 //random 8kyu
 
-function checkAlive(health) {
-    if (health <= 0) return false
-    else return true
+function divisibleBy(numbers, divisor) {
+    return numbers.filter(n => n % divisor === 0)
 }
+
+// function checkAlive(health) {
+//     if (health <= 0) return false
+//     else return true
+// }
 
 // function sumPPG(playerOne, playerTwo) {
 //     return playerOne.ppg + playerTwo.ppg
