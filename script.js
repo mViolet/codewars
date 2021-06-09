@@ -1,9 +1,14 @@
 //2021 06.11
-//random 7kyu
+//random 8kyu
 
-function sumPPG(playerOne, playerTwo) {
-    return playerOne.ppg + playerTwo.ppg
+function checkAlive(health) {
+    if (health <= 0) return false
+    else return true
 }
+
+// function sumPPG(playerOne, playerTwo) {
+//     return playerOne.ppg + playerTwo.ppg
+// }
 
 // //2021 06.08
 
