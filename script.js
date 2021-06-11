@@ -1,9 +1,13 @@
 //2021 06.11
 //random 8kyu
 
-function divisibleBy(numbers, divisor) {
-    return numbers.filter(n => n % divisor === 0)
+function isDivideBy(number, a, b) {
+    return (number % a === 0 && number % b === 0)
 }
+
+// function divisibleBy(numbers, divisor) {
+//     return numbers.filter(n => n % divisor === 0)
+// }
 
 // function checkAlive(health) {
 //     if (health <= 0) return false
