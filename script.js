@@ -1,10 +1,33 @@
-//2021 06.07
-//random 8kyus
+//2021 06.11
+//random 7kyu
 
-function sortVowels(s) {
-    if (typeof s !== 'string') return ''
-    return s.split("").map(c => /[aeiou]/gi.test(c) ? '|' + c : c + '|').join('\n')
+function sumPPG(playerOne, playerTwo) {
+    return playerOne.ppg + playerTwo.ppg
 }
+
+// //2021 06.08
+
+// function i(word) {
+//     let numVowels = (word.match(/[aeiou]/gi) || '').length
+//     let numCons = (word.match(/[^aeiou]/gi) || '').length
+
+//     return ((/(^[A-Z])|(^[iI])/g).test(word) || numVowels >= numCons) ? 'invalid word' : `i${word[0].toUpperCase() + word.substr(1) || ''}`
+// }
+
+
+// The word should not begin with the letter "I", for example Inspire.
+// The number of vowels should not be greater than or equal to the number of consonants,
+//    for example East or Peace. ("y" is considered a consonant)
+// The first letter is not capital, for example road.
+// If the word does not meet the rules, we return "Invalid word".
+
+// //2021 06.07
+// //random 8kyus
+
+// function sortVowels(s) {
+//     if (typeof s !== 'string') return ''
+//     return s.split("").map(c => /[aeiou]/gi.test(c) ? '|' + c : c + '|').join('\n')
+// }
 
 // function between(a, b) {
 //     const integers = []
