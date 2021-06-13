@@ -11,13 +11,13 @@ function colorOf(...args) {
 //2021 06.11
 //random 8kyu
 
-function mergeArrays(arr1, arr2) {
-    const arr = []
-    arr1.forEach(el => arr.push(el))
-    arr2.forEach(el => arr.push(el))
+// function mergeArrays(arr1, arr2) {
+//     const arr = []
+//     arr1.forEach(el => arr.push(el))
+//     arr2.forEach(el => arr.push(el))
 
-    return [...new Set(arr.sort((a, b) => a - b))]
-}
+//     return [...new Set(arr.sort((a, b) => a - b))]
+// }
 
 // function isDivideBy(number, a, b) {
 //     return (number % a === 0 && number % b === 0)
