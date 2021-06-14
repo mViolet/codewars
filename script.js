@@ -1,12 +1,18 @@
+//2021 06.14
+
+function xor(a, b) {
+    return Boolean(a ^ b)
+}
+
 //2021 06.13
 
 // Training JS #14: Methods of Number object--toString() and toLocaleString()
 // interesting one about using the radix parameter (here 16 hexadecimal)
 
-function colorOf(...args) {
-    const arr = args.map(el => el.toString(16).padStart(2, '0'))
-    return `#${arr.join('')}`
-}
+// function colorOf(...args) {
+//     const arr = args.map(el => el.toString(16).padStart(2, '0'))
+//     return `#${arr.join('')}`
+// }
 
 //2021 06.11
 //random 8kyu
