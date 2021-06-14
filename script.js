@@ -1,5 +1,6 @@
 //2021 06.14
 
+// xor / 'logical or'
 function xor(a, b) {
     return Boolean(a ^ b)
 }
