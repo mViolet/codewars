@@ -1,9 +1,15 @@
+//2021 06.16
+
+function toBinary(n) {
+    return Number(n.toString(2))
+}
+
 //2021 06.14
 
-// xor / 'logical or'
-function xor(a, b) {
-    return Boolean(a ^ b)
-}
+// // xor / 'logical or'
+// function xor(a, b) {
+//     return Boolean(a ^ b)
+// }
 
 //2021 06.13
 
