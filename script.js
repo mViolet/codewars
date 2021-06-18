@@ -1,8 +1,14 @@
+//2021 06.18
+
+function hexToDec(hexString) {
+    return parseInt(hexString, 16)
+}
+
 //2021 06.16
 
-function toBinary(n) {
-    return Number(n.toString(2))
-}
+// function toBinary(n) {
+//     return Number(n.toString(2))
+// }
 
 //2021 06.14
 
