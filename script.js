@@ -1,12 +1,17 @@
 //2021 06.19
 
-function generateMenu(menuItems) {
-    let str = ''
-    for (item of menuItems) {
-        str += `<a href=\"${item.url}\">${item.text}</a>`
-    }
-    return str
+function maxedOut(arr) {
+    let sum = arr.map(n => n ** 3).reduce((a, b) => a + b, 0)
+    return (sum <= Number.MAX_SAFE_INTEGER) ? sum : "You've pushed me to the max!"
 }
+
+// function generateMenu(menuItems) {
+//     let str = ''
+//     for (item of menuItems) {
+//         str += `<a href=\"${item.url}\">${item.text}</a>`
+//     }
+//     return str
+// }
 
 //2021 06.18
 
