@@ -1,8 +1,18 @@
+//2021 06.19
+
+function generateMenu(menuItems) {
+    let str = ''
+    for (item of menuItems) {
+        str += `<a href=\"${item.url}\">${item.text}</a>`
+    }
+    return str
+}
+
 //2021 06.18
 
-function hexToDec(hexString) {
-    return parseInt(hexString, 16)
-}
+// function hexToDec(hexString) {
+//     return parseInt(hexString, 16)
+// }
 
 //2021 06.16
 
