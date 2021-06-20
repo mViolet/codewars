@@ -1,9 +1,15 @@
-//2021 06.19
+// 2021 06.20
 
-function maxedOut(arr) {
-    let sum = arr.map(n => n ** 3).reduce((a, b) => a + b, 0)
-    return (sum <= Number.MAX_SAFE_INTEGER) ? sum : "You've pushed me to the max!"
+function closeCompare(a, b, margin = 0) {
+    return (margin >= Math.abs(a - b)) ? 0 : (a < b) ? -1 : 1
 }
+
+////2021 06.19
+
+// function maxedOut(arr) {
+//     let sum = arr.map(n => n ** 3).reduce((a, b) => a + b, 0)
+//     return (sum <= Number.MAX_SAFE_INTEGER) ? sum : "You've pushed me to the max!"
+// } 
 
 // function generateMenu(menuItems) {
 //     let str = ''
