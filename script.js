@@ -1,8 +1,13 @@
-// 2021 06.20
+// 2021 06.21
 
-function closeCompare(a, b, margin = 0) {
-    return (margin >= Math.abs(a - b)) ? 0 : (a < b) ? -1 : 1
-}
+//interesting pattern
+const overTheRoad = (address, n) => (n * 2) - address + 1
+
+// // 2021 06.20
+
+// function closeCompare(a, b, margin = 0) {
+//     return (margin >= Math.abs(a - b)) ? 0 : (a < b) ? -1 : 1
+// }
 
 ////2021 06.19
 
