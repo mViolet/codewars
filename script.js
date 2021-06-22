@@ -1,7 +1,29 @@
+// 2021 06.22
+
+// 6kyu - Disgruntled Employee
+function off(n){
+    const results = [] //for off positions
+    const arr = [] //create 1 to n switches
+    for (let i=0; i<n; i++) {arr.push(1)}
+    let increment = 1 //counter to track the increment
+    while (increment <= n) { //while the increment is less than or equal to n
+        //for the length of the loop, flip every switch. then every 2nd, then every 3rd, etc
+        //increment -1 is the start position for the loop
+        for (let i=increment-1; i < n; i += increment){
+            if (arr[i] === 0) {arr[i] = 1}
+            else {arr[i] = 0}
+        }
+        increment++
+    }
+    //pushing i + 1 because we need the position, not the index!
+    arr.forEach((el, i) => el === 0 && results.push(i + 1))
+    return results
+}
+
 // 2021 06.21
 
-//interesting pattern
-const overTheRoad = (address, n) => (n * 2) - address + 1
+// //interesting pattern
+// const overTheRoad = (address, n) => (n * 2) - address + 1
 
 // // 2021 06.20
 
