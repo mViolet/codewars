@@ -1,6 +1,12 @@
+// 2021 06.24
+
+function animal(obj) {
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
 // 2021 06.23
 
-const remove = s => s.replace(/!*$/, "")
+// const remove = s => s.replace(/!*$/, "")
 
 // doesn't need global flag
 // const remove = s => s.replace(/!*$/g, "")
