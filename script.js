@@ -1,15 +1,23 @@
 // 2021 06.23
 
-function calculator(a, b, sign) {
-    if (isNaN(a) || isNaN(b)) { return "unknown value" }
-    switch (sign) {
-        case "+": return a + b
-        case "-": return a - b
-        case "*": return a * b
-        case "/": return a / b
-        default: return "unknown value"
+var typeOfTriangle = function (a, b, c) {
+    if ((a + b) > c) {
+        return (a == b && a == c) ? "Equilateral" : (a == b || a == c || b == c) ? "Isosceles" : "Scalene"
+    } else {
+        return "Not a valid triangle"
     }
 }
+
+// function calculator(a, b, sign) {
+//     if (isNaN(a) || isNaN(b)) { return "unknown value" }
+//     switch (sign) {
+//         case "+": return a + b
+//         case "-": return a - b
+//         case "*": return a * b
+//         case "/": return a / b
+//         default: return "unknown value"
+//     }
+// }
 
 // function calculator(a, b, sign) {
 //     if (isNaN(a) || isNaN(b)) { return "unknown value"}
