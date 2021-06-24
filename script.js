@@ -1,5 +1,34 @@
 // 2021 06.24
 
+//meeting room can take up to 8 chairs
+// x represents array of ['XXXX', 3] or num of occupants as string, and # of chairs in that room
+//return array of ints (how many chairs taken from each room)
+
+function meeting(x, need) {
+    if (need <= 0) return "Game On"                 //if chairs not needed, return "Game On"
+
+    let chairsNeeded = need                         // track total chairs needed
+    const chairsTaken = []                          //create arr to track chairs taken
+
+    for (let i = 0; i < x.length; i++) {
+        let avail = x[i][1] - x[i][0].length        //how many chairs available (in tuple)
+        if (avail > 0) {
+            if (chairsNeeded - avail >= 0) {         //check if chairs still needed after this loop
+                chairsTaken.push(avail)
+                chairsNeeded = chairsNeeded - avail //update chairsNeeded
+            } else {
+                chairsTaken.push(chairsNeeded)
+                chairsNeeded = 0
+            }
+        } else {
+            chairsTaken.push(0)                     //no chairs were taken
+        }
+        if (chairsNeeded == 0) return chairsTaken   //return array of chairs Taken
+    }
+    return "Not enough!"
+}
+
+
 // "HTML dynamic color string generation"
 // generate a random hex color string
     //max value for each color is 255
