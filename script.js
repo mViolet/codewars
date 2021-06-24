@@ -1,8 +1,24 @@
 // 2021 06.24
 
-function animal(obj) {
-    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+// "HTML dynamic color string generation"
+// generate a random hex color string
+    //max value for each color is 255
+    //Math.random() to find a number - convert to hex base
+    //We need three joined as string, so call random func 3x
+
+// Math.random() * (max - min) + min //min inclusive, max excl
+
+function randomHex(){
+    return parseInt(Math.random() * (256 - 0)).toString(16).padStart(2, '0') //parseInt to round, padStart for leading zeros
 }
+
+function generateColor(){
+    return `#${randomHex()}${randomHex()}${randomHex()}`
+}
+
+// function animal(obj) {
+//     return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+// }
 
 // 2021 06.23
 
