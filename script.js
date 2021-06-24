@@ -1,12 +1,26 @@
 // 2021 06.23
 
-var typeOfTriangle = function (a, b, c) {
-    if ((a + b) > c) {
-        return (a == b && a == c) ? "Equilateral" : (a == b || a == c || b == c) ? "Isosceles" : "Scalene"
+const typeOfTriangle = (a, b, c) => {
+    const arr = [a, b, c].sort((a, b) => a - b)
+    const d = arr[0]
+    const e = arr[1]
+    const f = arr[2]
+
+    if ((d + e) > f) {
+        return (d == e && d == f) ? "Equilateral" : (d == e || d == f || e == f) ? "Isosceles" : "Scalene"
     } else {
         return "Not a valid triangle"
     }
 }
+
+// needs sorting
+// const typeOfTriangle = function (a, b, c) {
+//     if ((a + b) > c) {
+//         return (a == b && a == c) ? "Equilateral" : (a == b || a == c || b == c) ? "Isosceles" : "Scalene"
+//     } else {
+//         return "Not a valid triangle"
+//     }
+// }
 
 // function calculator(a, b, sign) {
 //     if (isNaN(a) || isNaN(b)) { return "unknown value" }
