@@ -1,19 +1,30 @@
+// 2021 06.25
+
+function alphabetPosition(text){
+    //minus 96 will give position from lowercase letter
+    let str =  text.match(/[a-z]/gi)
+    return (str == null) ? '' : str.map(l => l.toLowerCase().charCodeAt(0) - 96).join(' ')
+}
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+console.log("20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11")
+
 // 2021 06.24
 
-// redo using recursion?
-function christmasTree(h) {
-    if (h <= 0) return ''
-    let str = ''
-    let counter = 1
-    let stars = 1
+// // redo using recursion?
+// function christmasTree(h) {
+//     if (h <= 0) return ''
+//     let str = ''
+//     let counter = 1
+//     let stars = 1
 
-    for (let i = 0; i < h - 1; i++) {
-        str += ' '.repeat(h - counter) + '*'.repeat(stars) + ' '.repeat(h - counter) + '\n'
-        counter++
-        stars += 2
-    }
-    return str + ' '.repeat(h - counter) + '*'.repeat(stars) + ' '.repeat(h - counter)
-}
+//     for (let i = 0; i < h - 1; i++) {
+//         str += ' '.repeat(h - counter) + '*'.repeat(stars) + ' '.repeat(h - counter) + '\n'
+//         counter++
+//         stars += 2
+//     }
+//     return str + ' '.repeat(h - counter) + '*'.repeat(stars) + ' '.repeat(h - counter)
+// }
 
 // //meeting room can take up to 8 chairs
 // // x represents array of ['XXXX', 3] or num of occupants as string, and # of chairs in that room
