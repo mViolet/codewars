@@ -1,9 +1,19 @@
 //2021 06.27
 
-function howMuchILoveYou(nbPetals) {
-    const arr = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]
-    return arr[(nbPetals - 1) % 6]
+function oddCount(n) {
+    // return the number of positive odd numbers below n
+    //   let counter = 0
+    //   for (let i = 1; i < n; i++){
+    //     //push the odd number to the array oddNums
+    //     if (i % 2 !== 0) counter++
+    //   }
+    return Math.floor(n / 2)
 }
+
+// function howMuchILoveYou(nbPetals) {
+//     const arr = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]
+//     return arr[(nbPetals - 1) % 6]
+// }
 
 // function sayHello(name) {
 //     return `Hello, ${name}`
