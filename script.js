@@ -1,8 +1,14 @@
-// 2021 06.26
+//2021 06.27
 
 function sayHello(name) {
     return `Hello, ${name}`
 }
+
+// 2021 06.26
+
+// function sayHello(name) {
+//     return `Hello, ${name}`
+// }
 
 // 2021 06.25
 
