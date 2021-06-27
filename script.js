@@ -1,13 +1,19 @@
-// 2021 06.25
+// 2021 06.26
 
-function alphabetPosition(text){
-    //minus 96 will give position from lowercase letter
-    let str =  text.match(/[a-z]/gi)
-    return (str == null) ? '' : str.map(l => l.toLowerCase().charCodeAt(0) - 96).join(' ')
+function sayHello(name) {
+    return `Hello, ${name}`
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."))
-console.log("20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11")
+// 2021 06.25
+
+// function alphabetPosition(text){
+//     //minus 96 will give position from lowercase letter
+//     let str =  text.match(/[a-z]/gi)
+//     return (str == null) ? '' : str.map(l => l.toLowerCase().charCodeAt(0) - 96).join(' ')
+// }
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+// console.log("20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11")
 
 // 2021 06.24
 
