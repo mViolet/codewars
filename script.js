@@ -1,8 +1,13 @@
 //2021 06.27
 
-function sayHello(name) {
-    return `Hello, ${name}`
+function howMuchILoveYou(nbPetals) {
+    const arr = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]
+    return arr[(nbPetals - 1) % 6]
 }
+
+// function sayHello(name) {
+//     return `Hello, ${name}`
+// }
 
 // 2021 06.26
 
