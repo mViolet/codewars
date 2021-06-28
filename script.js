@@ -1,14 +1,51 @@
+//2021 06.28
+
+// find the outlier
+// input - an array containing at least three integers - all even or all odd
+// return - the outlier
+
+// might not look pretty, but it is ~85% faster than the top answer (uses filter)
+// Find The Parity Outlier
+function findOutlier(ints) {
+    // cases:
+    const a = ints[0] % 2 == 0
+    const b = ints[1] % 2 == 0
+    const c = ints[2] % 2 == 0
+
+    // if (a%2 ==0) == (b%2 == 0) && (a%2 == 0) == true, then find the first odd.
+    if (a === b && a === true && c === a) {
+        for (let i = 3; i < ints.length; i++){
+            if ((ints[i] % 2 === 0) === false) return ints[i]
+        }
+    }
+    // if(a % 2 == 0) == (b % 2 == 0) && (a % 2 == 0) == false, then find the first even num
+    else if (a === b && a === false && c === a) {
+        for (let i = 3; i < ints.length; i++) {
+            if ((ints[i] % 2 === 0) === true) return ints[i]
+        }
+    }
+    // if (a % 2 == 0) != (b % 2 == 0), check (c % 2 == 0)
+    else if (a !== b || a !== c) {
+        // if it equals a, return b. if it equals b, return a.
+        if (a === c) return ints[1]
+        if (a === b) return ints[2]
+        return ints[0]
+    }
+    return 'no outlier found' //base case
+}
+
 //2021 06.27
 
-function oddCount(n) {
-    // return the number of positive odd numbers below n
-    //   let counter = 0
-    //   for (let i = 1; i < n; i++){
-    //     //push the odd number to the array oddNums
-    //     if (i % 2 !== 0) counter++
-    //   }
-    return Math.floor(n / 2)
-}
+// unsolved
+// function oddCount(n) {
+//     // return the number of positive odd numbers below n
+//     //   let counter = 0
+//     //   for (let i = 1; i < n; i++){
+//     //     //push the odd number to the array oddNums
+//     //     if (i % 2 !== 0) counter++
+//     //   }
+//     return Math.floor(n / 2)
+// }
 
 // function howMuchILoveYou(nbPetals) {
 //     const arr = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]
