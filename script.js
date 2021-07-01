@@ -1,8 +1,20 @@
-// 2021 06.29
+// 2021 06.30
 
 function digital_root(n) {
-    return n.toString().split('').reduce((a,b) => a + +b, 0)
+
+    while (n.toString().length != 1) {
+        n = n.toString().split('').reduce((a, b) => a + +b, 0)
+    }
+
+    return n
 }
+
+// 2021 06.29
+
+// //needs to be recursive
+// function digital_root(n) {
+//     return n.toString().split('').reduce((a,b) => a + +b, 0)
+// }
 
 //2021 06.28
 
