@@ -1,5 +1,12 @@
 // 2021 06.30
 
+//this was the top solution. What wizardry is this??!?
+function digital_root(n) {
+    return (n - 1) % 9 + 1;
+}
+
+// more info here: https://www.sjsu.edu/faculty/watkins/Digitsum00.htm
+
 function digital_root(n) {
 
     while (n.toString().length != 1) {
