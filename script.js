@@ -1,8 +1,10 @@
 // 2021 07.02
 
-// for use in my color pallette generator app
+// for use in my color pallette generator
 
-//returns array of strings - [rgb value, hex value]
+//input: two colors as hex strings (with #)
+//return: array of strings - [rgb value, hex value]
+
 function blendHexColors(c0, c1) { //color 0, color 1
     const a = c0.slice(1).match(/.{1,2}/g)
     const b = c1.slice(1).match(/.{1,2}/g)
