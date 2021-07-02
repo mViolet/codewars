@@ -1,20 +1,47 @@
-// 2021 06.30
+// 2021 07.02
 
-//this was the top solution. What wizardry is this??!?
-function digital_root(n) {
-    return (n - 1) % 9 + 1;
-}
+// for use in my color pallette generator app
 
-// more info here: https://www.sjsu.edu/faculty/watkins/Digitsum00.htm
+//returns array of strings - [rgb value, hex value]
+function blendHexColors(c0, c1) { //color 0, color 1
+    const a = c0.slice(1).match(/.{1,2}/g)
+    const b = c1.slice(1).match(/.{1,2}/g)
+    let newColor = []
 
-function digital_root(n) {
+    a.forEach((el, i) => {
+        let rgbA = parseInt(el, 16)
+        let rgbB = parseInt(b[i], 16)
+        newColor.push(Math.round((rgbA + rgbB) / 2))
+    })
+    newColor.forEach(el => (el <= 255) ? el : 255) //max is 255
 
-    while (n.toString().length != 1) {
-        n = n.toString().split('').reduce((a, b) => a + +b, 0)
+    function toHex(value){
+        return value.toString(16).padStart(2, '0')
     }
 
-    return n
+    return [`rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`, 
+            `#${toHex(newColor[0])}${toHex(newColor[1])}${toHex(newColor[2])}`]
 }
+
+console.log(blendHexColors("00ff01", "ffffff"))
+
+// // 2021 06.30
+
+// //this was the top solution. What wizardry is this??!?
+// function digital_root(n) {
+//     return (n - 1) % 9 + 1;
+// }
+
+// // more info here: https://www.sjsu.edu/faculty/watkins/Digitsum00.htm
+
+// function digital_root(n) {
+
+//     while (n.toString().length != 1) {
+//         n = n.toString().split('').reduce((a, b) => a + +b, 0)
+//     }
+
+//     return n
+// }
 
 // 2021 06.29
 
