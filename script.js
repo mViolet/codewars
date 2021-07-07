@@ -1,3 +1,92 @@
+//2021 07.07
+function squareSum(numbers) {
+    // PREP
+    // We are taking in an array of integers, always a whole number
+    // What we are returning is a single integer
+
+    // at the least, we need to loop through the array
+    // each time squaring the number in the array
+    // then reduce the array, adding all the numbers together
+    // or we could create a variable to track the sum. We'll go with that
+
+    // Pseudocode:
+    //create a sum variable
+    //loop through array
+        // for each number, add the number squared to the sum
+    // return the sum
+
+    //Examples:
+    // squareSum([0]) returns 0
+    // squareSum([1, 2]) returns 5
+    // squareSum([0, 3, 4, 5]) returns 50
+    
+    let sum = 0
+    for (let i = 0; i < numbers.length; i++){
+        sum += numbers[i] ** 2
+    }
+    return sum
+}
+
+// 2021 07.06 - interview question from today!
+
+const ArrayMaker = require('./ArrayMaker');
+
+const findMissing = (array) => {
+    // Implement findMissing here
+    //input = an unsorted aray of integers
+    //return = the mising integer
+
+    //sort array
+    if (array === undefined) return 0
+    array.sort((a, b) => a - b)
+
+    if (array[0] === 2) return 1
+
+    //iterate over each item in array
+    for (let i = 0; i < array.length - 1; i++) {
+        //check if the current element is exactly one less than the following element
+        if (array[i] !== array[i + 1] - 1) return array[i] + 1
+    }
+    return array.length + 1
+
+
+    // ways to solve this:
+    // sort() (which is very slow)
+    // (sum of items in complete array - sum of items in original array) !!!!
+}
+
+const test = (size) => {
+    const maker = size == null ? size : new ArrayMaker(size);
+    const expected = size == null ? 0 : maker.missing;
+    const actual = findMissing(maker == null ? maker : maker.array);
+
+    const passed = expected === actual;
+
+    console.log(`findMissing() ${size == null ? 'undefined' : `Array(${size})`} -> ${actual} === ${expected}: ${passed ? 'PASSED' : 'FAILED'}`);
+
+    return passed;
+}
+
+let allPassed = true;
+
+allPassed = test(undefined) && allPassed;
+allPassed = test(1) && allPassed;
+allPassed = test(10) && allPassed;
+allPassed = test(100) && allPassed;
+allPassed = test(1000) && allPassed;
+allPassed = test(10000) && allPassed;
+
+console.log();
+console.log(allPassed ? 'ALL TESTS PASSED' : 'THERE ARE TEST FAILURES');
+
+
+// 2021 07.03
+
+// unsolved
+// var mergeTwoLists = function (l1, l2) {
+//
+// }
+
 // 2021 07.02
 
 // for use in my color pallette generator
