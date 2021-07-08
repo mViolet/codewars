@@ -1,5 +1,34 @@
+//2021 07.08
+
+/*
+PREP
+return the number of unique arrays that can be formed by picking one element from each subarray
+
+example: solve([[1,2],[4],[5,6]]) = 4
+        because: [1,4,5],[1,4,6],[2,4,5],[2,4,6]
+
+example: solve([[1,2],[4,4],[5,6,6]]) = 4 because duplicates don't count
+example: solve([[1,3],[5,7,1],[1,3,5]]) = 18
+example: solve([[1],[1,0],[1]]) = 2 
+
+the pattern seems to be the number of unique elements in each array, multiplied together 
+input will be an array of arrays              
+*/
+
+function solve(arr) {
+    //for each item in the array, find the number of unique elements
+    //multiply them together (use reduce?)
+    return arr.reduce((acc, curr) => acc * new Set(curr).size, 1)
+}
+
+console.log(solve([[1,2],[4,4],[5,6,6]]) === 4)
+console.log(solve([[1,2],[4],[5,6]]) === 4)
+console.log(solve([[1,3],[5,7,1],[1,3,5]]) === 18)
+console.log(solve([[1],[1,0],[1]]) === 2)
+
 //2021 07.07
-function squareSum(numbers) {
+// function squareSum(numbers) {
+    // /*
     // PREP
     // We are taking in an array of integers, always a whole number
     // What we are returning is a single integer
@@ -10,74 +39,76 @@ function squareSum(numbers) {
     // or we could create a variable to track the sum. We'll go with that
 
     // Pseudocode:
-    //create a sum variable
-    //loop through array
-        // for each number, add the number squared to the sum
+    // create a sum variable
+    // loop through array
+    //     for each number, add the number squared to the sum
     // return the sum
 
-    //Examples:
+    // Examples:
+    // 1,2,2 - 9
     // squareSum([0]) returns 0
     // squareSum([1, 2]) returns 5
     // squareSum([0, 3, 4, 5]) returns 50
+    // */
     
-    let sum = 0
-    for (let i = 0; i < numbers.length; i++){
-        sum += numbers[i] ** 2
-    }
-    return sum
-}
+//     let sum = 0
+//     for (let i = 0; i < numbers.length; i++){
+//         sum += numbers[i] ** 2
+//     }
+//     return sum
+// }
 
 // 2021 07.06 - interview question from today!
 
-const ArrayMaker = require('./ArrayMaker');
+// const ArrayMaker = require('./ArrayMaker');
 
-const findMissing = (array) => {
-    // Implement findMissing here
-    //input = an unsorted aray of integers
-    //return = the mising integer
+// const findMissing = (array) => {
+//     // Implement findMissing here
+//     //input = an unsorted aray of integers
+//     //return = the mising integer
 
-    //sort array
-    if (array === undefined) return 0
-    array.sort((a, b) => a - b)
+//     //sort array
+//     if (array === undefined) return 0
+//     array.sort((a, b) => a - b)
 
-    if (array[0] === 2) return 1
+//     if (array[0] === 2) return 1
 
-    //iterate over each item in array
-    for (let i = 0; i < array.length - 1; i++) {
-        //check if the current element is exactly one less than the following element
-        if (array[i] !== array[i + 1] - 1) return array[i] + 1
-    }
-    return array.length + 1
+//     //iterate over each item in array
+//     for (let i = 0; i < array.length - 1; i++) {
+//         //check if the current element is exactly one less than the following element
+//         if (array[i] !== array[i + 1] - 1) return array[i] + 1
+//     }
+//     return array.length + 1
 
 
-    // ways to solve this:
-    // sort() (which is very slow)
-    // (sum of items in complete array - sum of items in original array) !!!!
-}
+//     // ways to solve this:
+//     // sort() (which is very slow)
+//     // (sum of items in complete array - sum of items in original array) !!!!
+// }
 
-const test = (size) => {
-    const maker = size == null ? size : new ArrayMaker(size);
-    const expected = size == null ? 0 : maker.missing;
-    const actual = findMissing(maker == null ? maker : maker.array);
+// const test = (size) => {
+//     const maker = size == null ? size : new ArrayMaker(size);
+//     const expected = size == null ? 0 : maker.missing;
+//     const actual = findMissing(maker == null ? maker : maker.array);
 
-    const passed = expected === actual;
+//     const passed = expected === actual;
 
-    console.log(`findMissing() ${size == null ? 'undefined' : `Array(${size})`} -> ${actual} === ${expected}: ${passed ? 'PASSED' : 'FAILED'}`);
+//     console.log(`findMissing() ${size == null ? 'undefined' : `Array(${size})`} -> ${actual} === ${expected}: ${passed ? 'PASSED' : 'FAILED'}`);
 
-    return passed;
-}
+//     return passed;
+// }
 
-let allPassed = true;
+// let allPassed = true;
 
-allPassed = test(undefined) && allPassed;
-allPassed = test(1) && allPassed;
-allPassed = test(10) && allPassed;
-allPassed = test(100) && allPassed;
-allPassed = test(1000) && allPassed;
-allPassed = test(10000) && allPassed;
+// allPassed = test(undefined) && allPassed;
+// allPassed = test(1) && allPassed;
+// allPassed = test(10) && allPassed;
+// allPassed = test(100) && allPassed;
+// allPassed = test(1000) && allPassed;
+// allPassed = test(10000) && allPassed;
 
-console.log();
-console.log(allPassed ? 'ALL TESTS PASSED' : 'THERE ARE TEST FAILURES');
+// console.log();
+// console.log(allPassed ? 'ALL TESTS PASSED' : 'THERE ARE TEST FAILURES');
 
 
 // 2021 07.03
@@ -94,27 +125,27 @@ console.log(allPassed ? 'ALL TESTS PASSED' : 'THERE ARE TEST FAILURES');
 //input: two colors as hex strings (with #)
 //return: array of strings - [rgb value, hex value]
 
-function blendHexColors(c0, c1) { //color 0, color 1
-    const a = c0.slice(1).match(/.{1,2}/g)
-    const b = c1.slice(1).match(/.{1,2}/g)
-    let newColor = []
+// function blendHexColors(c0, c1) { //color 0, color 1
+//     const a = c0.slice(1).match(/.{1,2}/g)
+//     const b = c1.slice(1).match(/.{1,2}/g)
+//     let newColor = []
 
-    a.forEach((el, i) => {
-        let rgbA = parseInt(el, 16)
-        let rgbB = parseInt(b[i], 16)
-        newColor.push(Math.round((rgbA + rgbB) / 2))
-    })
-    newColor.forEach(el => (el <= 255) ? el : 255) //max is 255
+//     a.forEach((el, i) => {
+//         let rgbA = parseInt(el, 16)
+//         let rgbB = parseInt(b[i], 16)
+//         newColor.push(Math.round((rgbA + rgbB) / 2))
+//     })
+//     newColor.forEach(el => (el <= 255) ? el : 255) //max is 255
 
-    function toHex(value){
-        return value.toString(16).padStart(2, '0')
-    }
+//     function toHex(value){
+//         return value.toString(16).padStart(2, '0')
+//     }
 
-    return [`rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`, 
-            `#${toHex(newColor[0])}${toHex(newColor[1])}${toHex(newColor[2])}`]
-}
+//     return [`rgb(${newColor[0]}, ${newColor[1]}, ${newColor[2]})`, 
+//             `#${toHex(newColor[0])}${toHex(newColor[1])}${toHex(newColor[2])}`]
+// }
 
-console.log(blendHexColors("00ff01", "ffffff"))
+// console.log(blendHexColors("00ff01", "ffffff"))
 
 // // 2021 06.30
 
