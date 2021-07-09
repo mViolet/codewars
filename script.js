@@ -1,5 +1,7 @@
 //2021 07.08
 
+const solve = (a, b) => b.map(word => a.filter(el => el === word).length)
+
 /*
 PREP
 return the number of unique arrays that can be formed by picking one element from each subarray
