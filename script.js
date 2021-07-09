@@ -1,6 +1,10 @@
+//2021 07.09
+
+const sumMix = x => x.reduce((acc, curr) => acc + +curr, 0)
+
 //2021 07.08
 
-const solve = (a, b) => b.map(word => a.filter(el => el === word).length)
+// const solve = (a, b) => b.map(word => a.filter(el => el === word).length)
 
 /*
 PREP
@@ -17,16 +21,16 @@ the pattern seems to be the number of unique elements in each array, multiplied 
 input will be an array of arrays              
 */
 
-function solve(arr) {
-    //for each item in the array, find the number of unique elements
-    //multiply them together (use reduce?)
-    return arr.reduce((acc, curr) => acc * new Set(curr).size, 1)
-}
+// function solve(arr) {
+//     //for each item in the array, find the number of unique elements
+//     //multiply them together (use reduce?)
+//     return arr.reduce((acc, curr) => acc * new Set(curr).size, 1)
+// }
 
-console.log(solve([[1,2],[4,4],[5,6,6]]) === 4)
-console.log(solve([[1,2],[4],[5,6]]) === 4)
-console.log(solve([[1,3],[5,7,1],[1,3,5]]) === 18)
-console.log(solve([[1],[1,0],[1]]) === 2)
+// console.log(solve([[1,2],[4,4],[5,6,6]]) === 4)
+// console.log(solve([[1,2],[4],[5,6]]) === 4)
+// console.log(solve([[1,3],[5,7,1],[1,3,5]]) === 18)
+// console.log(solve([[1],[1,0],[1]]) === 2)
 
 //2021 07.07
 // function squareSum(numbers) {
