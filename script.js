@@ -1,13 +1,17 @@
 //2021 07.09
 
-function correctness(bob, expert) {
-    let score = 0
-    bob.forEach((el, i) => {
-        if (el === expert[i]) score++
-        else if (el == '?' || expert[i] == '?') score += .5
-    })
-    return score
+function matrix(array) {
+    return array.map((el, i) => el.map((sub, x) => (i == x) ? (sub < 0) ? 0 : 1 : sub))
 }
+
+// function correctness(bob, expert) {
+//     let score = 0
+//     bob.forEach((el, i) => {
+//         if (el === expert[i]) score++
+//         else if (el == '?' || expert[i] == '?') score += .5
+//     })
+//     return score
+// }
 
 // const sumMix = x => x.reduce((acc, curr) => acc + +curr, 0)
 
