@@ -1,6 +1,15 @@
 //2021 07.09
 
-const sumMix = x => x.reduce((acc, curr) => acc + +curr, 0)
+function correctness(bob, expert) {
+    let score = 0
+    bob.forEach((el, i) => {
+        if (el === expert[i]) score++
+        else if (el == '?' || expert[i] == '?') score += .5
+    })
+    return score
+}
+
+// const sumMix = x => x.reduce((acc, curr) => acc + +curr, 0)
 
 //2021 07.08
 
