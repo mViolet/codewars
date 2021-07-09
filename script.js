@@ -1,8 +1,10 @@
 //2021 07.09
 
-function matrix(array) {
-    return array.map((el, i) => el.map((sub, x) => (i == x) ? (sub < 0) ? 0 : 1 : sub))
-}
+const coffee = str => str.replace(/\bcoffee\b/gi, match => "COFFEE")
+
+// function matrix(array) {
+//     return array.map((el, i) => el.map((sub, x) => (i == x) ? (sub < 0) ? 0 : 1 : sub))
+// }
 
 // function correctness(bob, expert) {
 //     let score = 0
