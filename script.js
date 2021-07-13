@@ -1,6 +1,17 @@
+//2021 07.12
+
+//input: array of ints, within which only two ints occur once
+//return: the sum of the two unique integers
+
+function repeats(arr) {
+    return arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el)).reduce((a,b) => a + b, 0)
+}
+
+console.log(repeats([4, 5, 7, 5, 4, 8]), 15)
+
 //2021 07.09
 
-const coffee = str => str.replace(/\bcoffee\b/gi, match => "COFFEE")
+// const coffee = str => str.replace(/\bcoffee\b/gi, match => "COFFEE")
 
 // function matrix(array) {
 //     return array.map((el, i) => el.map((sub, x) => (i == x) ? (sub < 0) ? 0 : 1 : sub))
