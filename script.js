@@ -1,10 +1,16 @@
 //2021 07.13
 
+function isLeapYear(y) {
+    return ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0))
+}
+
+// --
+
 //remove consecutive strings, return resulting string
 //example 'alan alan al alan al al al alan' => 'alan al alan al alan'
-const removeConsecutiveDuplicates = s => s.split(' ').filter((el, i, arr) => el != arr[i + 1])
+// const removeConsecutiveDuplicates = s => s.split(' ').filter((el, i, arr) => el != arr[i + 1])
 
-console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'), 'alpha beta gamma delta alpha beta gamma delta')
+// console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'), 'alpha beta gamma delta alpha beta gamma delta')
 
 // ---
 
