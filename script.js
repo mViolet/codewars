@@ -1,8 +1,14 @@
 //2021 07.13
 
-function isLeapYear(y) {
-    return ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0))
+function middleMe(n, x, y) {
+    return (n % 2 != 0) ? x : y.repeat(n / 2) + x + y.repeat(n / 2)
 }
+
+// --
+
+// function isLeapYear(y) {
+//     return ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0))
+// }
 
 // --
 
