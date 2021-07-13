@@ -1,36 +1,64 @@
 //2021 07.13
 
-// Given - an integer n
-// Return an array including all of the special factors (Ascending order)
+// Write a function that returns the greatest common factor of an array of positive integers.Your return value should be a number, you will only receive positive integers.
 
+// Example: [3,6,12] => 6
 
-// Example1:
-// n = 6   factor of n: 1, 2, 3, 6
-// convert them to binary string:
-// n ==> "110"
-// factors: 1 ==> "1"  2 ==> "10"  3 ==> "11"  6 ==> "110"
-// sc(6) should return [1, 2, 3, 6]
-
-// Example2:
-// n = 15   factor of n: 1, 3, 5, 15
-// convert them to binary string:
-// n ==> "1111"
-// factors: 1 ==> "1"  3 ==> "11"  5 ==> "101"  15 ==> "1111"
-// Hmmm... "1", "11", "1111" are special factors, but "101" is not.
-// c(15) should return [1, 3, 15]
-
-function sc(n){
-// find all factors of n, save as an array
+// function for common factors
+function getFactors(n){
     const factors = []
-    //start at 1, up to n (inclusive)
     for (let i = 1; i <= n; i++){
-        if (n % i === 0) factors.push(i)
+        if (n % i == 0) factors.push(i)
     }
-
-    return factors.map(el => el.toString(2))      //convert each to binary strings
-        .filter(el => n.toString(2).includes(el)) // convert n to binary string, filter which are included in n as binary
-        .map(el => parseInt(el, 2))               //convert back to decimal
+    return factors
 }
+
+function greatestCommonFactor(array) {
+    //the common factor will never be larger than the smallest number in the array
+    const indexOfSmallest = array.indexOf(Math.min(...array))
+    const factorsArray = array.map(el => getFactors(el))
+
+    for (let i = factorsArray[indexOfSmallest].length - 1; i >= 0; i--){
+        if (factorsArray.every(el => el.includes(factorsArray[indexOfSmallest][i]))) return factorsArray[indexOfSmallest][i]
+    }
+    return 'no factors in common'
+}
+
+// --
+
+/*
+    Given - an integer n
+    Return an array including all of the special factors (Ascending order)
+
+
+    Example1:
+    n = 6   factor of n: 1, 2, 3, 6
+    convert them to binary string:
+    n ==> "110"
+    factors: 1 ==> "1"  2 ==> "10"  3 ==> "11"  6 ==> "110"
+    sc(6) should return [1, 2, 3, 6]
+
+    Example2:
+    n = 15   factor of n: 1, 3, 5, 15
+    convert them to binary string:
+    n ==> "1111"
+    factors: 1 ==> "1"  3 ==> "11"  5 ==> "101"  15 ==> "1111"
+    Hmmm... "1", "11", "1111" are special factors, but "101" is not.
+    c(15) should return [1, 3, 15]
+*/
+
+// function sc(n){
+// // find all factors of n, save as an array
+//     const factors = []
+//     //start at 1, up to n (inclusive)
+//     for (let i = 1; i <= n; i++){
+//         if (n % i === 0) factors.push(i)
+//     }
+
+//     return factors.map(el => el.toString(2))      //convert each to binary strings
+//         .filter(el => n.toString(2).includes(el)) // convert n to binary string, filter which are included in n as binary
+//         .map(el => parseInt(el, 2))               //convert back to decimal
+// }
 
 
 // --
