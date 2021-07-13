@@ -1,13 +1,21 @@
-//2021 07.12
+//2021 07.13
+
+//remove consecutive strings, return resulting string
+//example 'alan alan al alan al al al alan' => 'alan al alan al alan'
+const removeConsecutiveDuplicates = s => s.split(' ').filter((el, i, arr) => el != arr[i + 1])
+
+console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'), 'alpha beta gamma delta alpha beta gamma delta')
+
+// ---
 
 //input: array of ints, within which only two ints occur once
 //return: the sum of the two unique integers
 
-function repeats(arr) {
-    return arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el)).reduce((a,b) => a + b, 0)
-}
+// function repeats(arr) {
+//     return arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el)).reduce((a,b) => a + b, 0)
+// }
 
-console.log(repeats([4, 5, 7, 5, 4, 8]), 15)
+// console.log(repeats([4, 5, 7, 5, 4, 8]), 15)
 
 //2021 07.09
 
