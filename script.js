@@ -10,7 +10,7 @@
 //approach - use replace with regular expression to replace beginning of url i.e. 'https://www.' with ''
 //split the array at '.' and return the first element as a string
 
-const domainName = url => url.replace(/((.*:\/\/)|www.)/gi, '').split('.')[0]
+const domainName = url => url.replace(/(.*:\/\/)|www./gi, '').split('.')[0]
 
 
 //2021 07.13
