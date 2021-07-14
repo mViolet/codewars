@@ -1,3 +1,18 @@
+//2021 07.14
+
+// create a function that parses out the domain name
+
+// examples:
+// domainName("http://github.com/carbonfive/raygun") == "github"
+// domainName("http://www.zombie-bites.com") == "zombie-bites"
+// domainName("https://www.cnet.com") == "cnet"
+
+//approach - use replace with regular expression to replace beginning of url i.e. 'https://www.' with ''
+//split the array at '.' and return the first element as a string
+
+const domainName = url => url.replace(/((.*:\/\/)|www.)/gi, '').split('.')[0]
+
+
 //2021 07.13
 
 // Write a function that returns the greatest common factor of an array of positive integers.Your return value should be a number, you will only receive positive integers.
@@ -5,24 +20,24 @@
 // Example: [3,6,12] => 6
 
 // function for common factors
-function getFactors(n){
-    const factors = []
-    for (let i = 1; i <= n; i++){
-        if (n % i == 0) factors.push(i)
-    }
-    return factors
-}
+// function getFactors(n){
+//     const factors = []
+//     for (let i = 1; i <= n; i++){
+//         if (n % i == 0) factors.push(i)
+//     }
+//     return factors
+// }
 
-function greatestCommonFactor(array) {
-    //the common factor will never be larger than the smallest number in the array
-    const indexOfSmallest = array.indexOf(Math.min(...array))
-    const factorsArray = array.map(el => getFactors(el))
+// function greatestCommonFactor(array) {
+//     //the common factor will never be larger than the smallest number in the array
+//     const indexOfSmallest = array.indexOf(Math.min(...array))
+//     const factorsArray = array.map(el => getFactors(el))
 
-    for (let i = factorsArray[indexOfSmallest].length - 1; i >= 0; i--){
-        if (factorsArray.every(el => el.includes(factorsArray[indexOfSmallest][i]))) return factorsArray[indexOfSmallest][i]
-    }
-    return 'no factors in common'
-}
+//     for (let i = factorsArray[indexOfSmallest].length - 1; i >= 0; i--){
+//         if (factorsArray.every(el => el.includes(factorsArray[indexOfSmallest][i]))) return factorsArray[indexOfSmallest][i]
+//     }
+//     return 'no factors in common'
+// }
 
 // --
 
