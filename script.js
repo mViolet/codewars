@@ -1,3 +1,31 @@
+//2021 07.15
+
+// Given a string, return a new string that has transformed based on the input:
+
+// Change case of every character, ie.lower case to upper case, upper case to lower case.
+// Reverse the order of words from the input.
+//     Note: You will have to handle multiple spaces, and leading / trailing spaces.
+
+// For example:
+
+// "Example Input" ==> "iNPUT eXAMPLE"
+// You may assume the input only contain English alphabet and spaces.
+
+
+function stringTransformer(str) {
+    return str.split(' ')
+        .map(word => word.replace(/[a-z]/gi, c => c == c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()))
+        .reverse()
+        .join(' ')
+}
+
+function stringTransformer(str) {
+    return str.split(' ').map(word => word.replace(/[a-z]/gi, c => {
+        const n = c.codePointAt()
+        return (n >= 97 && n <= 122) ? String.fromCharCode(n - 32) : String.fromCharCode(n + 32)
+    })).reverse().join(' ')
+}
+
 //2021 07.14
 
 // create a function that parses out the domain name
