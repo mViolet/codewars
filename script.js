@@ -1,5 +1,14 @@
 //2021 07.16
 
+
+
+//Two to One
+const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
+
+console.log("Test 1:", longest("xyaabbbccccdefww", "xxxxyyyyabklmopq") === "abcdefklmopqwxy" ? 'Passed' : 'Failed')
+console.log("Test 1:", longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz") === "abcdefghijklmnopqrstuvwxyz" ? 'Passed' : 'Failed')
+console.log("Test 1:", longest("", "") === "" ? 'Passed' : 'Failed')
+
 //Meeting
 function meeting(s) {
     return s.toUpperCase()
@@ -11,7 +20,7 @@ function meeting(s) {
         .join('')
 }
 
-console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn") === "(ARNO, ANN)(BELL, JOHN)(CORNWELL, ALEX)(DORNY, ABBA)(KERN, LEWIS)(KORN, ALEX)(META, GRACE)(SCHWARZ, VICTORIA)(STAN, MADISON)(STAN, MEGAN)(WAHL, ALEXIS)")
+// console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn") === "(ARNO, ANN)(BELL, JOHN)(CORNWELL, ALEX)(DORNY, ABBA)(KERN, LEWIS)(KORN, ALEX)(META, GRACE)(SCHWARZ, VICTORIA)(STAN, MADISON)(STAN, MEGAN)(WAHL, ALEXIS)")
 
 //2021 07.15
 
