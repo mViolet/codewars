@@ -1,13 +1,32 @@
 //2021 07.16
 
+//Count characters in your string
 
+function count(string) {
+    const charCount = {}
+    for (i in string){
+        !charCount[string[i]] ? charCount[string[i]] = 1 : charCount[string[i]]++
+    }
+    return charCount
+}
+
+//or
+
+function count(string) {
+    const charCount = {}
+    string.split('').forEach(el => (!charCount[el]) ? charCount[el] = 1 : charCount[el]++)
+    return charCount
+}
+
+// console.log(count("aba"), { a: 2, b: 1 })
+// console.log(count(""), {})
 
 //Two to One
 const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
 
-console.log("Test 1:", longest("xyaabbbccccdefww", "xxxxyyyyabklmopq") === "abcdefklmopqwxy" ? 'Passed' : 'Failed')
-console.log("Test 1:", longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz") === "abcdefghijklmnopqrstuvwxyz" ? 'Passed' : 'Failed')
-console.log("Test 1:", longest("", "") === "" ? 'Passed' : 'Failed')
+// console.log("Test 1:", longest("xyaabbbccccdefww", "xxxxyyyyabklmopq") === "abcdefklmopqwxy" ? 'Passed' : 'Failed')
+// console.log("Test 1:", longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz") === "abcdefghijklmnopqrstuvwxyz" ? 'Passed' : 'Failed')
+// console.log("Test 1:", longest("", "") === "" ? 'Passed' : 'Failed')
 
 //Meeting
 function meeting(s) {
