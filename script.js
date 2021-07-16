@@ -1,5 +1,10 @@
 //2021 07.15
 
+
+//Break camelCase
+const solution = str => str.split('').map(l => l == l.toUpperCase() ? ` ${l}` : l).join('')
+
+
 // Given a string, return a new string that has transformed based on the input:
 
 // Change case of every character, ie.lower case to upper case, upper case to lower case.
