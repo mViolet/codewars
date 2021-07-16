@@ -2,6 +2,17 @@
 
 //random kata
 
+const toCamelCase = str => str
+    .replace(/[-_]/g, ' ')
+    .split(' ')
+    .map((word, i) => (i > 0) ? word.replace(/^[a-z]/, c => c.toUpperCase()) : word)
+    .join('')
+
+// console.log(toCamelCase("the_stealth_warrior"), "theStealthWarrior")
+// console.log(toCamelCase("The-Stealth-Warrior"), "TheStealthWarrior")
+// console.log(toCamelCase("A B C"), "ABC")
+// console.log(toCamelCase(""), "")
+
 // function order(words) {
 //     const map = []
 //     words.split(' ').forEach(el => map.push([el.match(/\d+/)[0], el]))
@@ -12,7 +23,7 @@ function order(words){
     return words.split(' ').sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0]).join(' ')
 }
 
-console.log(order("is2 Thi1s T4est 3a"))
+// console.log(order("is2 Thi1s T4est 3a"))
 
 const songDecoder = song => song.replace(/(WUB){1,}/g, ' ').trim()
 // console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"))
