@@ -1,5 +1,33 @@
 //2021 07.16
 
+//random kata
+
+// function order(words) {
+//     const map = []
+//     words.split(' ').forEach(el => map.push([el.match(/\d+/)[0], el]))
+//     return map.sort().map(el => el[1]).join(' ')
+// }
+
+function order(words){
+    return words.split(' ').sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0]).join(' ')
+}
+
+console.log(order("is2 Thi1s T4est 3a"))
+
+const songDecoder = song => song.replace(/(WUB){1,}/g, ' ').trim()
+// console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"))
+
+const uniqueInOrder = iterable => {
+    const unique = []
+    for (let i = 0; i < iterable.length; i++) {
+        if (iterable[i] !== iterable[i+1]) unique.push(iterable[i])
+    }
+    return unique
+}
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
+
+const twoDecimalPlaces = n => +n.toFixed(2)
+
 //Count characters in your string
 
 function count(string) {
