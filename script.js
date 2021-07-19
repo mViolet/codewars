@@ -1,12 +1,48 @@
+// 2021 07.17
+
+// Given a string of words, you need to find the highest scoring word.
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+// You need to return the highest scoring word as a string.
+// If two words score the same, return the word that appears earliest in the original string.
+// All letters will be lowercase and all inputs will be valid.
+
+function high(x) {
+    //create an array of key/value pairs
+    let scores = []
+    //split the string into an array (by space)
+    x.split(' ').forEach(w => scores.push([w, w.split('').reduce((acc, curr) => acc + (curr.codePointAt() - 96),0)]))
+        //add the value of each char together, that is the sum number
+    //sort that array highest to lowest
+    //return the first item
+    return scores.sort((a, b) => b[1] - a[1])[0][0]
+
+}
+
+// const arr = [['first', 3], ['second', 5], ['third', 5], ['fourth', 1]]
+// arr.sort((a, b) => b[1] - a[1])   //first one is 'second'
+
+// 'a'.codePointAt() - 96  // for eaach char, this is the score.
+
 //2021 07.16
 
 //random kata
+// unsolved
+const rot13 = message => {
+    // return nums or special chars as they are
+    return message.replace(/[a-z]/gi, m => {
+        let l = m.codePointAt()
+        return (l >= 97 && l <= 122) ? String.fromCharCode(l) : String.fromCharCode(l)
+    })
+}
+// console.log(rot13("z"), 'm')
+// console.log(rot13("Grfg"), 'Test')
 
-const toCamelCase = str => str
-    .replace(/[-_]/g, ' ')
-    .split(' ')
-    .map((word, i) => (i > 0) ? word.replace(/^[a-z]/, c => c.toUpperCase()) : word)
-    .join('')
+
+// const toCamelCase = str => str
+//     .replace(/[-_]/g, ' ')
+//     .split(' ')
+//     .map((word, i) => (i > 0) ? word.replace(/^[a-z]/, c => c.toUpperCase()) : word)
+//     .join('')
 
 // console.log(toCamelCase("the_stealth_warrior"), "theStealthWarrior")
 // console.log(toCamelCase("The-Stealth-Warrior"), "TheStealthWarrior")
@@ -19,71 +55,71 @@ const toCamelCase = str => str
 //     return map.sort().map(el => el[1]).join(' ')
 // }
 
-function order(words){
-    return words.split(' ').sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0]).join(' ')
-}
+// function order(words){
+//     return words.split(' ').sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0]).join(' ')
+// }
 
 // console.log(order("is2 Thi1s T4est 3a"))
 
-const songDecoder = song => song.replace(/(WUB){1,}/g, ' ').trim()
+// const songDecoder = song => song.replace(/(WUB){1,}/g, ' ').trim()
 // console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"))
 
-const uniqueInOrder = iterable => {
-    const unique = []
-    for (let i = 0; i < iterable.length; i++) {
-        if (iterable[i] !== iterable[i+1]) unique.push(iterable[i])
-    }
-    return unique
-}
+// const uniqueInOrder = iterable => {
+//     const unique = []
+//     for (let i = 0; i < iterable.length; i++) {
+//         if (iterable[i] !== iterable[i+1]) unique.push(iterable[i])
+//     }
+//     return unique
+// }
 // console.log(uniqueInOrder('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
 
-const twoDecimalPlaces = n => +n.toFixed(2)
+// const twoDecimalPlaces = n => +n.toFixed(2)
 
 //Count characters in your string
 
-function count(string) {
-    const charCount = {}
-    for (i in string){
-        !charCount[string[i]] ? charCount[string[i]] = 1 : charCount[string[i]]++
-    }
-    return charCount
-}
+// function count(string) {
+//     const charCount = {}
+//     for (i in string){
+//         !charCount[string[i]] ? charCount[string[i]] = 1 : charCount[string[i]]++
+//     }
+//     return charCount
+// }
 
 //or
 
-function count(string) {
-    const charCount = {}
-    string.split('').forEach(el => (!charCount[el]) ? charCount[el] = 1 : charCount[el]++)
-    return charCount
-}
+// function count(string) {
+//     const charCount = {}
+//     string.split('').forEach(el => (!charCount[el]) ? charCount[el] = 1 : charCount[el]++)
+//     return charCount
+// }
 
 // console.log(count("aba"), { a: 2, b: 1 })
 // console.log(count(""), {})
 
 //Two to One
-const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
+// const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
 
 // console.log("Test 1:", longest("xyaabbbccccdefww", "xxxxyyyyabklmopq") === "abcdefklmopqwxy" ? 'Passed' : 'Failed')
 // console.log("Test 1:", longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz") === "abcdefghijklmnopqrstuvwxyz" ? 'Passed' : 'Failed')
 // console.log("Test 1:", longest("", "") === "" ? 'Passed' : 'Failed')
 
 //Meeting
-function meeting(s) {
-    return s.toUpperCase()
-        .split(';')
-        // .sort()
-        .map(el => el.split(':').reverse())
-        .sort()
-        .map(el => `(${el[0]}, ${el[1]})`)
-        .join('')
-}
+// function meeting(s) {
+//     return s.toUpperCase()
+//         .split(';')
+//         // .sort()
+//         .map(el => el.split(':').reverse())
+//         .sort()
+//         .map(el => `(${el[0]}, ${el[1]})`)
+//         .join('')
+// }
 
 // console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn") === "(ARNO, ANN)(BELL, JOHN)(CORNWELL, ALEX)(DORNY, ABBA)(KERN, LEWIS)(KORN, ALEX)(META, GRACE)(SCHWARZ, VICTORIA)(STAN, MADISON)(STAN, MEGAN)(WAHL, ALEXIS)")
 
 //2021 07.15
 
 //Break camelCase
-const solution = str => str.split('').map(l => l == l.toUpperCase() ? ` ${l}` : l).join('')
+// const solution = str => str.split('').map(l => l == l.toUpperCase() ? ` ${l}` : l).join('')
 
 
 // Given a string, return a new string that has transformed based on the input:
@@ -98,19 +134,19 @@ const solution = str => str.split('').map(l => l == l.toUpperCase() ? ` ${l}` : 
 // You may assume the input only contain English alphabet and spaces.
 
 
-function stringTransformer(str) {
-    return str.split(' ')
-        .map(word => word.replace(/[a-z]/gi, c => c == c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()))
-        .reverse()
-        .join(' ')
-}
+// function stringTransformer(str) {
+//     return str.split(' ')
+//         .map(word => word.replace(/[a-z]/gi, c => c == c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()))
+//         .reverse()
+//         .join(' ')
+// }
 
-function stringTransformer(str) {
-    return str.split(' ').map(word => word.replace(/[a-z]/gi, c => {
-        const n = c.codePointAt()
-        return (n >= 97 && n <= 122) ? String.fromCharCode(n - 32) : String.fromCharCode(n + 32)
-    })).reverse().join(' ')
-}
+// function stringTransformer(str) {
+//     return str.split(' ').map(word => word.replace(/[a-z]/gi, c => {
+//         const n = c.codePointAt()
+//         return (n >= 97 && n <= 122) ? String.fromCharCode(n - 32) : String.fromCharCode(n + 32)
+//     })).reverse().join(' ')
+// }
 
 //2021 07.14
 
@@ -124,7 +160,7 @@ function stringTransformer(str) {
 //approach - use replace with regular expression to replace beginning of url i.e. 'https://www.' with ''
 //split the array at '.' and return the first element as a string
 
-const domainName = url => url.replace(/(.*:\/\/)|www./gi, '').split('.')[0]
+// const domainName = url => url.replace(/(.*:\/\/)|www./gi, '').split('.')[0]
 
 
 //2021 07.13
