@@ -7,15 +7,12 @@
 // All letters will be lowercase and all inputs will be valid.
 
 function high(x) {
-    //create an array of key/value pairs
+    //create an array of key/value pairs to track scores
     let scores = []
-    //split the string into an array (by space)
-    x.split(' ').forEach(w => scores.push([w, w.split('').reduce((acc, curr) => acc + (curr.codePointAt() - 96),0)]))
-        //add the value of each char together, that is the sum number
-    //sort that array highest to lowest
-    //return the first item
+    //split the string into an array (by space), push values for the word and its score to 'scores'
+    x.split(' ').forEach(w => scores.push([w, w.split('').reduce((acc, curr) => acc + (curr.codePointAt() - 96),0)])) //add the value of each char together (this is the word score))
+    //sort the array from highest to lowest score, and return the first element of the first item
     return scores.sort((a, b) => b[1] - a[1])[0][0]
-
 }
 
 // const arr = [['first', 3], ['second', 5], ['third', 5], ['fourth', 1]]
