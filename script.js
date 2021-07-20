@@ -1,4 +1,56 @@
-// 2021 07.17
+// 2021 07.20
+
+// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string.Ignore capitalization when determining if a character is a duplicate.
+
+// examples
+// "din"      => "((("
+// "recede"   => "()()()"
+// "Success"  => ")())())"
+// "(( @"     => "))(("
+
+//use indexOf and lastIndexOf
+//either split string, use for of loop or replace to loop through each character, creating a new string based on whether there are duplicate chars
+
+//split string
+function duplicateEncode(word){
+    let chars = word.toLowerCase().split('')
+    let result = ''
+
+    for (let i = 0; i < chars.length; i++){
+        if (chars.indexOf(chars[i]) == chars.lastIndexOf(chars[i])) {
+            result += '('
+        } else {
+            result += ')'
+        }
+    }
+
+    return result
+}
+
+//for ...of
+// function duplicateEncode(word) {
+//     const lowercase = word.toLowerCase()
+//     let result = ''
+
+//     for (char of lowercase){
+//         ( lowercase.indexOf(char) !== lowercase.lastIndexOf(char) ) ? result += ')' : result += '('
+//     }
+
+//     return result
+// }
+
+//replace
+// function duplicateEncode(word){
+//     return word.toLowerCase().replace(/./g, (m,i,a) => a.indexOf(m) !== a.lastIndexOf(m) ? ')' : '(')
+// }
+
+
+console.log(duplicateEncode("din"), "(((")
+console.log(duplicateEncode("recede"), "()()()")
+console.log(duplicateEncode("Success"), ")())())")
+console.log(duplicateEncode("(( @"), "))((")
+
+// 2021 07.19
 
 // Given a string of words, you need to find the highest scoring word.
 // Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
