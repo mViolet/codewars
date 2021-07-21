@@ -1,5 +1,20 @@
 // 2021 07.21
 
+function solve(arr) {
+    let result  = []
+    const sorted = arr.sort((a,b) => b-a)
+    let n = arr.length - 1
+    
+    for (let i = 0; n > i; i++){
+        result.push(sorted[i])
+        result.push(sorted[n])
+        n--
+    }
+
+    if (sorted.length % 2 !== 0) result.push(sorted[n])
+    return result
+}
+
 //IQ test - top solution used filter. I chose the long way to avoid iterating all the way through the array 
 
 function isEven(n){
