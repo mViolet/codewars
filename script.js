@@ -1,5 +1,67 @@
 // 2021 07.20
 
+//IQ test - top solution used filter. I chose the long way to avoid iterating all the way through the array 
+
+function isEven(n){
+    return n % 2 === 0
+}
+
+function iqTest(numbers) {
+    let evens
+    let result
+    const numsArr = numbers.split(' ')
+    console.log(numsArr)
+
+    if ((isEven(numsArr[0]) && isEven(numsArr[1])) || (isEven(numsArr[0]) && isEven(numsArr[2])) || (isEven(numsArr[1]) && isEven(numsArr[2]))) { //checks for even number majority
+        evens = true
+    } else {
+        evens = false
+    }
+
+    for (let i = 0; i < numsArr.length; i++){
+        if (evens) { //if evens are majority
+            if (numsArr[i] % 2 !== 0) {
+                result = i + 1 //set result to the position of the odd number
+            }
+        } else { //else
+            if (numsArr[i] % 2 === 0) {
+                result = i + 1 //set result to position of the even number
+            }
+        }
+        console.log(numsArr[i])
+        if (result) break //break once result is found
+    }
+    return result
+}
+
+// unsolved
+// function longestConsec(arr, k) {
+//     // two inputs - arr of strings, k as an int
+//     // return the longest string which can be made from consecutive strings in the array by multiple of k?
+//     const l = arr.length
+//     const longStrs = []
+
+//     if (l == 0 || k > l || k <= 0) return ''
+
+//     for (let i = 0; i <= l - k; i++) { //iterate as far as we can based on k
+//         let newStr = '' //create a blank string
+        
+//         for (let j = i; j < i + k; j++) { //loop from i to i + k to grab strings to concatenate
+//             newStr += arr[j] //add the string to newStr on each iteration
+//         }
+
+//         longStrs.push(newStr) //push the concatenated string to the array of long strings
+//     }
+//     return longStrs.sort((a,b) => b.length - a.length)[0] //sort the array by length and return the first (longest) element
+//     //needs bubble sort
+// }
+
+
+// console.log(longestConsec(longArr, 3))
+// console.log(`Expected: 'pothktqogsjzyipzbofrfxhvqbttsxtqcmjdaiwh'`)
+// Expected: 'pothktqogsjzyipzbofrfxhvqbttsxtqcmjdaiwh', instead got: 'pbkwnpsilqhxncdxohomfigsqimskfvjmibxibqp'
+
+
 // The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string.Ignore capitalization when determining if a character is a duplicate.
 
 // examples
@@ -28,19 +90,19 @@ function duplicateEncode(word){
 }
 
 //for ...of
-function duplicateEncode(word) {
-    const lowercase = word.toLowerCase()
-    let result = ''
+// function duplicateEncode(word) {
+//     const lowercase = word.toLowerCase()
+//     let result = ''
 
-    for (char of lowercase){
-        ( lowercase.indexOf(char) !== lowercase.lastIndexOf(char) ) ? result += ')' : result += '('
-    }
+//     for (char of lowercase){
+//         ( lowercase.indexOf(char) !== lowercase.lastIndexOf(char) ) ? result += ')' : result += '('
+//     }
 
 //     return result
 // }
 
 //replace
-const duplicateEncode = word => word.toLowerCase().replace(/./g, (m,i,a) => a.indexOf(m) !== a.lastIndexOf(m) ? ')' : '(')
+// const duplicateEncode = word => word.toLowerCase().replace(/./g, (m,i,a) => a.indexOf(m) !== a.lastIndexOf(m) ? ')' : '(')
 
 
 // console.log(duplicateEncode("din"), "(((")
