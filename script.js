@@ -3,7 +3,7 @@
 function solve(arr) {
     let result  = []
     const sorted = arr.sort((a,b) => b-a)
-    let n = arr.length - 1
+    let n = arr.length - 1 //the indices of the min values
     
     for (let i = 0; n > i; i++){
         result.push(sorted[i])
@@ -15,38 +15,42 @@ function solve(arr) {
     return result
 }
 
-//IQ test - top solution used filter. I chose the long way to avoid iterating all the way through the array 
+//adding comments for standup repl.it
+//IQ test - I chose the long way to avoid iterating all the way through the array.
 
+//helper function to check if a number is even
 function isEven(n){
     return n % 2 === 0
 }
 
 function iqTest(numbers) {
-    let evens
-    let result
-    const numsArr = numbers.split(' ')
-    console.log(numsArr)
+    let evens   //tracks whether evens are a majority
+    let result  //result to return
+    const numsArr = numbers.split(' ') //array of nums to loop through
 
+    // a wild & crazy conditional! Basically checks the first three elements to figure out whether odds or evens are the majority
+    // (it evaluates to true if any pair of numbers out of the first three nums are even... We'd have an even majority)
     if ((isEven(numsArr[0]) && isEven(numsArr[1])) || (isEven(numsArr[0]) && isEven(numsArr[2])) || (isEven(numsArr[1]) && isEven(numsArr[2]))) { //checks for even number majority
-        evens = true
+        evens = true // so we set evens to true
     } else {
-        evens = false
+        evens = false // otherwise we set it to false
     }
 
+    //now we loop through the array
     for (let i = 0; i < numsArr.length; i++){
         if (evens) { //if evens are majority
-            if (numsArr[i] % 2 !== 0) {
+            if (numsArr[i] % 2 !== 0) { //if the current element is odd, we found the odd one out
                 result = i + 1 //set result to the position of the odd number
             }
-        } else { //else
-            if (numsArr[i] % 2 === 0) {
+        } else { //else odds are the majority
+            if (numsArr[i] % 2 === 0) { // if the current num is even, it's the odd one out
                 result = i + 1 //set result to position of the even number
             }
         }
-        console.log(numsArr[i])
-        if (result) break //break once result is found
+
+        if (result) break //break the loop once result is found, to avoid looping through the whole array
     }
-    return result
+    return result //return the one-indexed position of the odd number out
 }
 
 // 2021 07.20
