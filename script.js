@@ -1,4 +1,4 @@
-// 2021 07.20
+// 2021 07.21
 
 //IQ test - top solution used filter. I chose the long way to avoid iterating all the way through the array 
 
@@ -33,6 +33,8 @@ function iqTest(numbers) {
     }
     return result
 }
+
+// 2021 07.20
 
 // unsolved
 // function longestConsec(arr, k) {
