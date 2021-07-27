@@ -1,18 +1,34 @@
 //2021 07.27
 
+// You live in the city of Cartesia where all roads are laid out in a perfect grid.You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk.The city provides its citizens with a Walk Generating App on their phones-- everytime you press the button it sends you an array of one - letter strings representing directions to walk(eg. ['n', 's', 'w', 'e']).You always walk only a single block for each letter(direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes(you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+
+//if the length != 10, return false (has to be exactly 10 min)
+//my approach: assign pos & neg nums to each direction. When added together, a complete path should equal 0. !0 evaluates to true
+
+function isValidWalk(walk) {
+    const dirs = {'n': 2, 's': -2, 'e': 1, 'w': -1}
+    return (walk.length !== 10) ? false : !walk.reduce((acc, curr) => acc + dirs[curr], 0) //any number other than 0 will return truthy, so I'm returning the opposite
+}
+
+console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']), 'should return true');
+console.log(isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']), 'should return false');
+console.log(isValidWalk(['w']), 'should return false');
+console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']), 'should return false');
+
+
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
-function persistence(num) {
-    let numStr = num.toString()   //convert num to a string
-    let count = 0                 //track how many times we multiplied
+// function persistence(num) {
+//     let numStr = num.toString()   //convert num to a string
+//     let count = 0                 //track how many times we multiplied
 
-    while (numStr.length > 1) {   //while numString has a length greater than 1
-        let arr = numStr.split('')   //create an array of nums (as strings) from numStr
-        numStr = arr.reduce((acc, n) => acc * +n, 1).toString()  //multiply them together, convert back to a string (this is now our new numStr)
-        count++ //increase the multiplication count
-    }
-    return count
-}
+//     while (numStr.length > 1) {   //while numString has a length greater than 1
+//         let arr = numStr.split('')   //create an array of nums (as strings) from numStr
+//         numStr = arr.reduce((acc, n) => acc * +n, 1).toString()  //multiply them together, convert back to a string (this is now our new numStr)
+//         count++ //increase the multiplication count
+//     }
+//     return count
+// }
 
 // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string.
 // The input string can be assumed to contain only alphabets(both uppercase and lowercase) and numeric digits.
