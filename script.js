@@ -1,20 +1,34 @@
 //2021 07.27
 
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+function persistence(num) {
+    let numStr = num.toString()   //convert num to a string
+    let count = 0                 //track how many times we multiplied
+
+    while (numStr.length > 1) {   //while numString has a length greater than 1
+        let arr = numStr.split('')   //create an array of nums (as strings) from numStr
+        numStr = arr.reduce((acc, n) => acc * +n, 1).toString()  //multiply them together, convert back to a string (this is now our new numStr)
+        count++ //increase the multiplication count
+    }
+    return count
+}
+
 // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string.
 // The input string can be assumed to contain only alphabets(both uppercase and lowercase) and numeric digits.
 
-function duplicateCount(str){
-    let counts = {} //tracks counts of each char
-    str.toLowerCase().split('').sort().forEach(el => counts[el] ? counts[el]++ : counts[el] = 1) //builds the counts map
-    return Object.entries(counts).filter(([letter, num]) => num > 1).length //entries of counts obj as key/value pairs
-}
+// function duplicateCount(str){
+//     let counts = {} //tracks counts of each char
+//     str.toLowerCase().split('').sort().forEach(el => counts[el] ? counts[el]++ : counts[el] = 1) //builds the counts map
+//     return Object.entries(counts).filter(([letter, num]) => num > 1).length //entries of counts obj as key/value pairs
+// }
 
-console.log(duplicateCount(""), 0);
-console.log(duplicateCount("abcde"), 0);
-console.log(duplicateCount("aabbcde"), 2);
-console.log(duplicateCount("aabBcde"), 2, "should ignore case");
-console.log(duplicateCount("Indivisibility"), 1)
-console.log(duplicateCount("Indivisibilities"), 2, "characters may not be adjacent")
+// console.log(duplicateCount(""), 0);
+// console.log(duplicateCount("abcde"), 0);
+// console.log(duplicateCount("aabbcde"), 2);
+// console.log(duplicateCount("aabBcde"), 2, "should ignore case");
+// console.log(duplicateCount("Indivisibility"), 1)
+// console.log(duplicateCount("Indivisibilities"), 2, "characters may not be adjacent")
 
 
 //catch up on daily challenges
