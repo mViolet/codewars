@@ -1,13 +1,31 @@
 //2021 07.27
+
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string.
+// The input string can be assumed to contain only alphabets(both uppercase and lowercase) and numeric digits.
+
+function duplicateCount(str){
+    let counts = {} //tracks counts of each char
+    str.toLowerCase().split('').sort().forEach(el => counts[el] ? counts[el]++ : counts[el] = 1) //builds the counts map
+    return Object.entries(counts).filter(([letter, num]) => num > 1).length //entries of counts obj as key/value pairs
+}
+
+console.log(duplicateCount(""), 0);
+console.log(duplicateCount("abcde"), 0);
+console.log(duplicateCount("aabbcde"), 2);
+console.log(duplicateCount("aabBcde"), 2, "should ignore case");
+console.log(duplicateCount("Indivisibility"), 1)
+console.log(duplicateCount("Indivisibilities"), 2, "characters may not be adjacent")
+
+
 //catch up on daily challenges
 
 // You will be given an array of numbers.You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
 
 //shorter version using map:
-function sortArray(array){
-    let odds = array.filter(el => el % 2).sort((a,b) => a - b)  //sorted odds, el % 2 is truthy, it's odd
-    return array.map(el => (el % 2) ? odds.shift() : el)
-}
+// function sortArray(array){
+//     let odds = array.filter(el => el % 2).sort((a,b) => a - b)  //sorted odds, el % 2 is truthy, it's odd
+//     return array.map(el => (el % 2) ? odds.shift() : el)
+// }
 
 // function sortArray(array) {
 //     let odds = array.filter(el => el % 2 !== 0)
@@ -24,11 +42,11 @@ function sortArray(array){
 //     return array
 // }
 
-console.log(sortArray([5, 3, 2, 8, 1, 4]), [1, 3, 2, 8, 5, 4])
-console.log(sortArray([5, 3, 1, 8, 0]), [1, 3, 5, 8, 0])
-console.log(sortArray([7, 1]), [1, 7])
-console.log(sortArray([5, 8, 6, 3, 4]), [3, 8, 6, 5, 4])
-console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]), [1, 8, 3, 6, 5, 4, 7, 2, 9, 0])
+// console.log(sortArray([5, 3, 2, 8, 1, 4]), [1, 3, 2, 8, 5, 4])
+// console.log(sortArray([5, 3, 1, 8, 0]), [1, 3, 5, 8, 0])
+// console.log(sortArray([7, 1]), [1, 7])
+// console.log(sortArray([5, 8, 6, 3, 4]), [3, 8, 6, 5, 4])
+// console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]), [1, 8, 3, 6, 5, 4, 7, 2, 9, 0])
 
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 
