@@ -1,12 +1,44 @@
 //2021 07.27
 
-const countBits = n => n.toString(2).split('').filter(n => +n === 1).length
+function alphabetWar(fight) {
+    const left = { 'w': 4, 'p': 3, 'b': 2, 's': 1 }
+    const right = { 'm': 4, 'q': 3, 'd': 2, 'z': 1 }
+    const exploded = fight.replace(/\*[a-z]/gi, "*").replace(/[a-z]\*/gi, '').split('')
 
-console.log(countBits(0), 0)
-console.log(countBits(4), 1)
-console.log(countBits(7), 3)
-console.log(countBits(9), 2)
-console.log(countBits(10), 2)
+
+    if (exploded.length >= 1) {
+        let leftCount = 0
+        let rightCount = 0
+
+        exploded.forEach(el => {
+            if (left[el]) leftCount += left[el]
+            if (right[el]) rightCount += right[el]
+        })
+
+        if (leftCount !== rightCount) {
+            return (leftCount > rightCount) ? "Left side wins!" : "Right side wins!"
+        }
+    }
+
+    return "Let's fight again!"
+}
+
+console.log(alphabetWar("z"), "Right side wins!");
+console.log(alphabetWar("****"), "Let's fight again!");
+console.log(alphabetWar("z*dq*mw*pb*s"), "Let's fight again!");
+console.log(alphabetWar("zdqmwpbs"), "Let's fight again!");
+console.log(alphabetWar("zz*zzs"), "Right side wins!");
+console.log(alphabetWar("sz**z**zs"), "Left side wins!");
+console.log(alphabetWar("z*z*z*zs"), "Left side wins!");
+console.log(alphabetWar("*wwwwww*z*"), "Left side wins!");
+
+// const countBits = n => n.toString(2).split('').filter(n => +n === 1).length
+
+// console.log(countBits(0), 0)
+// console.log(countBits(4), 1)
+// console.log(countBits(7), 3)
+// console.log(countBits(9), 2)
+// console.log(countBits(10), 2)
 
 // You live in the city of Cartesia where all roads are laid out in a perfect grid.You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk.The city provides its citizens with a Walk Generating App on their phones-- everytime you press the button it sends you an array of one - letter strings representing directions to walk(eg. ['n', 's', 'w', 'e']).You always walk only a single block for each letter(direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes(you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
 
