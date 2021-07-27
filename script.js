@@ -1,17 +1,34 @@
 //2021 07.27
 //catch up on daily challenges
 
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+//     arrayDiff([1, 2], [1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// arrayDiff([1, 2, 2, 2, 3], [2]) == [1, 3]
+
+const arrayDiff = (a, b) => a.filter(el => !b.includes(el))
+
+console.log(arrayDiff([], [4, 5]), [])
+console.log(arrayDiff([3, 4], [3]), [4])
+console.log(arrayDiff([1, 8, 2], []), [1, 8, 2])
+console.log(arrayDiff([1, 2, 3], [1, 2]), [3])
+
+
 // Given a string of words(x), you need to return an array of the words, sorted alphabetically by the final character in each.
 // If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
 // All inputs will be valid.
 
-function last(x) {
-    return x.split(' ').sort((a,b) => a[a.length-1].charCodeAt() - b[b.length-1].charCodeAt()) //needed to call charCodeAt() on '' for actual solution
-}
+// function last(x) {
+//     return x.split(' ').sort((a,b) => a[a.length-1].charCodeAt() - b[b.length-1].charCodeAt()) //needed to call charCodeAt() on '' for actual solution
+// }
 
-console.log(last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up']);
-console.log(last('what time are we climbing up the volcano'), ['time', 'are', 'we', 'the', 'climbing', 'volcano', 'up', 'what']);
-console.log(last('take me to semynak'), ['take', 'me', 'semynak', 'to']);
+// console.log(last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up'])
+// console.log(last('what time are we climbing up the volcano'), ['time', 'are', 'we', 'the', 'climbing', 'volcano', 'up', 'what'])
+// console.log(last('take me to semynak'), ['take', 'me', 'semynak', 'to'])
 
 // // Given an array of numbers(in string format), you must return a string.The numbers correspond to the letters of the alphabet in reverse order: a = 26, z = 1 etc.You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
 
