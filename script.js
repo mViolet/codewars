@@ -1,6 +1,35 @@
 //2021 07.27
 //catch up on daily challenges
 
+// You will be given an array of numbers.You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+
+//shorter version using map:
+function sortArray(array){
+    let odds = array.filter(el => el % 2).sort((a,b) => a - b)  //sorted odds, el % 2 is truthy, it's odd
+    return array.map(el => (el % 2) ? odds.shift() : el)
+}
+
+// function sortArray(array) {
+//     let odds = array.filter(el => el % 2 !== 0)
+//     odds.sort((a,b) => a - b)
+//     counter = 0
+    
+//     for (let i = 0; i < array.length; i++){
+//         if (array[i] % 2 !== 0) {
+//             array[i] = odds[counter]
+//             counter++
+//         }
+//     }
+
+//     return array
+// }
+
+console.log(sortArray([5, 3, 2, 8, 1, 4]), [1, 3, 2, 8, 5, 4])
+console.log(sortArray([5, 3, 1, 8, 0]), [1, 3, 5, 8, 0])
+console.log(sortArray([7, 1]), [1, 7])
+console.log(sortArray([5, 8, 6, 3, 4]), [3, 8, 6, 5, 4])
+console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]), [1, 8, 3, 6, 5, 4, 7, 2, 9, 0])
+
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 
 // It should remove all values from list a, which are present in list b keeping their order.
@@ -10,12 +39,12 @@
 
 // arrayDiff([1, 2, 2, 2, 3], [2]) == [1, 3]
 
-const arrayDiff = (a, b) => a.filter(el => !b.includes(el))
+// const arrayDiff = (a, b) => a.filter(el => !b.includes(el))
 
-console.log(arrayDiff([], [4, 5]), [])
-console.log(arrayDiff([3, 4], [3]), [4])
-console.log(arrayDiff([1, 8, 2], []), [1, 8, 2])
-console.log(arrayDiff([1, 2, 3], [1, 2]), [3])
+// console.log(arrayDiff([], [4, 5]), [])
+// console.log(arrayDiff([3, 4], [3]), [4])
+// console.log(arrayDiff([1, 8, 2], []), [1, 8, 2])
+// console.log(arrayDiff([1, 2, 3], [1, 2]), [3])
 
 
 // Given a string of words(x), you need to return an array of the words, sorted alphabetically by the final character in each.
