@@ -1,3 +1,16 @@
+//2021 07.27
+
+// Given an array of numbers(in string format), you must return a string.The numbers correspond to the letters of the alphabet in reverse order: a = 26, z = 1 etc.You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
+
+function switcher(x) {
+    let key = "~zyxwvutsrqponmlkjihgfedcba!? "
+    return x.map(n => key[n]).join('')
+}
+
+console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8']), 'codewars')
+console.log(switcher(['25', '7', '8', '4', '14', '23', '8', '25', '23', '29', '16', '16', '4']), 'btswmdsbd kkw')
+console.log(switcher(['4', '24']), 'wc')
+
 // 2021 07.21
 
 function solve(arr) {
@@ -15,100 +28,100 @@ function solve(arr) {
     return result
 }
 
-//adding comments for standup repl.it
-//IQ test - I chose the long way to avoid iterating all the way through the array.
+// //adding comments for standup repl.it
+// //IQ test - I chose the long way to avoid iterating all the way through the array.
 
-//helper function to check if a number is even
-function isEven(n){
-    return n % 2 === 0
-}
-
-function iqTest(numbers) {
-    let evens   //tracks whether evens are a majority
-    let result  //result to return
-    const numsArr = numbers.split(' ') //array of nums to loop through
-
-    // a wild & crazy conditional! Basically checks the first three elements to figure out whether odds or evens are the majority
-    // (it evaluates to true if any pair of numbers out of the first three nums are even... We'd have an even majority)
-    if ((isEven(numsArr[0]) && isEven(numsArr[1])) || (isEven(numsArr[0]) && isEven(numsArr[2])) || (isEven(numsArr[1]) && isEven(numsArr[2]))) { //checks for even number majority
-        evens = true // so we set evens to true
-    } else {
-        evens = false // otherwise we set it to false
-    }
-
-    //now we loop through the array
-    for (let i = 0; i < numsArr.length; i++){
-        if (evens) { //if evens are majority
-            if (numsArr[i] % 2 !== 0) { //if the current element is odd, we found the odd one out
-                result = i + 1 //set result to the position of the odd number
-            }
-        } else { //else odds are the majority
-            if (numsArr[i] % 2 === 0) { // if the current num is even, it's the odd one out
-                result = i + 1 //set result to position of the even number
-            }
-        }
-
-        if (result) break //break the loop once result is found, to avoid looping through the whole array
-    }
-    return result //return the one-indexed position of the odd number out
-}
-
-// 2021 07.20
-
-// unsolved
-// function longestConsec(arr, k) {
-//     // two inputs - arr of strings, k as an int
-//     // return the longest string which can be made from consecutive strings in the array by multiple of k?
-//     const l = arr.length
-//     const longStrs = []
-
-//     if (l == 0 || k > l || k <= 0) return ''
-
-//     for (let i = 0; i <= l - k; i++) { //iterate as far as we can based on k
-//         let newStr = '' //create a blank string
-        
-//         for (let j = i; j < i + k; j++) { //loop from i to i + k to grab strings to concatenate
-//             newStr += arr[j] //add the string to newStr on each iteration
-//         }
-
-//         longStrs.push(newStr) //push the concatenated string to the array of long strings
-//     }
-//     return longStrs.sort((a,b) => b.length - a.length)[0] //sort the array by length and return the first (longest) element
-//     //needs bubble sort
+// //helper function to check if a number is even
+// function isEven(n){
+//     return n % 2 === 0
 // }
 
+// function iqTest(numbers) {
+//     let evens   //tracks whether evens are a majority
+//     let result  //result to return
+//     const numsArr = numbers.split(' ') //array of nums to loop through
 
-// console.log(longestConsec(longArr, 3))
-// console.log(`Expected: 'pothktqogsjzyipzbofrfxhvqbttsxtqcmjdaiwh'`)
-// Expected: 'pothktqogsjzyipzbofrfxhvqbttsxtqcmjdaiwh', instead got: 'pbkwnpsilqhxncdxohomfigsqimskfvjmibxibqp'
+//     // a wild & crazy conditional! Basically checks the first three elements to figure out whether odds or evens are the majority
+//     // (it evaluates to true if any pair of numbers out of the first three nums are even... We'd have an even majority)
+//     if ((isEven(numsArr[0]) && isEven(numsArr[1])) || (isEven(numsArr[0]) && isEven(numsArr[2])) || (isEven(numsArr[1]) && isEven(numsArr[2]))) { //checks for even number majority
+//         evens = true // so we set evens to true
+//     } else {
+//         evens = false // otherwise we set it to false
+//     }
+
+//     //now we loop through the array
+//     for (let i = 0; i < numsArr.length; i++){
+//         if (evens) { //if evens are majority
+//             if (numsArr[i] % 2 !== 0) { //if the current element is odd, we found the odd one out
+//                 result = i + 1 //set result to the position of the odd number
+//             }
+//         } else { //else odds are the majority
+//             if (numsArr[i] % 2 === 0) { // if the current num is even, it's the odd one out
+//                 result = i + 1 //set result to position of the even number
+//             }
+//         }
+
+//         if (result) break //break the loop once result is found, to avoid looping through the whole array
+//     }
+//     return result //return the one-indexed position of the odd number out
+// }
+
+// // 2021 07.20
+
+// // unsolved
+// // function longestConsec(arr, k) {
+// //     // two inputs - arr of strings, k as an int
+// //     // return the longest string which can be made from consecutive strings in the array by multiple of k?
+// //     const l = arr.length
+// //     const longStrs = []
+
+// //     if (l == 0 || k > l || k <= 0) return ''
+
+// //     for (let i = 0; i <= l - k; i++) { //iterate as far as we can based on k
+// //         let newStr = '' //create a blank string
+        
+// //         for (let j = i; j < i + k; j++) { //loop from i to i + k to grab strings to concatenate
+// //             newStr += arr[j] //add the string to newStr on each iteration
+// //         }
+
+// //         longStrs.push(newStr) //push the concatenated string to the array of long strings
+// //     }
+// //     return longStrs.sort((a,b) => b.length - a.length)[0] //sort the array by length and return the first (longest) element
+// //     //needs bubble sort
+// // }
 
 
-// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string.Ignore capitalization when determining if a character is a duplicate.
+// // console.log(longestConsec(longArr, 3))
+// // console.log(`Expected: 'pothktqogsjzyipzbofrfxhvqbttsxtqcmjdaiwh'`)
+// // Expected: 'pothktqogsjzyipzbofrfxhvqbttsxtqcmjdaiwh', instead got: 'pbkwnpsilqhxncdxohomfigsqimskfvjmibxibqp'
 
-// examples
-// "din"      => "((("
-// "recede"   => "()()()"
-// "Success"  => ")())())"
-// "(( @"     => "))(("
 
-//use indexOf and lastIndexOf
-//either split string, use for of loop or replace to loop through each character, creating a new string based on whether there are duplicate chars
+// // The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string.Ignore capitalization when determining if a character is a duplicate.
 
-//split string
-function duplicateEncode(word){
-    let chars = word.toLowerCase().split('')
-    let result = ''
+// // examples
+// // "din"      => "((("
+// // "recede"   => "()()()"
+// // "Success"  => ")())())"
+// // "(( @"     => "))(("
 
-    for (let i = 0; i < chars.length; i++){
-        if (chars.indexOf(chars[i]) == chars.lastIndexOf(chars[i])) {
-            result += '('
-        } else {
-            result += ')'
-        }
-    }
+// //use indexOf and lastIndexOf
+// //either split string, use for of loop or replace to loop through each character, creating a new string based on whether there are duplicate chars
 
-    return result
-}
+// //split string
+// function duplicateEncode(word){
+//     let chars = word.toLowerCase().split('')
+//     let result = ''
+
+//     for (let i = 0; i < chars.length; i++){
+//         if (chars.indexOf(chars[i]) == chars.lastIndexOf(chars[i])) {
+//             result += '('
+//         } else {
+//             result += ')'
+//         }
+//     }
+
+//     return result
+// }
 
 //for ...of
 // function duplicateEncode(word) {
