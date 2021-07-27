@@ -1,15 +1,28 @@
 //2021 07.27
+//catch up on daily challenges
 
-// Given an array of numbers(in string format), you must return a string.The numbers correspond to the letters of the alphabet in reverse order: a = 26, z = 1 etc.You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
+// Given a string of words(x), you need to return an array of the words, sorted alphabetically by the final character in each.
+// If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
+// All inputs will be valid.
 
-function switcher(x) {
-    let key = "~zyxwvutsrqponmlkjihgfedcba!? "
-    return x.map(n => key[n]).join('')
+function last(x) {
+    return x.split(' ').sort((a,b) => a[a.length-1].charCodeAt() - b[b.length-1].charCodeAt()) //needed to call charCodeAt() on '' for actual solution
 }
 
-console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8']), 'codewars')
-console.log(switcher(['25', '7', '8', '4', '14', '23', '8', '25', '23', '29', '16', '16', '4']), 'btswmdsbd kkw')
-console.log(switcher(['4', '24']), 'wc')
+console.log(last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up']);
+console.log(last('what time are we climbing up the volcano'), ['time', 'are', 'we', 'the', 'climbing', 'volcano', 'up', 'what']);
+console.log(last('take me to semynak'), ['take', 'me', 'semynak', 'to']);
+
+// // Given an array of numbers(in string format), you must return a string.The numbers correspond to the letters of the alphabet in reverse order: a = 26, z = 1 etc.You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
+
+// function switcher(x) {
+//     let key = "~zyxwvutsrqponmlkjihgfedcba!? "
+//     return x.map(n => key[n]).join('')
+// }
+
+// console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8']), 'codewars')
+// console.log(switcher(['25', '7', '8', '4', '14', '23', '8', '25', '23', '29', '16', '16', '4']), 'btswmdsbd kkw')
+// console.log(switcher(['4', '24']), 'wc')
 
 // 2021 07.21
 
