@@ -1,36 +1,53 @@
+//2021 07.28
+
+// return the two oldest/oldest ages within the array of ages passed in.
+const twoOldestAges = ages => ages.sort((a, b) => a - b).slice(ages.length - 2)
+
+console.log(twoOldestAges([1, 5, 87, 87, 45, 8, 8]), [87, 87])
+console.log(twoOldestAges([6, 5, 83, 5, 3, 18]), [45, 87])
+
+
 //2021 07.27
 
-function alphabetWar(fight) {
-    const left = { 'w': 4, 'p': 3, 'b': 2, 's': 1 }
-    const right = { 'm': 4, 'q': 3, 'd': 2, 'z': 1 }
-    const exploded = fight.replace(/\*[a-z]/gi, "*").replace(/[a-z]\*/gi, '').split('')
+const morse_code = {'-.-.--': '!','.-..-.': '"','...-..-': '$','.-...': '&','.----.': '\'','-.--.': '(','-.--.-': ')','.-.-.': '+','--..--': ',','-....-': '-','.-.-.-': '.','-..-.': '/','-----': '0','.----': '1','..---': '2','...--': '3','....-': '4','.....': '5','-....': '6','--...': '7','---..': '8','----.': '9','---...': ':','-.-.-.': ';','-...-': '=','..--..': '?','.--.-.': '@','.-': 'A','-...': 'B','-.-.': 'C','-..': 'D','.': 'E','..-.': 'F','--.': 'G','....': 'H','..': 'I','.---': 'J','-.-': 'K','.-..': 'L','--': 'M','-.': 'N','---': 'O','.--.': 'P','--.-': 'Q','.-.': 'R','...': 'S','-': 'T','..-': 'U','...-': 'V','.--': 'W','-..-': 'X','-.--': 'Y','--..': 'Z','..--.-': '_','...---...': 'SOS'}
 
-
-    if (exploded.length >= 1) {
-        let leftCount = 0
-        let rightCount = 0
-
-        exploded.forEach(el => {
-            if (left[el]) leftCount += left[el]
-            if (right[el]) rightCount += right[el]
-        })
-
-        if (leftCount !== rightCount) {
-            return (leftCount > rightCount) ? "Left side wins!" : "Right side wins!"
-        }
-    }
-
-    return "Let's fight again!"
+decodeMorse = function (morseCode) {
+    return morseCode.replace(/  +/gi, '!').split('!').map(el => el.split(' ').map(el => morse_code[el]).join('')).join(' ')
 }
 
-console.log(alphabetWar("z"), "Right side wins!");
-console.log(alphabetWar("****"), "Let's fight again!");
-console.log(alphabetWar("z*dq*mw*pb*s"), "Let's fight again!");
-console.log(alphabetWar("zdqmwpbs"), "Let's fight again!");
-console.log(alphabetWar("zz*zzs"), "Right side wins!");
-console.log(alphabetWar("sz**z**zs"), "Left side wins!");
-console.log(alphabetWar("z*z*z*zs"), "Left side wins!");
-console.log(alphabetWar("*wwwwww*z*"), "Left side wins!");
+// console.log(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
+
+// function alphabetWar(fight) {
+//     const left = { 'w': 4, 'p': 3, 'b': 2, 's': 1 }
+//     const right = { 'm': 4, 'q': 3, 'd': 2, 'z': 1 }
+//     const exploded = fight.replace(/\*[a-z]/gi, "*").replace(/[a-z]\*/gi, '').split('')
+
+
+//     if (exploded.length >= 1) {
+//         let leftCount = 0
+//         let rightCount = 0
+
+//         exploded.forEach(el => {
+//             if (left[el]) leftCount += left[el]
+//             if (right[el]) rightCount += right[el]
+//         })
+
+//         if (leftCount !== rightCount) {
+//             return (leftCount > rightCount) ? "Left side wins!" : "Right side wins!"
+//         }
+//     }
+
+//     return "Let's fight again!"
+// }
+
+// console.log(alphabetWar("z"), "Right side wins!")
+// console.log(alphabetWar("****"), "Let's fight again!")
+// console.log(alphabetWar("z*dq*mw*pb*s"), "Let's fight again!")
+// console.log(alphabetWar("zdqmwpbs"), "Let's fight again!")
+// console.log(alphabetWar("zz*zzs"), "Right side wins!")
+// console.log(alphabetWar("sz**z**zs"), "Left side wins!")
+// console.log(alphabetWar("z*z*z*zs"), "Left side wins!")
+// console.log(alphabetWar("*wwwwww*z*"), "Left side wins!")
 
 // const countBits = n => n.toString(2).split('').filter(n => +n === 1).length
 
