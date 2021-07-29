@@ -1,5 +1,28 @@
 //2021 07.29
 
+//top solution
+String.prototype.sort = function () {
+    return this.split("").sort().join("");
+};
+
+function anagrams(word, words) {
+    return words.filter(function (x) {
+        return x.sort() === word.sort();
+    });
+}
+
+function anagrams(word, words) {
+    const matches = []
+
+    words.forEach(el => {
+        if (word.toLowerCase().split('').sort().join() === el.toLowerCase().split('').sort().join()) matches.push(el)
+    })
+
+    return matches
+}
+
+console.log(anagrams("word", ["dwor", "Dwro", "abba", "rood", "word"]), ["dwor", "Dwro", "word"])
+
 // Write a function that takes a single string(word) as argument.The function must return an ordered list containing the indexes of all capital letters in the string.
 
 //this was one of the solutions
