@@ -1,10 +1,31 @@
+//2021 07.29
+
+// Write a function that takes a single string(word) as argument.The function must return an ordered list containing the indexes of all capital letters in the string.
+
+//this was one of the solutions
+const capitals = word => {
+    return word.split('').reduce(function (n, l, i) {
+        return /[A-Z]/.test(l) && n.push(i), n //comma operator in return statement
+    }, [])
+}
+
+// const capitals = word => {
+//     const indexes = []
+//     word.split('').forEach((el, i) => {
+//         if (/[A-Z]/g.test(el)) indexes.push(i)
+//     })
+//     return indexes
+// }
+
+console.log(capitals('CodEWaRs'), [0, 3, 4, 6])
+
 //2021 07.28
 
-// return the two oldest/oldest ages within the array of ages passed in.
-const twoOldestAges = ages => ages.sort((a, b) => a - b).slice(ages.length - 2)
+// return the two oldest ages within the array of ages passed in (including doubles).
+// const twoOldestAges = ages => ages.sort((a, b) => a - b).slice(-2)
 
-console.log(twoOldestAges([1, 5, 87, 87, 45, 8, 8]), [87, 87])
-console.log(twoOldestAges([6, 5, 83, 5, 3, 18]), [45, 87])
+// console.log(twoOldestAges([1, 5, 87, 87, 45, 8, 8]), [87, 87])
+// console.log(twoOldestAges([6, 5, 83, 5, 3, 18]), [45, 87])
 
 
 //2021 07.27
