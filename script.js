@@ -1,36 +1,46 @@
+//2021 08.02
+
+// In this Kata, you will be given an array of strings and your task is to remove all consecutive duplicate letters from each string in the array.
+
+function dup(arr) {
+    return arr.map((el) => el.split('').map((l, i, a) => l !== a[i + 1] ? l : '').join(''))
+}
+
+console.log(dup(["abracadabra", "allottee", "assessee"]), ['abracadabra', 'alote', 'asese'])
+
 //2021 07.29
 
 //top solution
-String.prototype.sort = function () {
-    return this.split("").sort().join("");
-};
+// String.prototype.sort = function () {
+//     return this.split("").sort().join("");
+// };
 
-function anagrams(word, words) {
-    return words.filter(function (x) {
-        return x.sort() === word.sort();
-    });
-}
+// function anagrams(word, words) {
+//     return words.filter(function (x) {
+//         return x.sort() === word.sort();
+//     });
+// }
 
-function anagrams(word, words) {
-    const matches = []
+// function anagrams(word, words) {
+//     const matches = []
 
-    words.forEach(el => {
-        if (word.toLowerCase().split('').sort().join() === el.toLowerCase().split('').sort().join()) matches.push(el)
-    })
+//     words.forEach(el => {
+//         if (word.toLowerCase().split('').sort().join() === el.toLowerCase().split('').sort().join()) matches.push(el)
+//     })
 
-    return matches
-}
+//     return matches
+// }
 
-console.log(anagrams("word", ["dwor", "Dwro", "abba", "rood", "word"]), ["dwor", "Dwro", "word"])
+// console.log(anagrams("word", ["dwor", "Dwro", "abba", "rood", "word"]), ["dwor", "Dwro", "word"])
 
 // Write a function that takes a single string(word) as argument.The function must return an ordered list containing the indexes of all capital letters in the string.
 
 //this was one of the solutions
-const capitals = word => {
-    return word.split('').reduce(function (n, l, i) {
-        return /[A-Z]/.test(l) && n.push(i), n //comma operator in return statement
-    }, [])
-}
+// const capitals = word => {
+//     return word.split('').reduce(function (n, l, i) {
+//         return /[A-Z]/.test(l) && n.push(i), n //comma operator in return statement
+//     }, [])
+// }
 
 // const capitals = word => {
 //     const indexes = []
@@ -40,7 +50,7 @@ const capitals = word => {
 //     return indexes
 // }
 
-console.log(capitals('CodEWaRs'), [0, 3, 4, 6])
+// console.log(capitals('CodEWaRs'), [0, 3, 4, 6])
 
 //2021 07.28
 
