@@ -1,3 +1,7 @@
+//2021 08.03
+
+const findDeletedNumber = (arr, mixArr) => arr.reduce((a, b) => a + b) - mixArr.reduce((a, b) => a + b)
+
 //2021 08.02
 
 // In this Kata, you will be given an array of strings and your task is to remove all consecutive duplicate letters from each string in the array.
