@@ -1,16 +1,25 @@
 //2021 08.03
 
-const findDeletedNumber = (arr, mixArr) => arr.reduce((a, b) => a + b, 0) - mixArr.reduce((a, b) => a + b, 0)
+function dbSort(a){
+	const nums = a.filter(el => typeof el === "number").sort((a,b) => a - b)
+    const strs = a.filter(el => typeof el === "string").sort()
+
+    return nums.concat(strs)
+}
+
+console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 0, 2, 2]), [0, 2, 2, "Apple", "Banana", "Mango", "Orange"])
+
+// const findDeletedNumber = (arr, mixArr) => arr.reduce((a, b) => a + b, 0) - mixArr.reduce((a, b) => a + b, 0)
 
 //2021 08.02
 
 // In this Kata, you will be given an array of strings and your task is to remove all consecutive duplicate letters from each string in the array.
 
-function dup(arr) {
-    return arr.map((el) => el.split('').map((l, i, a) => l !== a[i + 1] ? l : '').join(''))
-}
+// function dup(arr) {
+//     return arr.map((el) => el.split('').map((l, i, a) => l !== a[i + 1] ? l : '').join(''))
+// }
 
-console.log(dup(["abracadabra", "allottee", "assessee"]), ['abracadabra', 'alote', 'asese'])
+// console.log(dup(["abracadabra", "allottee", "assessee"]), ['abracadabra', 'alote', 'asese'])
 
 //2021 07.29
 
