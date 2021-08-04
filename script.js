@@ -1,13 +1,17 @@
+//2021 08.04
+
+const gimme = arr => arr.indexOf(arr.map(el => el).sort((a, b) => a < b)[1])
+
 //2021 08.03
 
-function dbSort(a){
-	const nums = a.filter(el => typeof el === "number").sort((a,b) => a - b)
-    const strs = a.filter(el => typeof el === "string").sort()
+// function dbSort(a){
+// 	const nums = a.filter(el => typeof el === "number").sort((a,b) => a - b)
+//     const strs = a.filter(el => typeof el === "string").sort()
 
-    return nums.concat(strs)
-}
+//     return nums.concat(strs)
+// }
 
-console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 0, 2, 2]), [0, 2, 2, "Apple", "Banana", "Mango", "Orange"])
+// console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 0, 2, 2]), [0, 2, 2, "Apple", "Banana", "Mango", "Orange"])
 
 // const findDeletedNumber = (arr, mixArr) => arr.reduce((a, b) => a + b, 0) - mixArr.reduce((a, b) => a + b, 0)
 
