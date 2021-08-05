@@ -5,7 +5,7 @@ function absentVowel(x) {
     const vowels = {'a':0, 'e':1, 'i':2, 'o':3, 'u':4}
     const sum = Object.values(vowels).reduce((a,b) => a + b)
 
-    return sum - [...new Set(x.match(/[aeiou]/gi))].reduce((a,b) => a + +vowels[b], 0)
+    return sum - [...new Set(x.match(/[aeiou]/gi))].reduce((a,b) => a + vowels[b], 0)
 }
 
 console.log(absentVowel("John Doe hs seven red pples under his bsket"), 0)
