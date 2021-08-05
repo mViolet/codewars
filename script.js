@@ -1,15 +1,29 @@
 //2021 08.05
 
-
-function absentVowel(x) {
-    const vowels = {'a':0, 'e':1, 'i':2, 'o':3, 'u':4}
-    const sum = Object.values(vowels).reduce((a,b) => a + b)
-
-    return sum - [...new Set(x.match(/[aeiou]/gi))].reduce((a,b) => a + vowels[b], 0)
+function list(names) {
+    const namesList = names.map(el => el.name)
+    let l = names.length
+    if (l) {
+        return (l > 2) ? (namesList.slice(0, -1).join(', ') + ' & ') + (namesList[namesList.length - 1]) : namesList.join(' & ')
+    }
+    return ''
 }
 
-console.log(absentVowel("John Doe hs seven red pples under his bsket"), 0)
-console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"), 3)
+console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }, { name: 'Homer' }, { name: 'Marge' }]), 'Bart, Lisa, Maggie, Homer & Marge', "Must work with many names")
+console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }]), 'Bart, Lisa & Maggie', "Must work with many names")
+console.log(list([{ name: 'Bart' }, { name: 'Lisa' }]), 'Bart & Lisa', "Must work with two names")
+console.log(list([{ name: 'Bart' }]), 'Bart', "Wrong output for a single name")
+console.log(list([]), '', "Must work with no names")
+
+// function absentVowel(x) {
+//     const vowels = {'a':0, 'e':1, 'i':2, 'o':3, 'u':4}
+//     const sum = Object.values(vowels).reduce((a,b) => a + b)
+
+//     return sum - [...new Set(x.match(/[aeiou]/gi))].reduce((a,b) => a + vowels[b], 0)
+// }
+
+// console.log(absentVowel("John Doe hs seven red pples under his bsket"), 0)
+// console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"), 3)
 
 //2021 08.04
 
