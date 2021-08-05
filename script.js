@@ -1,5 +1,21 @@
 //2021 08.05
 
+//top solution - reduce!!
+function list(names) {
+    return names.reduce(function (prev, current, index, array) {
+        if (index === 0) {
+            return current.name;
+        }
+        else if (index === array.length - 1) {
+            return prev + ' & ' + current.name
+        }
+        else {
+            return prev + ', ' + current.name
+        }
+    }, '')
+}
+
+//my solution
 function list(names) {
     const namesList = names.map(el => el.name)
     let l = names.length
