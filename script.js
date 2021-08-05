@@ -1,6 +1,19 @@
+//2021 08.05
+
+
+function absentVowel(x) {
+    const vowels = {'a':0, 'e':1, 'i':2, 'o':3, 'u':4}
+    const sum = Object.values(vowels).reduce((a,b) => a + b)
+
+    return sum - [...new Set(x.match(/[aeiou]/gi))].reduce((a,b) => a + +vowels[b], 0)
+}
+
+console.log(absentVowel("John Doe hs seven red pples under his bsket"), 0)
+console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"), 3)
+
 //2021 08.04
 
-const gimme = arr => arr.indexOf(arr.map(el => el).sort((a, b) => a < b)[1])
+// const gimme = arr => arr.indexOf(arr.map(el => el).sort((a, b) => a < b)[1])
 
 //2021 08.03
 
