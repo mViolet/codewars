@@ -1,35 +1,46 @@
+//2021 08.06
+
+function averageLength(arr) {
+    let avg = Math.round(arr.reduce((a,b) => a + b.length, 0) / arr.length)
+    return arr.map(el => el[0].repeat(avg))
+}
+
+console.log(averageLength(['u', 'y']), ['u', 'y'])
+console.log(averageLength(['aa', 'bbb', 'cccc']), ['aaa', 'bbb', 'ccc'])
+console.log(averageLength(['aa', 'bb', 'ddd', 'eee']), ['aaa', 'bbb', 'ddd', 'eee'])
+
 //2021 08.05
 
 //top solution - reduce!!
-function list(names) {
-    return names.reduce(function (prev, current, index, array) {
-        if (index === 0) {
-            return current.name;
-        }
-        else if (index === array.length - 1) {
-            return prev + ' & ' + current.name
-        }
-        else {
-            return prev + ', ' + current.name
-        }
-    }, '')
-}
+// function list(names) {
+//     return names.reduce(function (prev, current, index, array) {
+//         if (index === 0) {
+//             return current.name;
+//         }
+//         else if (index === array.length - 1) {
+//             return prev + ' & ' + current.name
+//         }
+//         else {
+//             return prev + ', ' + current.name
+//         }
+//     }, '')
+// }
 
-//my solution
-function list(names) {
-    const namesList = names.map(el => el.name)
-    let l = names.length
-    if (l) {
-        return (l > 2) ? (namesList.slice(0, -1).join(', ') + ' & ') + (namesList[namesList.length - 1]) : namesList.join(' & ')
-    }
-    return ''
-}
+// //my solution
+// function list(names) {
+//     const namesList = names.map(el => el.name)
+//     let l = names.length
+//     if (l) {
+//         return (l > 2) ? (namesList.slice(0, -1).join(', ') + ' & ') + (namesList[namesList.length - 1]) : namesList.join(' & ')
+//     }
+//     return ''
+// }
 
-console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }, { name: 'Homer' }, { name: 'Marge' }]), 'Bart, Lisa, Maggie, Homer & Marge', "Must work with many names")
-console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }]), 'Bart, Lisa & Maggie', "Must work with many names")
-console.log(list([{ name: 'Bart' }, { name: 'Lisa' }]), 'Bart & Lisa', "Must work with two names")
-console.log(list([{ name: 'Bart' }]), 'Bart', "Wrong output for a single name")
-console.log(list([]), '', "Must work with no names")
+// console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }, { name: 'Homer' }, { name: 'Marge' }]), 'Bart, Lisa, Maggie, Homer & Marge', "Must work with many names")
+// console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }]), 'Bart, Lisa & Maggie', "Must work with many names")
+// console.log(list([{ name: 'Bart' }, { name: 'Lisa' }]), 'Bart & Lisa', "Must work with two names")
+// console.log(list([{ name: 'Bart' }]), 'Bart', "Wrong output for a single name")
+// console.log(list([]), '', "Must work with no names")
 
 // function absentVowel(x) {
 //     const vowels = {'a':0, 'e':1, 'i':2, 'o':3, 'u':4}
