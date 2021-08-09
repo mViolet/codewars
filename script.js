@@ -1,13 +1,24 @@
-//2021 08.06
+//2021 08.09
 
-function averageLength(arr) {
-    let avg = Math.round(arr.reduce((a,b) => a + b.length, 0) / arr.length)
-    return arr.map(el => el[0].repeat(avg))
+function findUniq(arr) {
+    const nums = [... new Set(arr)]
+    return arr.slice(0,3).filter(el => el == nums[0]).length > 1 ? nums[1] : nums[0]
 }
 
-console.log(averageLength(['u', 'y']), ['u', 'y'])
-console.log(averageLength(['aa', 'bbb', 'cccc']), ['aaa', 'bbb', 'ccc'])
-console.log(averageLength(['aa', 'bb', 'ddd', 'eee']), ['aaa', 'bbb', 'ddd', 'eee'])
+console.log(findUniq([0, 1, 0]), 1)
+console.log(findUniq([1, 1, 1, 2, 1, 1]), 2)
+console.log(findUniq([3, 10, 3, 3, 3]), 10)
+
+//2021 08.06
+
+// function averageLength(arr) {
+//     let avg = Math.round(arr.reduce((a,b) => a + b.length, 0) / arr.length)
+//     return arr.map(el => el[0].repeat(avg))
+// }
+
+// console.log(averageLength(['u', 'y']), ['u', 'y'])
+// console.log(averageLength(['aa', 'bbb', 'cccc']), ['aaa', 'bbb', 'ccc'])
+// console.log(averageLength(['aa', 'bb', 'ddd', 'eee']), ['aaa', 'bbb', 'ddd', 'eee'])
 
 //2021 08.05
 
