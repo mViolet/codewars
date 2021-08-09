@@ -1,13 +1,32 @@
 //2021 08.09
 
-function findUniq(arr) {
-    const nums = [... new Set(arr)]
-    return arr.slice(0,3).filter(el => el == nums[0]).length > 1 ? nums[1] : nums[0]
+//daily standup fizzbuzz problem
+// Given a number as an input, print out every integer from 1 to that number.However, when the integer is divisible by 2, print out “Fizz”; when it’s divisible by 3, print out “Buzz”; when it’s divisible by both 2 and 3, print out “Fizz Buzz”.
+
+//we are taking in an integer
+//we are printing out every number from one to that number - time complexity will be O(n) (one for-loop)
+
+function fizzBuzz(n){
+    for (let i = 1; i <= n; i++){
+        if (i % 2 == 0 && i % 3 == 0) console.log("Fizz Buzz")
+        else if (i % 2 == 0) console.log("Fizz")
+        else if (i % 3 == 0) console.log("Buzz")
+        else (console.log(i))
+    }
 }
 
-console.log(findUniq([0, 1, 0]), 1)
-console.log(findUniq([1, 1, 1, 2, 1, 1]), 2)
-console.log(findUniq([3, 10, 3, 3, 3]), 10)
+fizzBuzz(15)
+// should equal 1, Fizz, Buzz, Fizz, 5, Fizz Buzz, 7, Fizz, Buzz, Fizz, 11, Fizz Buzz, 13, Fizz, Buzz
+
+
+// function findUniq(arr) {
+//     const nums = [... new Set(arr)]
+//     return arr.slice(0,3).filter(el => el == nums[0]).length > 1 ? nums[1] : nums[0]
+// }
+
+// console.log(findUniq([0, 1, 0]), 1)
+// console.log(findUniq([1, 1, 1, 2, 1, 1]), 2)
+// console.log(findUniq([3, 10, 3, 3, 3]), 10)
 
 //2021 08.06
 
