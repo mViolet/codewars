@@ -16,7 +16,7 @@ function fizzBuzz(n){
 }
 
 fizzBuzz(15)
-// should equal 1, Fizz, Buzz, Fizz, 5, Fizz Buzz, 7, Fizz, Buzz, Fizz, 11, Fizz Buzz, 13, Fizz, Buzz
+// should print: 1, Fizz, Buzz, Fizz, 5, Fizz Buzz, 7, Fizz, Buzz, Fizz, 11, Fizz Buzz, 13, Fizz, Buzz
 
 
 // function findUniq(arr) {
