@@ -1,3 +1,17 @@
+//2021 08.10
+
+// O(n)
+function reverse(str){
+    let reversed = ''
+    for (let i = str.length - 1; i >= 0; i--){
+        reversed += str[i]
+    }
+    return reversed
+}
+
+console.log(reverse("hello"), "olleh")
+console.log(reverse("Hello World!"), "!dlroW olleH")
+
 //2021 08.09
 
 //daily standup fizzbuzz problem
@@ -6,16 +20,16 @@
 //we are taking in an integer
 //we are printing out every number from one to that number - time complexity will be O(n) (one for-loop)
 
-function fizzBuzz(n){
-    for (let i = 1; i <= n; i++){
-        if (i % 2 == 0 && i % 3 == 0) console.log("Fizz Buzz")
-        else if (i % 2 == 0) console.log("Fizz")
-        else if (i % 3 == 0) console.log("Buzz")
-        else (console.log(i))
-    }
-}
+// function fizzBuzz(n){
+//     for (let i = 1; i <= n; i++){
+//         if (i % 2 == 0 && i % 3 == 0) console.log("Fizz Buzz")
+//         else if (i % 2 == 0) console.log("Fizz")
+//         else if (i % 3 == 0) console.log("Buzz")
+//         else (console.log(i))
+//     }
+// }
 
-fizzBuzz(15)
+// fizzBuzz(15)
 // should print: 1, Fizz, Buzz, Fizz, 5, Fizz Buzz, 7, Fizz, Buzz, Fizz, 11, Fizz Buzz, 13, Fizz, Buzz
 
 
