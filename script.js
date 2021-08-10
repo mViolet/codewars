@@ -1,5 +1,12 @@
 //2021 08.10
 
+function hexStringToRGB(hexString) {
+    const rgbVals = hexString.slice(1).match(/.{1,2}/g).map(el => parseInt(el, 16))
+    return { r: rgbVals[0], g: rgbVals[1], b: rgbVals[2]}
+}
+
+console.log(hexStringToRGB("#FF9933"), { r: 255, g: 153, b: 51 })
+
 // O(n)
 function reverse(str){
     let reversed = ''
