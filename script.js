@@ -1,23 +1,49 @@
+//2021 08.12
+
+// Given a string of characters, return the character that appears the most often.
+// No String or Array Methods(well brute force it first, but then no methods)!
+
+function max(str){
+    const charCounts = {}
+    let maxNum = 0
+    let maxChar = ''
+    for (let l in str){
+        !charCounts[str[l]] ? charCounts[str[l]] = 1 : charCounts[str[l]]++
+    }
+    for (let l in charCounts){
+        if (charCounts[l] > maxNum) {
+            maxNum = charCounts[l]
+            maxChar = l
+        }
+    }
+    return maxChar
+}
+
+console.log(max("Hello World!"), "l")
+console.log(max("This is a sentence!"), "s") //s appears first
+console.log(max("aaaabbbcccs"), "a")
+console.log(max(''), "")
+
 //2021 08.10
 
-function hexStringToRGB(hexString) {
-    const rgbVals = hexString.slice(1).match(/.{1,2}/g).map(el => parseInt(el, 16))
-    return { r: rgbVals[0], g: rgbVals[1], b: rgbVals[2]}
-}
+// function hexStringToRGB(hexString) {
+//     const rgbVals = hexString.slice(1).match(/.{1,2}/g).map(el => parseInt(el, 16))
+//     return { r: rgbVals[0], g: rgbVals[1], b: rgbVals[2]}
+// }
 
-console.log(hexStringToRGB("#FF9933"), { r: 255, g: 153, b: 51 })
+// console.log(hexStringToRGB("#FF9933"), { r: 255, g: 153, b: 51 })
 
-// O(n)
-function reverse(str){
-    let reversed = ''
-    for (let i = str.length - 1; i >= 0; i--){
-        reversed += str[i]
-    }
-    return reversed
-}
+// // O(n)
+// function reverse(str){
+//     let reversed = ''
+//     for (let i = str.length - 1; i >= 0; i--){
+//         reversed += str[i]
+//     }
+//     return reversed
+// }
 
-console.log(reverse("hello"), "olleh")
-console.log(reverse("Hello World!"), "!dlroW olleH")
+// console.log(reverse("hello"), "olleh")
+// console.log(reverse("Hello World!"), "!dlroW olleH")
 
 //2021 08.09
 
