@@ -1,28 +1,60 @@
 //2021 08.12
 
+// Given a string of words or phrases, count the number of vowels (not counting y).
+// No Regex! Unless that is your brute force... :(
+
+//nested loops solution
+function countVowels(str){
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let count = 0
+
+    for (let l in str){
+        for (let v in vowels){
+            if (vowels[v] === str[l]) count++
+        }
+    }
+
+    return count
+}
+
+//methods solution
+function countVowels(str){
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    return str.split('').filter(l => vowels.includes(l)).length
+}
+
+//regex solution
+function countVowels(str) {
+    return (str.match(/[aeiou]/gi) || '').length
+}
+
+console.log(countVowels("aeiou"), 5)
+console.log(countVowels("hello world!"), 3)
+console.log(countVowels(""), 0)
+
 // Given a string of characters, return the character that appears the most often.
 // No String or Array Methods(well brute force it first, but then no methods)!
 
-function max(str){
-    const charCounts = {}
-    let maxNum = 0
-    let maxChar = ''
-    for (let l in str){
-        !charCounts[str[l]] ? charCounts[str[l]] = 1 : charCounts[str[l]]++
-    }
-    for (let l in charCounts){
-        if (charCounts[l] > maxNum) {
-            maxNum = charCounts[l]
-            maxChar = l
-        }
-    }
-    return maxChar
-}
+// function max(str){
+//     const charCounts = {}
+//     let maxNum = 0
+//     let maxChar = ''
+//     for (let l in str){
+//         !charCounts[str[l]] ? charCounts[str[l]] = 1 : charCounts[str[l]]++
+//     }
+//     for (let l in charCounts){
+//         if (charCounts[l] > maxNum) {
+//             maxNum = charCounts[l]
+//             maxChar = l
+//         }
+//     }
+//     return maxChar
+// }
 
-console.log(max("Hello World!"), "l")
-console.log(max("This is a sentence!"), "s") //s appears first
-console.log(max("aaaabbbcccs"), "a")
-console.log(max(''), "")
+// console.log(max("Hello World!"), "l")
+// console.log(max("This is a sentence!"), "s") //s appears first
+// console.log(max("aaaabbbcccs"), "a")
+// console.log(max(''), "")
 
 //2021 08.10
 
