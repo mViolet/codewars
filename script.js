@@ -8,7 +8,7 @@ function countVowels(str){
     const vowels = ['a', 'e', 'i', 'o', 'u']
     let count = 0
 
-    for (let l in str){
+    for (let l in str.toLowerCase()){
         for (let v in vowels){
             if (vowels[v] === str[l]) count++
         }
@@ -20,7 +20,7 @@ function countVowels(str){
 //methods solution
 function countVowels(str){
     const vowels = ['a', 'e', 'i', 'o', 'u']
-    return str.split('').filter(l => vowels.includes(l)).length
+    return str.toLowerCase().split('').filter(l => vowels.includes(l)).length
 }
 
 //regex solution
