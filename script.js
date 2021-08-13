@@ -1,36 +1,57 @@
+//2021 08.13
+
+// Given an array of items, reverse the order.
+// No reverse method! Unless that is your brute force first...
+
+//reverse method solution
+const reverseArr = arr => arr.reverse()
+
+//swapping values solution
+function reverseArr(arr){
+    let l = arr.length
+    for (let i = 0; i < l / 2; i++){
+        let temp = arr[i] 
+        arr[i] = arr[arr.length - i - 1]
+        arr[arr.length - i - 1] = temp
+    }
+    return arr
+}
+
+console.log(reverseArr([1,2,3,4,5]), [5,4,3,2,1])
+
 //2021 08.12
 
 // Given a string of words or phrases, count the number of vowels (not counting y).
 // No Regex! Unless that is your brute force... :(
 
 //nested loops solution
-function countVowels(str){
-    const vowels = ['a', 'e', 'i', 'o', 'u']
-    let count = 0
+// function countVowels(str){
+//     const vowels = ['a', 'e', 'i', 'o', 'u']
+//     let count = 0
 
-    for (let l in str.toLowerCase()){
-        for (let v in vowels){
-            if (vowels[v] === str[l]) count++
-        }
-    }
+//     for (let l in str.toLowerCase()){
+//         for (let v in vowels){
+//             if (vowels[v] === str[l]) count++
+//         }
+//     }
 
-    return count
-}
+//     return count
+// }
 
-//methods solution
-function countVowels(str){
-    const vowels = ['a', 'e', 'i', 'o', 'u']
-    return str.toLowerCase().split('').filter(l => vowels.includes(l)).length
-}
+// //methods solution
+// function countVowels(str){
+//     const vowels = ['a', 'e', 'i', 'o', 'u']
+//     return str.toLowerCase().split('').filter(l => vowels.includes(l)).length
+// }
 
-//regex solution
-function countVowels(str) {
-    return (str.match(/[aeiou]/gi) || '').length
-}
+// //regex solution
+// function countVowels(str) {
+//     return (str.match(/[aeiou]/gi) || '').length
+// }
 
-console.log(countVowels("aeiou"), 5)
-console.log(countVowels("hello world!"), 3)
-console.log(countVowels(""), 0)
+// console.log(countVowels("aeiou"), 5)
+// console.log(countVowels("hello world!"), 3)
+// console.log(countVowels(""), 0)
 
 // Given a string of characters, return the character that appears the most often.
 // No String or Array Methods(well brute force it first, but then no methods)!
