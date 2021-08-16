@@ -1,23 +1,42 @@
+//2021 08.16
+
+// Given a phrase, reverse the order of the characters of each word.
+// No Reverse Method! Unless that is your brute force...
+
+function reverseWords(str){
+    return str.split(' ').map(w => {
+        let word = ''
+        for (let i = 0; i < w.length; i++){
+            word = w[i] + word
+        }
+        return word
+    }).join(' ')
+}
+
+console.log(reverseWords("I love JavaScript!"), "I evol !tpircSavaJ")
+
+
+
 //2021 08.13
 
 // Given an array of items, reverse the order.
 // No reverse method! Unless that is your brute force first...
 
-//reverse method solution
-const reverseArr = arr => arr.reverse()
+// //reverse method solution
+// const reverseArr = arr => arr.reverse()
 
-//swapping values solution
-function reverseArr(arr){
-    let l = arr.length
-    for (let i = 0; i < l / 2; i++){
-        let temp = arr[i] 
-        arr[i] = arr[arr.length - i - 1]
-        arr[arr.length - i - 1] = temp
-    }
-    return arr
-}
+// //swapping values solution
+// function reverseArr(arr){
+//     let l = arr.length
+//     for (let i = 0; i < l / 2; i++){
+//         let temp = arr[i] 
+//         arr[i] = arr[arr.length - i - 1]
+//         arr[arr.length - i - 1] = temp
+//     }
+//     return arr
+// }
 
-console.log(reverseArr([1,2,3,4,5]), [5,4,3,2,1])
+// console.log(reverseArr([1,2,3,4,5]), [5,4,3,2,1])
 
 //2021 08.12
 
