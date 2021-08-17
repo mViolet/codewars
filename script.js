@@ -1,19 +1,35 @@
+//2021 08.17
+
+// Given a magazine of words and a ransom note, determine if it’s possible to “cut out” and create the ransom note from the magazine words.
+
+const magazine =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+
+function ransomNote(str){
+    return str.split(' ').every(word => magazine.includes(word))
+}
+
+console.log(ransomNote("sit ad est sint", magazine), true)
+console.log(ransomNote("sit ad est love", magazine), false)
+console.log(ransomNote("sit ad est sint in in", magazine), true)
+console.log(ransomNote("sit ad est sint in in in in", magazine), false)
+
 //2021 08.16
 
 // Given a phrase, reverse the order of the characters of each word.
 // No Reverse Method! Unless that is your brute force...
 
-function reverseWords(str){
-    return str.split(' ').map(w => {
-        let word = ''
-        for (let i in w){
-            word = w[i] + word
-        }
-        return word
-    }).join(' ')
-}
+// function reverseWords(str){
+//     return str.split(' ').map(w => {
+//         let word = ''
+//         for (let i in w){
+//             word = w[i] + word
+//         }
+//         return word
+//     }).join(' ')
+// }
 
-console.log(reverseWords("I love JavaScript!"), "I evol !tpircSavaJ")
+// console.log(reverseWords("I love JavaScript!"), "I evol !tpircSavaJ")
 
 
 
