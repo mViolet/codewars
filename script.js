@@ -8,7 +8,7 @@ function pigIt(str){
 }
 
 console.log(pigIt('Pig latin is cool')) // igPay atinlay siay oolcay
-console.log(pigIt('Hello world!'))     // elloHay orldway !
+console.log(pigIt('Hello world!'))     // elloHay orldway!
 
 
 //2021 08.17
