@@ -25,6 +25,7 @@ function profit(arr){
 
 // profit([7, 1, 5, 3, 6, 4])
 console.log(profit([7, 1, 5, 3, 6, 4]), 5)
+console.log(profit([20, 17, 3, 6, 19, 20, 1, 2]), 17)
 console.log(profit([7, 6, 4, 3, 1]), 0)
 
 
