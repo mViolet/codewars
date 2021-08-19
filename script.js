@@ -1,3 +1,42 @@
+//2021 08.19
+
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+// Return the maximum profit you can achieve from this transaction.If you cannot achieve any profit, return 0.
+
+function profit(arr){
+    let purchPrice = arr[0] //1
+    let profit = 0
+
+    for (let i = 1; i < arr.length; i++){
+        if (purchPrice > arr[i]) {
+            purchPrice = arr[i]
+        } else {
+            let thisProfit = arr[i] - purchPrice
+            if (thisProfit > profit) profit = thisProfit
+        }
+    }
+
+    return profit
+
+}
+
+// profit([7, 1, 5, 3, 6, 4])
+console.log(profit([7, 1, 5, 3, 6, 4]), 5)
+console.log(profit([7, 6, 4, 3, 1]), 0)
+
+
+// two sum
+// Given an array of numbers, return all pairs that add up to a given sum.The numbers can be used more than once.
+
+function twoSum(arr, sum){
+}
+
+console.log(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]])
+
+
 //2021 08.18
 
 //simple pig latin
