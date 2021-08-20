@@ -36,10 +36,10 @@ function majority(nums){
 console.log(majority([3, 2, 3, 4]), 3)
 
 // Example 2:
-// console.log(majority([2, 2, 1, 1, 1, 2, 2]), 2)
+console.log(majority([2, 2, 1, 1, 1, 2, 2]), 2)
 
 // Example 3:
-// console.log(majority([2, 2, 1, 1, 1, 2, 1, 2]), 'no majority element found')
+console.log(majority([2, 2, 1, 1, 1, 2, 1, 2]), 'no majority element found')
 
 //2021 08.19
 
