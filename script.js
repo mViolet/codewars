@@ -1,3 +1,46 @@
+//2021 08.20
+
+// Given an array nums of size n, return the majority element.
+
+// The majority element is the element that appears more than ⌊n / 2⌋ times.You may assume that the majority element always exists in the array.
+
+//hash map solution
+function majority(nums){
+    let num = nums.length / 2
+    let hash = {}
+    
+    for (let n in nums){
+        (hash[nums[n]]) ? hash[nums[n]]++ : hash[nums[n]] = 1
+    }
+
+    for (let n in hash){
+        if (hash[n] > num) return n
+    }
+
+    return 'no majority element found'
+}
+
+//Set solution
+// const majority = function (nums) {
+//     let maxNum = (nums.length / 2)
+//     let uniq = [...new Set(nums)]
+
+//     for (let n in uniq){
+//         if (nums.filter(el => el === uniq[n]).length >= maxNum) return uniq[n]
+//     }
+
+//     return 'no majority element found'
+// }
+
+// Example 1:
+console.log(majority([3, 2, 3, 4]), 3)
+
+// Example 2:
+// console.log(majority([2, 2, 1, 1, 1, 2, 2]), 2)
+
+// Example 3:
+// console.log(majority([2, 2, 1, 1, 1, 2, 1, 2]), 'no majority element found')
+
 //2021 08.19
 
 // You are given an array prices where prices[i] is the price of a given stock on the ith day.
@@ -6,27 +49,27 @@
 
 // Return the maximum profit you can achieve from this transaction.If you cannot achieve any profit, return 0.
 
-function profit(arr){
-    let purchPrice = arr[0] //1
-    let profit = 0
+// function profit(arr){
+//     let purchPrice = arr[0]
+//     let profit = 0
 
-    for (let i = 1; i < arr.length; i++){
-        if (purchPrice > arr[i]) {
-            purchPrice = arr[i]
-        } else {
-            let thisProfit = arr[i] - purchPrice
-            if (thisProfit > profit) profit = thisProfit
-        }
-    }
+//     for (let i = 1; i < arr.length; i++){
+//         if (purchPrice > arr[i]) {
+//             purchPrice = arr[i]
+//         } else {
+//             let thisProfit = arr[i] - purchPrice
+//             if (thisProfit > profit) profit = thisProfit
+//         }
+//     }
 
-    return profit
+//     return profit
 
-}
+// }
 
 // profit([7, 1, 5, 3, 6, 4])
-console.log(profit([7, 1, 5, 3, 6, 4]), 5)
-console.log(profit([20, 17, 3, 6, 19, 20, 1, 2]), 17)
-console.log(profit([7, 6, 4, 3, 1]), 0)
+// console.log(profit([7, 1, 5, 3, 6, 4]), 5)
+// console.log(profit([20, 17, 3, 6, 19, 20, 1, 2]), 17)
+// console.log(profit([7, 6, 4, 3, 1]), 0)
 
 
 // two sum
@@ -43,12 +86,12 @@ console.log(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]])
 //simple pig latin
 // Move the first letter of each word to the end of it, then add "ay" to the end of the word.Leave punctuation marks untouched.
 
-function pigIt(str){
-    return str.replace(/\w+/gi, w => w.slice(1) + w[0] + 'ay')
-}
+// function pigIt(str){
+//     return str.replace(/\w+/gi, w => w.slice(1) + w[0] + 'ay')
+// }
 
-console.log(pigIt('Pig latin is cool')) // igPay atinlay siay oolcay
-console.log(pigIt('Hello world!'))     // elloHay orldway!
+// console.log(pigIt('Pig latin is cool')) // igPay atinlay siay oolcay
+// console.log(pigIt('Hello world!'))     // elloHay orldway!
 
 
 //2021 08.17
@@ -61,18 +104,18 @@ console.log(pigIt('Hello world!'))     // elloHay orldway!
 //input: [4,2,2,3,2,2,2] output: [2,3,4]
 
 // Set solution
-const uniqSort = function(arr){
-    const breadcrumbs = {}
+// const uniqSort = function(arr){
+//     const breadcrumbs = {}
 
-    return [... new Set(arr.sort((a, b) => a - b))]
-}
+//     return [... new Set(arr.sort((a, b) => a - b))]
+// }
 
 //another way
 // const uniqSort = function (arr) {
 //     return arr.sort((a, b) => a - b).filter((el,i,a) => el !== a[i+1])
 // }
 
-console.log(uniqSort([4,2,2,3,2,2,2]), [2,3,4])
+// console.log(uniqSort([4,2,2,3,2,2,2]), [2,3,4])
 
 // Given a magazine of words and a ransom note, determine if it’s possible to “cut out” and create the ransom note from the magazine words.
 
