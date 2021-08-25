@@ -1,3 +1,66 @@
+//2021 08.25
+//catching up with the standup problems!
+/*
+You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+
+Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+Example 1:
+Input: jewels = "aA", stones = "aAAbbbb"
+Output: 3
+
+Example 2:
+Input: jewels = "z", stones = "ZZ"
+Output: 0
+
+
+Constraints:
+
+1 <= jewels.length, stones.length <= 50
+jewels and stones consist of only English letters.
+All the characters of jewels are unique.
+*/
+
+function countJewels(jewels, stones){
+    let jewelCount = {}
+    let count = 0
+    for (let l of stones){
+        jewelCount[l] ? jewelCount[l]++ : jewelCount[l] = 1
+    }
+    for (let l of jewels){
+        if (jewelCount[l]) count += jewelCount[l]
+    }
+    return count
+}
+
+console.log(countJewels("Aa", "AbcbBAad"), 3)
+console.log(countJewels("z", "ZZ"), 0)
+
+// Given an array of integers nums.
+
+// A pair(i, j) is called good if nums[i] == nums[j] and i < j.
+
+// Return the number of good pairs.
+
+function goodPairs(arr){
+
+}
+
+console.log(goodPairs([1,2,3,1,1,3]), 4)
+
+// Input: nums = [1, 2, 3, 1, 1, 3]
+// Output: 4
+// Explanation: There are 4 good pairs(0, 3), (0, 4), (3, 4), (2, 5) 0 - indexed.
+//     Example 2:
+
+// Input: nums = [1, 1, 1, 1]
+// Output: 6
+// Explanation: Each pair in the array are good.
+//     Example 3:
+
+// Input: nums = [1, 2, 3]
+// Output: 0
+
 //2021 08.20
 
 // Given an array nums of size n, return the majority element.
