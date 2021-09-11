@@ -1,3 +1,26 @@
+//2021 09.10
+// It's been a while!! 
+
+function isPangram(string) {
+    const alphaMap = {a:0,b:0,c:0,d:0,e:0,f:0,g:0,h:0,i:0,j:0,k:0,l:0,m:0,n:0,o:0,p:0,q:0,r:0,s:0,t:0,u:0,v:0,w:0,x:0,y:0,z:0}
+    let count = 0
+    const str = string.toLowerCase().match(/[a-z]/g).join('')
+
+    for (l of str){
+        alphaMap[l] ? alphaMap[l] += 0 : alphaMap[l] += 1
+    }
+
+    for (el in alphaMap) {
+        count += alphaMap[el]
+    }
+    
+    return count == 26 ? true : false
+}
+
+console.log(isPangram('hello'), false)
+console.log(isPangram('abcdefghijklmnopqrstuvwxyz'), true)
+console.log(isPangram('the quick brown fox jumps over a lazy dog'), true)
+
 //2021 08.25
 //catching up with the standup problems!
 /*
@@ -21,20 +44,20 @@ jewels and stones consist of only English letters.
 All the characters of jewels are unique.
 */
 
-function countJewels(jewels, stones){
-    let jewelCount = {}
-    let count = 0
-    for (let l of stones){
-        jewelCount[l] ? jewelCount[l]++ : jewelCount[l] = 1
-    }
-    for (let l of jewels){
-        if (jewelCount[l]) count += jewelCount[l]
-    }
-    return count
-}
+// function countJewels(jewels, stones){
+//     let jewelCount = {}
+//     let count = 0
+//     for (let l of stones){
+//         jewelCount[l] ? jewelCount[l]++ : jewelCount[l] = 1
+//     }
+//     for (let l of jewels){
+//         if (jewelCount[l]) count += jewelCount[l]
+//     }
+//     return count
+// }
 
-console.log(countJewels("Aa", "AbcbBAad"), 3)
-console.log(countJewels("z", "ZZ"), 0)
+// console.log(countJewels("Aa", "AbcbBAad"), 3)
+// console.log(countJewels("z", "ZZ"), 0)
 
 // Given an array of integers nums.
 
@@ -42,11 +65,12 @@ console.log(countJewels("z", "ZZ"), 0)
 
 // Return the number of good pairs.
 
-function goodPairs(arr){
+// *unsolved
+// function goodPairs(arr){
 
-}
+// }
 
-console.log(goodPairs([1,2,3,1,1,3]), 4)
+// console.log(goodPairs([1,2,3,1,1,3]), 4)
 
 // Input: nums = [1, 2, 3, 1, 1, 3]
 // Output: 4
@@ -68,20 +92,20 @@ console.log(goodPairs([1,2,3,1,1,3]), 4)
 // The majority element is the element that appears more than ⌊n / 2⌋ times.You may assume that the majority element always exists in the array.
 
 //hash map solution
-function majority(nums){
-    let num = nums.length / 2
-    let hash = {}
+// function majority(nums){
+//     let num = nums.length / 2
+//     let hash = {}
     
-    for (let n in nums){
-        (hash[nums[n]]) ? hash[nums[n]]++ : hash[nums[n]] = 1
-    }
+//     for (let n in nums){
+//         (hash[nums[n]]) ? hash[nums[n]]++ : hash[nums[n]] = 1
+//     }
 
-    for (let n in hash){
-        if (hash[n] > num) return n
-    }
+//     for (let n in hash){
+//         if (hash[n] > num) return n
+//     }
 
-    return 'no majority element found'
-}
+//     return 'no majority element found'
+// }
 
 //Set solution
 // const majority = function (nums) {
@@ -96,13 +120,13 @@ function majority(nums){
 // }
 
 // Example 1:
-console.log(majority([3, 2, 3, 4]), 3)
+// console.log(majority([3, 2, 3, 4]), 3)
 
-// Example 2:
-console.log(majority([2, 2, 1, 1, 1, 2, 2]), 2)
+// // Example 2:
+// console.log(majority([2, 2, 1, 1, 1, 2, 2]), 2)
 
-// Example 3:
-console.log(majority([2, 2, 1, 1, 1, 2, 1, 2]), 'no majority element found')
+// // Example 3:
+// console.log(majority([2, 2, 1, 1, 1, 2, 1, 2]), 'no majority element found')
 
 //2021 08.19
 
@@ -138,10 +162,11 @@ console.log(majority([2, 2, 1, 1, 1, 2, 1, 2]), 'no majority element found')
 // two sum
 // Given an array of numbers, return all pairs that add up to a given sum.The numbers can be used more than once.
 
-function twoSum(arr, sum){
-}
+// // *unsolved
+// function twoSum(arr, sum){
+// }
 
-console.log(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]])
+// console.log(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]])
 
 
 //2021 08.18
@@ -479,14 +504,14 @@ console.log(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]])
 
 //2021 07.27
 
-const morse_code = {'-.-.--': '!','.-..-.': '"','...-..-': '$','.-...': '&','.----.': '\'','-.--.': '(','-.--.-': ')','.-.-.': '+','--..--': ',','-....-': '-','.-.-.-': '.','-..-.': '/','-----': '0','.----': '1','..---': '2','...--': '3','....-': '4','.....': '5','-....': '6','--...': '7','---..': '8','----.': '9','---...': ':','-.-.-.': ';','-...-': '=','..--..': '?','.--.-.': '@','.-': 'A','-...': 'B','-.-.': 'C','-..': 'D','.': 'E','..-.': 'F','--.': 'G','....': 'H','..': 'I','.---': 'J','-.-': 'K','.-..': 'L','--': 'M','-.': 'N','---': 'O','.--.': 'P','--.-': 'Q','.-.': 'R','...': 'S','-': 'T','..-': 'U','...-': 'V','.--': 'W','-..-': 'X','-.--': 'Y','--..': 'Z','..--.-': '_','...---...': 'SOS'}
+// const morse_code = {'-.-.--': '!','.-..-.': '"','...-..-': '$','.-...': '&','.----.': '\'','-.--.': '(','-.--.-': ')','.-.-.': '+','--..--': ',','-....-': '-','.-.-.-': '.','-..-.': '/','-----': '0','.----': '1','..---': '2','...--': '3','....-': '4','.....': '5','-....': '6','--...': '7','---..': '8','----.': '9','---...': ':','-.-.-.': ';','-...-': '=','..--..': '?','.--.-.': '@','.-': 'A','-...': 'B','-.-.': 'C','-..': 'D','.': 'E','..-.': 'F','--.': 'G','....': 'H','..': 'I','.---': 'J','-.-': 'K','.-..': 'L','--': 'M','-.': 'N','---': 'O','.--.': 'P','--.-': 'Q','.-.': 'R','...': 'S','-': 'T','..-': 'U','...-': 'V','.--': 'W','-..-': 'X','-.--': 'Y','--..': 'Z','..--.-': '_','...---...': 'SOS'}
 
-const decodeMorse = morseCode => morseCode
-    .replace(/  +/gi, '!')
-    .split('!')
-    .map(el => el.split(' ').map(el => MORSE_CODE[el]).join(''))
-    .join(' ')
-    .trim()
+// const decodeMorse = morseCode => morseCode
+//     .replace(/  +/gi, '!')
+//     .split('!')
+//     .map(el => el.split(' ').map(el => MORSE_CODE[el]).join(''))
+//     .join(' ')
+//     .trim()
 
 // console.log(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
 
@@ -650,20 +675,20 @@ const decodeMorse = morseCode => morseCode
 
 // 2021 07.21
 
-function solve(arr) {
-    let result  = []
-    const sorted = arr.sort((a,b) => b-a)
-    let n = arr.length - 1 //the indices of the min values
+// function solve(arr) {
+//     let result  = []
+//     const sorted = arr.sort((a,b) => b-a)
+//     let n = arr.length - 1 //the indices of the min values
     
-    for (let i = 0; n > i; i++){
-        result.push(sorted[i])
-        result.push(sorted[n])
-        n--
-    }
+//     for (let i = 0; n > i; i++){
+//         result.push(sorted[i])
+//         result.push(sorted[n])
+//         n--
+//     }
 
-    if (sorted.length % 2 !== 0) result.push(sorted[n])
-    return result
-}
+//     if (sorted.length % 2 !== 0) result.push(sorted[n])
+//     return result
+// }
 
 // //adding comments for standup repl.it
 // //IQ test - I chose the long way to avoid iterating all the way through the array.
