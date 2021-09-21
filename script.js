@@ -1,25 +1,46 @@
+//2021 09.21
+
+function add(n) {
+    return function addNum(x) {
+        return n + x
+    }
+}
+
+//2021 09.12
+
+// function tribonacci(sig, n) {
+//     const seq = []
+//     for (s of sig){
+//       seq.push(s)
+//     }
+//     while (seq.length < n){
+//         seq.push(seq.slice(-3).reduce((a,b) => a + b, 0))
+//     }
+//     return seq.slice(0,n)
+// }
+
 //2021 09.10
 // It's been a while!! 
 
-function isPangram(string) {
-    const alphaMap = {a:0,b:0,c:0,d:0,e:0,f:0,g:0,h:0,i:0,j:0,k:0,l:0,m:0,n:0,o:0,p:0,q:0,r:0,s:0,t:0,u:0,v:0,w:0,x:0,y:0,z:0}
-    let count = 0
-    const str = string.toLowerCase().match(/[a-z]/g).join('')
+// function isPangram(string) {
+//     const alphaMap = {a:0,b:0,c:0,d:0,e:0,f:0,g:0,h:0,i:0,j:0,k:0,l:0,m:0,n:0,o:0,p:0,q:0,r:0,s:0,t:0,u:0,v:0,w:0,x:0,y:0,z:0}
+//     let count = 0
+//     const str = string.toLowerCase().match(/[a-z]/g).join('')
 
-    for (l of str){
-        alphaMap[l] ? alphaMap[l] += 0 : alphaMap[l] += 1
-    }
+//     for (l of str){
+//         alphaMap[l] ? alphaMap[l] += 0 : alphaMap[l] += 1
+//     }
 
-    for (el in alphaMap) {
-        count += alphaMap[el]
-    }
+//     for (el in alphaMap) {
+//         count += alphaMap[el]
+//     }
     
-    return count == 26 ? true : false
-}
+//     return count == 26 ? true : false
+// }
 
-console.log(isPangram('hello'), false)
-console.log(isPangram('abcdefghijklmnopqrstuvwxyz'), true)
-console.log(isPangram('the quick brown fox jumps over a lazy dog'), true)
+// console.log(isPangram('hello'), false)
+// console.log(isPangram('abcdefghijklmnopqrstuvwxyz'), true)
+// console.log(isPangram('the quick brown fox jumps over a lazy dog'), true)
 
 //2021 08.25
 //catching up with the standup problems!
