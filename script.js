@@ -1,10 +1,45 @@
+//2021 09.24
+// just some 8kyus today
+
+//better (top solution):
+// const hello = s =>
+//     `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
+
+const hello = name => name ? `Hello, ${name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) || 'World'}!` : 'Hello, World!'
+
+// function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+//     return [...arguments].reduce((a, b) => a + b, 0)
+// }
+
+// function expressionMatter(a, b, c) {
+//     let map = [
+//         a + b + c,
+//         a * b * c,
+//         a + b * c,
+//         a * b + c,
+//         (a + b) * c,
+//         a * (b + c)
+//     ]
+//     return Math.max(...map)
+// }
+
+// const simpleMultiplication = n => n % 2 ? n * 9 : n * 8
+
+// String.prototype.toAlternatingCase = function () {
+//     return this.split('')
+//         .map(el => el == el.toUpperCase() ? el.toLowerCase() : el.toUpperCase())
+//         .join('')
+// }
+
+// const setAlarm = (employed, vacation) => employed && !vacation
+
 //2021 09.21
 
-function add(n) {
-    return function addNum(x) {
-        return n + x
-    }
-}
+// function add(n) {
+//     return function addNum(x) {
+//         return n + x
+//     }
+// }
 
 //2021 09.12
 
