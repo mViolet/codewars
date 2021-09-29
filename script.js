@@ -1,3 +1,24 @@
+//2021 09.29
+// https://leetcode.com/problems/fibonacci-number/
+//no recursion or memoization, just a raw loop.
+//each number is the sum of two preceding ones, starting with 0 and 1
+// Given n, calculate F(n)
+// 0 1 2 3 4
+// Example 1:
+// Input: n=4
+// Output: 3
+
+function fib(n) {
+    let arr = [0,1]
+    if (n == 0) return 0
+    if (n == 1) return 1
+    for (let i = 2; i <= n; i++){
+        arr.push(arr[i-1] + arr[i-2])
+    }
+    return arr[arr.length - 1]
+}
+
+
 //2021 09.24
 // just some 8kyus today
 
@@ -5,7 +26,7 @@
 // const hello = s =>
 //     `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
 
-const hello = name => name ? `Hello, ${name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) || 'World'}!` : 'Hello, World!'
+// const hello = name => name ? `Hello, ${name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) || 'World'}!` : 'Hello, World!'
 
 // function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
 //     return [...arguments].reduce((a, b) => a + b, 0)
