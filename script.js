@@ -1,4 +1,28 @@
 //2021 09.29
+
+//are they the 'same'?
+function comp(arr1, arr2) {
+    let flag = true
+    for (i in arr1){
+        if (!arr2.includes(arr1[i]**2)){
+        flag = false
+        break
+        }
+    }
+    return (flag && (arr1 && arr2 !== null)) ? arr1.reduce((a,b) => a + b**2, 0) == arr2.reduce((a,b) => a+b, 0) : false
+}
+
+// function arithmetic(a, b, operator) {
+//     switch (operator){
+//         case 'add': return a+b
+//         case 'subtract': return a-b
+//         case 'multiply': return a*b
+//         case 'divide': return a/b
+//         default:
+//             return 'invalid operator'
+//     }
+// }
+
 // https://leetcode.com/problems/fibonacci-number/
 //no recursion or memoization, just a raw loop.
 //each number is the sum of two preceding ones, starting with 0 and 1
@@ -8,15 +32,15 @@
 // Input: n=4
 // Output: 3
 
-function fib(n) {
-    let arr = [0,1]
-    if (n == 0) return 0
-    if (n == 1) return 1
-    for (let i = 2; i <= n; i++){
-        arr.push(arr[i-1] + arr[i-2])
-    }
-    return arr[arr.length - 1]
-}
+// function fib(n) {
+//     let arr = [0,1]
+//     if (n == 0) return 0
+//     if (n == 1) return 1
+//     for (let i = 2; i <= n; i++){
+//         arr.push(arr[i-1] + arr[i-2])
+//     }
+//     return arr[arr.length - 1]
+// }
 
 
 //2021 09.24
