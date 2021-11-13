@@ -1,16 +1,16 @@
 //2021 09.29
 
 //are they the 'same'?
-function comp(arr1, arr2) {
-    let flag = true
-    for (i in arr1){
-        if (!arr2.includes(arr1[i]**2)){
-        flag = false
-        break
-        }
-    }
-    return (flag && (arr1 && arr2 !== null)) ? arr1.reduce((a,b) => a + b**2, 0) == arr2.reduce((a,b) => a+b, 0) : false
-}
+// function comp(arr1, arr2) {
+//     let flag = true
+//     for (i in arr1){
+//         if (!arr2.includes(arr1[i]**2)){
+//         flag = false
+//         break
+//         }
+//     }
+//     return (flag && (arr1 && arr2 !== null)) ? arr1.reduce((a,b) => a + b**2, 0) == arr2.reduce((a,b) => a+b, 0) : false
+// }
 
 // function arithmetic(a, b, operator) {
 //     switch (operator){
